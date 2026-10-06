@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://oy2famkn04b"]
+[gd_scene load_steps=6 format=3 uid="uid://oy2famkn04b"]
 
 [ext_resource type="PackedScene" uid="uid://3dva3g4i7aj2" path="res://test scene/player.tscn" id="1_4crlv"]
+[ext_resource type="Script" uid="uid://bgj6kecmub1dw" path="res://test scene/trigger.gd" id="3_ayvms"]
 [ext_resource type="PackedScene" uid="uid://n4n3galh0e3o" path="res://test scene/box.tscn" id="3_m2ikh"]
+[ext_resource type="Texture2D" uid="uid://g7lrj6x5i501" path="res://assets/icon.svg" id="4_ayvms"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4crlv"]
+size = Vector2(150, 150)
 
 [node name="Test" type="Node2D"]
 
@@ -61,3 +66,17 @@ position = Vector2(0, -130)
 
 [node name="box2" parent="le_box/box2/box2/box2/box2/box2/box2/box2/box2/box2/box2/box2/box2/box2/box2" instance=ExtResource("3_m2ikh")]
 position = Vector2(0, -131)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(704, 344)
+script = ExtResource("3_ayvms")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+scale = Vector2(1.22, 1.22)
+texture = ExtResource("4_ayvms")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_4crlv")
+
+[connection signal="body_entered" from="Area2D" to="player" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="player" method="_on_body_exited"]
