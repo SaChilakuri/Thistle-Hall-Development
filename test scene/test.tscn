@@ -6,10 +6,58 @@
 [node name="Test" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_4crlv")]
-position = Vector2(209, 109)
+position = Vector2(348, 349)
 
-[node name="box" parent="." instance=ExtResource("3_m2ikh")]
-position = Vector2(486, 133)
+[node name="le_box" parent="." instance=ExtResource("3_m2ikh")]
+position = Vector2(285, 171)
 
-[node name="box2" parent="." instance=ExtResource("3_m2ikh")]
-position = Vector2(972, 266)
+[node name="box2" parent="le_box" instance=ExtResource("3_m2ikh")]
+position = Vector2(124, -2)
+
+[node name="box" parent="le_box/box2" instance=ExtResource("3_m2ikh")]
+position = Vector2(131, 0)
+
+[node name="box2" parent="le_box/box2" instance=ExtResource("3_m2ikh")]
+position = Vector2(262, 0)
+
+[node name="box" parent="le_box/box2/box2" instance=ExtResource("3_m2ikh")]
+position = Vector2(131, 0)
+
+[node name="box2" parent="le_box/box2/box2" instance=ExtResource("3_m2ikh")]
+position = Vector2(262, 0)
+
+[node name="box2" parent="le_box/box2/box2/box2" instance=ExtResource("3_m2ikh")]
+position = Vector2(0, 131)
+
+[node name="box2" parent="le_box/box2/box2/box2/box2" instance=ExtResource("3_m2ikh")]
+position = Vector2(0, 131)
+
+[node name="box2" parent="le_box/box2/box2/box2/box2/box2" instance=ExtResource("3_m2ikh")]
+position = Vector2(0, 131)
+
+[node name="box2" parent="le_box/box2/box2/box2/box2/box2/box2" instance=ExtResource("3_m2ikh")]
+position = Vector2(-130, 0)
+
+[node name="box2" parent="le_box/box2/box2/box2/box2/box2/box2/box2" instance=ExtResource("3_m2ikh")]
+position = Vector2(-130, 0)
+
+[node name="box2" parent="le_box/box2/box2/box2/box2/box2/box2/box2/box2" instance=ExtResource("3_m2ikh")]
+position = Vector2(-130, 0)
+
+[node name="box2" parent="le_box/box2/box2/box2/box2/box2/box2/box2/box2/box2" instance=ExtResource("3_m2ikh")]
+position = Vector2(-130, 0)
+
+[node name="box2" parent="le_box/box2/box2/box2/box2/box2/box2/box2/box2/box2/box2" instance=ExtResource("3_m2ikh")]
+position = Vector2(-130, 0)
+
+[node name="box2" parent="le_box/box2/box2/box2/box2/box2/box2/box2/box2/box2/box2/box2" instance=ExtResource("3_m2ikh")]
+position = Vector2(-130, 0)
+
+[node name="box2" parent="le_box/box2/box2/box2/box2/box2/box2/box2/box2/box2/box2/box2/box2" instance=ExtResource("3_m2ikh")]
+position = Vector2(0, -130)
+
+[node name="box2" parent="le_box/box2/box2/box2/box2/box2/box2/box2/box2/box2/box2/box2/box2/box2" instance=ExtResource("3_m2ikh")]
+position = Vector2(0, -130)
+
+[node name="box2" parent="le_box/box2/box2/box2/box2/box2/box2/box2/box2/box2/box2/box2/box2/box2/box2" instance=ExtResource("3_m2ikh")]
+position = Vector2(0, -131)
