@@ -15,3 +15,12 @@ func _process(delta: float) -> void:
 	
 	move_and_slide()
 	
+
+
+func _on_body_entered(body: Node2D) -> void:
+	print("Something Happened")
+
+
+
+func _on_body_exited(body: Node2D) -> void:
+	print('Nothing Happened')
