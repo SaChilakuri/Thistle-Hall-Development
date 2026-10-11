@@ -1,0 +1,7 @@
+This is a test interaction between two characters \:)
+join characterOne center
+characterOne: yogurt
+join Minerva center
+Minerva: gurt\: yo my name is ???
+set {learnt_code} = 1000
+set {mems_learnt_today} += 1.0

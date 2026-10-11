@@ -1,0 +1,11 @@
+set {learnt_code} = 0
+join characterOne center
+characterOne: yogurt
+join Minerva center
+Minerva: do you remember my name..?
+
+# Dialogic can safely read its own variables in conditions
+if {temp_bool} == true:
+	Minerva: you remembered my name!
+else:
+	Minerva: you don't know???
