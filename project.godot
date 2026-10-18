@@ -10,25 +10,22 @@ config_version=5
 
 [application]
 
-config/name="Thistle Hall Development"
-run/main_scene="res://scenes/node_2d.tscn"
+config/name="Thistle Hall"
+config/description="THE GAME"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://cqwjoxnhy3n2k"
 
 [autoload]
 
 Dialogic="*uid://ds2q0uclmolvu"
-Gamewideinfo="*uid://gihxyyncq6y4"
+GameManager="*uid://cosvkj6pnmx3f"
 
 [dialogic]
 
-directories/dch_directory={
-"Minerva": "res://characters/Minerva.dch",
-"characterOne": "res://characters/characterOne.dch",
-"characterTwo": "res://characters/characterTwo.dch"
-}
+directories/dch_directory={}
 directories/dtl_directory={
 "ifisejfiojasfijariof": "res://ifisejfiojasfijariof.dtl",
+"minerva_first_interaction": "res://timelines/day_one/minerva_first_interaction.dtl",
 "timeline": "res://timeline.dtl",
 "timeline2": "res://timeline2.dtl",
 "timeline3": "res://timeline3.dtl"
