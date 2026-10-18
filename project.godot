@@ -22,6 +22,7 @@ Gamewideinfo="*uid://gihxyyncq6y4"
 
 [dialogic]
 
+<<<<<<< Updated upstream
 directories/dch_directory={
 "Minerva": "res://characters/Minerva.dch",
 "characterOne": "res://characters/characterOne.dch",
@@ -32,6 +33,11 @@ directories/dtl_directory={
 "timeline": "res://timeline.dtl",
 "timeline2": "res://timeline2.dtl",
 "timeline3": "res://timeline3.dtl"
+=======
+directories/dch_directory={}
+directories/dtl_directory={
+"timeline": "res://timelines/day_one/minerva_first_interaction.dtl"
+>>>>>>> Stashed changes
 }
 layout/style_directory={
 "": "res://addons/test_style.tres",
