@@ -1,48 +1,70 @@
 extends Node
-const TESTSCENE = preload("res://scenes/node_2d.tscn")
-var memory_keys_today = []
-# The key is a 4 digit int code to access that specific memory
-# Index of array 0 should be the description of the info
+
+# global_memory.gd Description:
+# Global containing the Memory Dict as well as other things that
+# frequently have to be accessed/updated.
+
+# MEMORY DICT GUIDE:
+# The key is a 4 digit int code to access that specific memory's info
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# The key's associated value points to an array with info 
+# relating to the memory, following this structure:
+#
+# Index 0 should be the description of the info
 # Index 1 is that actual info
 # Index 2 is a bool to say wether the protag has learnt the info or not
 # Index 3 is a bool for wether the key relates to a characters name
-var memory_log = {
-	1000 : ["the girl with an afro's name", "Minerva", false, true]
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# THIS STRUCTURE MUST BE FOLLOWED!!!!!!!!
+var memory_dict = {
+	"1000" : ["The girl with an afro's name", "Minerva", false, true]
 }
 
-func _ready() -> void:
-	Dialogic.timeline_ended.connect(_on_timeline_ended)
-
-func _on_timeline_ended():
-	# Once timeline ends, check if a new memory was obtained, and take it-
-	# If it has
-	var memory_key = _get_memory_key()
-	if memory_key != 0:
-		memory_keys_today.append(memory_key)
-		print(memory_keys_today)
-
-func _get_memory_key():
-	return Dialogic.VAR.learnt_code
-
-func _end_of_day():
-	memory_keys_today.clear()
-
-func _process(delta: float) -> void:
-	# These are just debug inputs to start a test dialouge scene and-
-	# -reload the scene as well
-	#
-	if Input.is_action_just_pressed("q"):
-		Dialogic.start("timeline3")
-		Dialogic.VAR.temp_bool = has_learnt_memory(1000)
-	if Input.is_action_just_pressed("r"):
-		get_tree().change_scene_to_file("res://scenes/node_2d.tscn")
-		memory_log[1000][2] = false
-
-func has_learnt_memory(key: int) -> bool:
+func _get_memory_description(key):
 	# Purpose:
-	# Check if a memory has been learnt or not
-	# Params:
-	# Key associated with that memory's info (int)
+	# Gets the description of the memory relating to the key
+	# Param:
+	# key - A valid memory key (int)
 	# Returns:
-	# Bool of wether the player has learnt that memory or not (bool)
-	return memory_log[key][2]
+	# Description relating to the memory (str)
+	return memory_dict[key][0]
+
+func _get_memory_info(key):
+	# Purpose:
+	# Gets the information of what the player should learn
+	# Param:
+	# key - A valid memory key (int)
+	# Returns:
+	# The memory itself (str)
+	return memory_dict[key][1]
+
+func _get_memory_learnt(key):
+	# Purpose:
+	# Find wether or not a player has learnt a specific memory
+	# Param:
+	# key - A valid memory key (int)
+	# Returns:
+	# Wether the player has learnt the memory or not (bool)
+	return memory_dict[key][2]
+
+func _set_memory_learnt(key, boolean):
+	# Purpose:
+	# Set a memory to wether it's been learnt or not
+	# Params:
+	# key - A valid memory key (int)
+	# boolean - What to change memory learnt status to (bool)
+	memory_dict[key][2] = boolean
+	
+func _get_is_memory_name(key):
+	# Purpose:
+	# Find if the memory learnt is related to a name, used to help
+	# update names in Dialogic
+	# Param:
+	# key - A valid memory key (int)
+	# Returns:
+	# Wether the memory associated with the key is a character's
+	# name (bool)
+	return memory_dict[key][3]
+
+func _get_memory_keys():
+	pass
