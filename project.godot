@@ -22,16 +22,17 @@ Gamewideinfo="*uid://gihxyyncq6y4"
 
 [dialogic]
 
-directories/dch_directory={}
+directories/dch_directory={
+"Minerva": "res://assets/Minerva/Minerva.dch"
+}
 directories/dtl_directory={}
 layout/style_directory={
 "": "res://addons/test_style.tres",
 "test_style": "res://addons/test_style.tres"
 }
 variables={
-"CHARACTER_NAMES": {
-"Minerva": "???",
-"unknown": "???"
+"Minerva": {
+"name": "????"
 },
 "learnt_code": 0,
 "mems_learnt_today": 0,
