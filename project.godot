@@ -23,8 +23,8 @@ GameManager="*uid://cosvkj6pnmx3f"
 [dialogic]
 
 directories/dch_directory={
-"Minerva": "res://characters/minerva.dch",
-"Player": "res://characters/player.dch",
+"Minerva": "res://characters/Minerva.dch",
+"Player": "res://characters/Player.dch",
 "characterOne": "res://characters/characterOne.dch",
 "characterTwo": "res://characters/characterTwo.dch"
 }
@@ -42,7 +42,13 @@ layout/style_directory={
 variables={
 "CHARACTER_NAMES": {
 "Minerva": "???",
+"Player": "Player",
 "unknown": "???"
+},
+"INTERACTION_VARIABLES": {
+"Minerva": {
+"inter1_1_leave": 0.0
+}
 },
 "learnt_code": 0,
 "mems_learnt_today": 0,
