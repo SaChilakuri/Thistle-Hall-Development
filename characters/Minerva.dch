@@ -12,7 +12,7 @@
 },
 &"default_portrait": "Image 2026 10 01 201227557 Removebg Preview",
 &"description": "",
-&"display_name": "{CHARACTER_NAMES.Minerva}",
+&"display_name": "{CHARACTER_NAMES.Minerva.Minerva}",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),

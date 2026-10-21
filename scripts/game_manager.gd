@@ -17,7 +17,7 @@ extends Node
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # THIS STRUCTURE MUST BE FOLLOWED!!!!!!!!
 var memory_dict = {
-	"1000" : ["The girl with an afro's name", "Minerva", false, true]
+	"1000" : ["The girl with an afro's name", "Minerva", false, true],
 }
 
 func _get_memory_description(key):

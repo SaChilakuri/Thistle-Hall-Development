@@ -22,7 +22,12 @@ GameManager="*uid://cosvkj6pnmx3f"
 
 [dialogic]
 
-directories/dch_directory={}
+directories/dch_directory={
+"Minerva": "res://characters/minerva.dch",
+"Player": "res://characters/player.dch",
+"characterOne": "res://characters/characterOne.dch",
+"characterTwo": "res://characters/characterTwo.dch"
+}
 directories/dtl_directory={
 "ifisejfiojasfijariof": "res://ifisejfiojasfijariof.dtl",
 "minerva_first_interaction": "res://timelines/day_one/minerva_first_interaction.dtl",
