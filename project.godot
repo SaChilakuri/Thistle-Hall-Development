@@ -19,6 +19,7 @@ config/icon="uid://cqwjoxnhy3n2k"
 
 Dialogic="*uid://ds2q0uclmolvu"
 Gamewideinfo="*uid://gihxyyncq6y4"
+GameManager="*uid://cosvkj6pnmx3f"
 
 [dialogic]
 
