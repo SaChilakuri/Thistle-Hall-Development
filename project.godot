@@ -23,40 +23,61 @@ GameManager="*uid://cosvkj6pnmx3f"
 [dialogic]
 
 directories/dch_directory={
-"Minerva": "res://characters/Minerva.dch",
+"Minerva/Minerva": "res://assets/Minerva/Minerva.dch",
 "Player": "res://characters/Player.dch",
-"characterOne": "res://characters/characterOne.dch",
-"characterTwo": "res://characters/characterTwo.dch"
+"player": "res://assets/Minerva/player.dch"
 }
 directories/dtl_directory={
-"ifisejfiojasfijariof": "res://ifisejfiojasfijariof.dtl",
-"minerva_first_interaction": "res://timelines/day_one/minerva_first_interaction.dtl",
-"timeline": "res://timeline.dtl",
-"timeline2": "res://timeline2.dtl",
-"timeline3": "res://timeline3.dtl"
+"minerva_first_interaction": "res://timelines/day_one/minerva_first_interaction.dtl"
 }
 layout/style_directory={
 "": "res://addons/test_style.tres",
 "test_style": "res://addons/test_style.tres"
 }
 variables={
-"CHARACTER_NAMES": {
-"Minerva": "???",
-"Player": "Player",
-"unknown": "???"
-},
-"INTERACTION_VARIABLES": {
 "Minerva": {
-"inter1_1_leave": 0.0
-}
+"name": "????"
 },
 "learnt_code": 0,
 "mems_learnt_today": 0,
+"player_name": "Player",
 "temp_bool": false
 }
 layout/style_list=["res://addons/test_style.tres"]
 layout/default_style="res://addons/test_style.tres"
 glossary/default_case_sensitive=true
+text/letter_speed=0.01
+text/initial_text_reveal_skippable=true
+text/text_reveal_skip_delay=0.1
+text/advance_delay=0.1
+text/autoadvance_per_character_delay=0.1
+text/autoadvance_ignored_characters_enabled=true
+animations/join_default_length=0.5
+animations/join_default_wait=true
+animations/leave_default_length=0.5
+animations/leave_default_wait=true
+animations/cross_fade_default_length=0.5
+choices/autofocus_first=true
+choices/delay=0.2
+choices/reveal_delay=0
+choices/reveal_by_input=false
+save/autosave_delay=60.0
+save/encryption_on_exports_only=true
+text/autopauses={}
+audio/channel_defaults={
+"": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": false,
+"volume": 0.0
+},
+"music": {
+"audio_bus": "",
+"fade_length": 0.0,
+"loop": true,
+"volume": 0.0
+}
+}
 
 [display]
 
