@@ -1,0 +1,72 @@
+[i]You look through the peephole of the front door to see a girl standing in the pouring rain.[/i]
+Minerva: "Hey, let me in! I know there's someone here, I can see that lamp in the window!"
+[i]You look over to the left and sure enough, a bright lamp sits on the windowsill. You don't remember putting it there, however. Strange.[/i]
+[i]The girl continues pounding on the door.[/i]
+- She can stay as long as she needs to.
+	[i]You open the door.[/i]
+	Minerva: "Oh thank God, somebody else. Do you know how long I've been alone out there? Regardless, thank you for letting me in."
+	Player: "Of course! It's the least I can do, given that it's pouring. Stay as long as you need to. I could use the company."
+- It's pouring. It would be polite to let her stay until it lets up.
+	[i]You open the door.[/i]
+	Minerva: "Oh thank God, somebody else. Do you know how long I've been alone out there? Regardless, thank you for letting me in."
+	Player: "No problem. You can stay here until the rain lets up, whenever that is."
+	set {INTERACTION_VARIABLES.Minerva.inter1_1_leave} = 1.0
+- She knows you're in here, it would be stupid to pretend otherwise.
+	[i]You open the door.[/i]
+	Minerva: "Oh thank God, somebody else. Do you know how long I've been alone out there? Regardless, thank you for letting me in."
+	Player: "Yeah. Just leave when the rain stops."
+	set {INTERACTION_VARIABLES.Minerva.inter1_1_leave} = 2.0
+[i]You let the woman enter, and she sits down at one of the tables in the lobby.[/i]
+Minerva: "So, are you here by yourself? Seems a little... large for one person."
+label Minerva Convo
+- (Explore) Who are you? | [else="hide"]
+	Player: "Who are you?"
+	Minerva: "My name is {CHARACTER_NAMES.Minerva}. I probably should have introduced myself earlier. What's your name?"
+	Player: "I'm {CHARACTER_NAMES.Player}. Nice to meet you."
+	if {INTERACTION_VARIABLES.Minerva.inter1_1_leave} > 0.0:
+		"Yeah, it's nice to meet you too."
+	else:
+		Minerva: "It's nice to meet you too! I'm glad that there's someone who is willing to let me stay."
+	Minerva: "Anyways, I used to be a student here. I was going for a [[Business]] Major, if you can believe that. I certaintly don't look like I would."
+	Minerva: "I've always wanted to run a [[yarn store]], so [[business]] was kinda where I ended up going to."
+	[signal arg="1000"]
+	jump MinervaFirstMeeting/Minerva Convo
+- (Explore) Where are you from? | [else="hide"]
+	Player: "Where are you from?"
+	Minerva: "Not really sure it matters anymore, but I'm from [[a suburb of Seattle]]. You'd think I'd be used to this weather because of that, but it actually doesn't really get this bad there."
+	jump MinervaFirstMeeting/Minerva Convo
+- (Explore) What do you like to do for fun? | [else="hide"]
+	Player: "What do you like to do for fun?"
+	if {INTERACTION_VARIABLES.Minerva.inter1_1_leave} > 0.0:
+		Minerva: "Seems a little strange to ask that given you want me out after the rain lets up, but sure. Why not?"
+	Minerva: "I [[knit and crochet if I can find the yarn for it]]. I've been out of luck in that department recently, however. Most places have been raided already."
+	"Apart from that, I used to [[play video games]] here and there, but that was before, well, you know."
+	jump MinervaFirstMeeting/Minerva Convo
+- (Explore) How long do you think you're going to stay? | [else="hide"]
+	Player: "How long do you think you're going to stay for?"
+	Minerva: "I'm not too sure. I haven't really had somewhere to stay at all for the past couple of months, so if you'd be willing, id like to stay here for a good while."
+	- I'd love to have you here! You can stay as long as you want!
+		Player: "I'd love to have you here! You can stay as long as you want!"
+		Minerva: "Thank you! That means a lot to me."
+	- That sounds nice. I'd like company.
+		Player: "That sounds nice. I'd like company."
+		Minerva: "I'm glad you seem open to me staying here. I'll try to be helpful."
+	- We'll play it by ear.
+		Player: "We can see how it goes. I don't have any immediate objections."
+		Minerva: "That's fair. You don't know me, and I just kinda showed up on your doorstep."
+	jump MinervaFirstMeeting/Minerva Convo
+- I'm hungry. It's time for breakfast.
+	Player: "Sorry, I know we just started talking, but I'm really hungry. I'm going to make breakfast."
+Minerva: "Oh. Yeah, I guess it is about that time, isn't it? I'll let you go then, I've got some of my own."
+[i]{character_names.minerva_name} leans over her backpack, rummaging inside for something[/i]
+- Offer to make breakfast.
+	Minerva: "Don't worry about it. I have enough food for both of us."
+	Minerva: "Really? Are you sure? You don't have to give me your food, I have my own stockpile."
+	Minerva: "I already said to not worry about it. I have enough for a couple of years at least."
+	Minerva: "A couple of [b]years[/b]!? Where did you get all of that from?"
+	Player: "...I'm actually not sure."
+	[i]She gives you a strange look, but lets it go. You go make breakfast, breaking out some pancake mix you suppose you'd been saving for an occasion like this.[/i]
+	set {Friendship_Minerva} += 5.0
+- Leave her be.
+	[i]You silently leave and make yourself breakfast. It's nothing special, just some canned fruit and some cereal.[/i]
+[i]During your meal, Minerva asks about a room she could stay in for the time being. Regardless of the time she would be staying for, you figure it wouldn't be too much of a hassle; after all, you have plenty of empty rooms.[/i]

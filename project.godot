@@ -18,22 +18,37 @@ config/icon="uid://cqwjoxnhy3n2k"
 [autoload]
 
 Dialogic="*uid://ds2q0uclmolvu"
-Gamewideinfo="*uid://gihxyyncq6y4"
 GameManager="*uid://cosvkj6pnmx3f"
 
 [dialogic]
 
 directories/dch_directory={
-"Minerva": "res://assets/Minerva/Minerva.dch"
+"Minerva": "res://characters/Minerva.dch",
+"Player": "res://characters/Player.dch",
+"characterOne": "res://characters/characterOne.dch",
+"characterTwo": "res://characters/characterTwo.dch"
 }
-directories/dtl_directory={}
+directories/dtl_directory={
+"ifisejfiojasfijariof": "res://ifisejfiojasfijariof.dtl",
+"minerva_first_interaction": "res://timelines/day_one/minerva_first_interaction.dtl",
+"timeline": "res://timeline.dtl",
+"timeline2": "res://timeline2.dtl",
+"timeline3": "res://timeline3.dtl"
+}
 layout/style_directory={
 "": "res://addons/test_style.tres",
 "test_style": "res://addons/test_style.tres"
 }
 variables={
+"CHARACTER_NAMES": {
+"Minerva": "???",
+"Player": "Player",
+"unknown": "???"
+},
+"INTERACTION_VARIABLES": {
 "Minerva": {
-"name": "????"
+"inter1_1_leave": 0.0
+}
 },
 "learnt_code": 0,
 "mems_learnt_today": 0,
