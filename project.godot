@@ -24,7 +24,6 @@ GameManager="*uid://cosvkj6pnmx3f"
 
 directories/dch_directory={
 "Minerva/Minerva": "res://assets/Minerva/Minerva.dch",
-"Player": "res://characters/Player.dch",
 "player": "res://assets/Minerva/player.dch"
 }
 directories/dtl_directory={
@@ -36,6 +35,7 @@ layout/style_directory={
 }
 variables={
 "Minerva": {
+"minerva_int_1_1_leave": 0.0,
 "name": "????"
 },
 "learnt_code": 0,

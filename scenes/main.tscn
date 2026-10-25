@@ -1,6 +1,12 @@
 [gd_scene format=3 uid="uid://bc1mviy55mitb"]
 
 [ext_resource type="Script" uid="uid://f55drq8obia2" path="res://scripts/timeline_manager.gd" id="1_o5qli"]
+[ext_resource type="Texture2D" uid="uid://b2xrx3tx0pgse" path="res://assets/Unsorted/lobby_background.png" id="2_0wfyh"]
 
 [node name="Node2D" type="Node2D" unique_id=1086051408]
 script = ExtResource("1_o5qli")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1468541381]
+
+[node name="LobbyBackground" type="Sprite2D" parent="." unique_id=238768880]
+texture = ExtResource("2_0wfyh")
