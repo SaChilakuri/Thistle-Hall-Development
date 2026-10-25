@@ -12,6 +12,7 @@ config_version=5
 
 config/name="Thistle Hall"
 config/description="THE GAME"
+run/main_scene="uid://bc1mviy55mitb"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="uid://cqwjoxnhy3n2k"
 
@@ -35,6 +36,7 @@ layout/style_directory={
 }
 variables={
 "Minerva": {
+"minerva_friendship": 0.0,
 "minerva_int_1_1_leave": 0.0,
 "name": "????"
 },

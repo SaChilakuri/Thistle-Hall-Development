@@ -66,7 +66,7 @@ Minerva/Minerva: "Oh. Yeah, I guess it is about that time, isn't it? I'll let yo
 	Minerva/Minerva: "A couple of [b]years[/b]!? Where did you get all of that from?"
 	player: "...I'm actually not sure."
 	[i]She gives you a strange look, but lets it go. You go make breakfast, breaking out some pancake mix you suppose you'd been saving for an occasion like this.[/i]
-	set {Friendship_Minerva} += 5.0
+	set {Minerva.minerva_friendship} += 5.0
 - Leave her be.
 	[i]You silently leave and make yourself breakfast. It's nothing special, just some canned fruit and some cereal.[/i]
 [i]During your meal, Minerva asks about a room she could stay in for the time being. Regardless of the time she would be staying for, you figure it wouldn't be too much of a hassle; after all, you have plenty of empty rooms.[/i]
