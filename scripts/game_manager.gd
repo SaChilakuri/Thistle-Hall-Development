@@ -13,10 +13,12 @@ extends Node
 # Index 0 should be the description of the info
 # Index 1 is that actual info
 # Index 2 is a bool to say wether the protag has learnt the info or not
-# Index 3 is a bool for wether the key relates to a characters name
+# Index 3 is the name of the Dialogic variable associated with the memory
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # THIS STRUCTURE MUST BE FOLLOWED!!!!!!!!
 var memory_keys_to_learn = []
+
+
 
 var memory_log = {
 	1000 : ["The girl with an afro's name", "Minerva", false, "Minerva.name"]
