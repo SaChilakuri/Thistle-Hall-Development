@@ -26,6 +26,9 @@ scene = ExtResource("4_8clu0")
 [sub_resource type="Resource" id="Resource_t8okp"]
 script = ExtResource("2_623v0")
 scene = ExtResource("5_8xu7y")
+overrides = {
+"portrait_position": "1"
+}
 
 [sub_resource type="Resource" id="Resource_gv1et"]
 script = ExtResource("2_623v0")
@@ -34,6 +37,10 @@ scene = ExtResource("6_8a11x")
 [sub_resource type="Resource" id="Resource_sfsca"]
 script = ExtResource("2_623v0")
 scene = ExtResource("7_5n806")
+overrides = {
+"boxes_min_size": "Vector2(50, 0)",
+"boxes_offset": "Vector2(-300, 0)"
+}
 
 [sub_resource type="Resource" id="Resource_vv4jl"]
 script = ExtResource("2_623v0")

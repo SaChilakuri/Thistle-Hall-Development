@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://f55drq8obia2" path="res://scripts/timeline_manager.gd" id="1_o5qli"]
 [ext_resource type="Texture2D" uid="uid://b2xrx3tx0pgse" path="res://assets/Unsorted/lobby_background.png" id="2_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://c4leytjd5ssly" path="res://assets/Unsorted/th_bg.png" id="3_sugp2"]
 
 [node name="Node2D" type="Node2D" unique_id=1086051408]
 script = ExtResource("1_o5qli")
@@ -10,3 +11,9 @@ script = ExtResource("1_o5qli")
 
 [node name="LobbyBackground" type="Sprite2D" parent="." unique_id=238768880]
 texture = ExtResource("2_0wfyh")
+
+[node name="ThBg" type="Sprite2D" parent="." unique_id=127064504]
+z_index = -2
+position = Vector2(0.50006104, 4.5776367e-05)
+scale = Vector2(3.7861106, 4.1222224)
+texture = ExtResource("3_sugp2")

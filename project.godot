@@ -33,10 +33,13 @@ directories/dtl_directory={
 "MinervaFirstMeeting": "res://timelines/day_one/MinervaFirstMeeting.dtl",
 "SilasFirstMeeting": "res://timelines/day_one/SilasFirstMeeting.dtl",
 "big_fight_day_1": "res://timelines/day_one/big_fight_day_1.dtl",
+"foshi_meeting": "res://timelines/day_one/foshi_meeting.dtl",
+"foshi_talk_end1": "res://timelines/day_one/foshi_talk_end1.dtl",
 "silas_talk_end1": "res://timelines/day_one/silas_talk_end1.dtl"
 }
 layout/style_directory={
 "": "res://addons/test_style.tres",
+"minerva_textbox_style": "res://assets/textbox_styles/minerva_textbox_style.tres",
 "test_style": "res://addons/test_style.tres"
 }
 variables={
