@@ -20,7 +20,7 @@ Minerva: "Hey, let me in! I know there's someone here, I can see that lamp in th
 [i]You let the woman enter, and she sits down at one of the tables in the lobby.[/i]
 Minerva: "So, are you here by yourself? Seems a little... large for one person."
 label Minerva Convo
-- (Explore) Who are you?
+- (Explore) Who are you? | [if {Timeline_Managment.MinervaInt1_1Who} == 0.0] [else="hide"]
 	Player: "Who are you?"
 	Minerva: "My name is {Minerva.name}. I probably should have introduced myself earlier. What's your name?"
 	Player: "I'm {player_name}. Nice to meet you."
@@ -29,20 +29,23 @@ label Minerva Convo
 	else:
 		Minerva: "It's nice to meet you too! I'm glad that there's someone who is willing to let me stay."
 	[signal arg="1000"]
+	set {Timeline_Managment.MinervaInt1_1Who} = 1.0
 	jump MinervaFirstMeeting/Minerva Convo
-- (Explore) Where are you from?
+- (Explore) Where are you from? | [if {Timeline_Managment.MinervaInt1_1WhereFrom} == 0.0] [else="hide"]
 	Player: "Where are you from?"
 	Minerva: "Not really sure it matters anymore, but I'm from {Minerva.from}. You'd think I'd be used to this weather because of that, but it actually doesn't really get this bad there."
 	[signal arg="1001"]
+	set {Timeline_Managment.MinervaInt1_1WhereFrom} = 1.0
 	jump MinervaFirstMeeting/Minerva Convo
-- (Explore) What do you like to do for fun?
+- (Explore) What do you like to do for fun? | [if {Timeline_Managment.MinervaInt1_1Hobbies} == 0.0] [else="hide"]
 	Player: "What do you like to do for fun?"
 	if {Timeline_Managment.MinervaInt1_1Leave} > 0.0:
 		Minerva: "Seems a little strange to ask that given you want me out after the rain lets up, but sure. Why not?"
 	Minerva: "I really love {Minerva.hobbies}. I've been out of luck in that department recently, however. Most places have been raided already."
 	[signal arg="1002"]
+	set {Timeline_Managment.MinervaInt1_1Hobbies} = 1.0
 	jump MinervaFirstMeeting/Minerva Convo
-- (Explore) How long do you think you're going to stay?
+- (Explore) How long do you think you're going to stay? | [if {Timeline_Managment.MinervaInt1_1Leave}  ==  0.0 and {Timeline_Managment.MinervaInt1_1LeaveAsked} == 0.0]
 	Player: "How long do you think you're going to stay for?"
 	Minerva: "I'm not too sure. I haven't really had somewhere to stay at all for the past couple of months, so if you'd be willing, id like to stay here for a good while."
 	- I'd love to have you here! You can stay as long as you want!
@@ -54,6 +57,7 @@ label Minerva Convo
 	- We'll play it by ear.
 		Player: "We can see how it goes. I don't have any immediate objections."
 		Minerva: "That's fair. You don't know me, and I just kinda showed up on your doorstep."
+	set {Timeline_Managment.MinervaInt1_1LeaveAsked} = 1.0
 	jump MinervaFirstMeeting/Minerva Convo
 - I'm hungry. It's time for breakfast.
 	Player: "Sorry, I know we just started talking, but I'm really hungry. I'm going to make breakfast."

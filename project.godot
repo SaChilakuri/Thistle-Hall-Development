@@ -43,7 +43,6 @@ layout/style_directory={
 }
 variables={
 "Minerva": {
-"MinervaInt1_1Leave": 0.0,
 "from": "????",
 "hobbies": "????",
 "minerva_friendship": 0.0,
@@ -53,6 +52,20 @@ variables={
 "from": "????",
 "hobbies": "????",
 "name": "????"
+},
+"Timeline_Managment": {
+"MinervaInt1_1Hobbies": 0.0,
+"MinervaInt1_1Leave": 0.0,
+"MinervaInt1_1LeaveAsked": 0.0,
+"MinervaInt1_1WhereFrom": 0.0,
+"MinervaInt1_1Who": 0.0,
+"SilasInt1_1BookReading": 0.0,
+"SilasInt1_1Hobbies": 0.0,
+"SilasInt1_1Leave": 0.0,
+"SilasInt1_1LeaveAsked": 0.0,
+"SilasInt1_1Talked": 0.0,
+"SilasInt1_1WhereFrom": 0.0,
+"SilasInt1_1Who": 0.0
 },
 "learnt_code": 0,
 "mems_learnt_today": 0,
