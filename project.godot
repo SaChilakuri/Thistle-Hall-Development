@@ -39,7 +39,6 @@ directories/dtl_directory={
 }
 layout/style_directory={
 "": "res://addons/test_style.tres",
-"minerva_textbox_style": "res://assets/textbox_styles/minerva_textbox_style.tres",
 "test_style": "res://addons/test_style.tres"
 }
 variables={
@@ -48,6 +47,10 @@ variables={
 "from": "????",
 "hobbies": "????",
 "minerva_friendship": 0.0,
+"name": "????"
+},
+"Silas": {
+"from": "????",
 "name": "????"
 },
 "learnt_code": 0,
@@ -90,6 +93,7 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
+animations/join_default="Fade In Up"
 
 [display]
 

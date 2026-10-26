@@ -4,7 +4,8 @@
 - You already let Minerva in, what's one more?
 - Minerva wouldn't be too happy if I denied this guy shelter.
 [i]You open the door. the boy seems delighted.[/i]
-Silas: "Finally! I've been looking for somebody else for weeks! I'm [[Silas]], by the way."
+Silas: "Finally! I've been looking for somebody else for weeks! I'm {Silas.name}, by the way."
+[signal arg="2000"]
 - It's nice to meet you.
 	Player: "It's nice to meet you."
 	Silas: "Yeah! It's really nice to meet you too! Would I be able to stay here for a little bit? Until the rain passes by, at least."
@@ -40,7 +41,7 @@ label Silas Convo
 	jump SilasFirstMeeting/Silas Convo
 - (Explore) Where are you from? | [if {SilasInt1_1WhereFrom} == 0.0] [else="hide"]
 	Player: "Where are you from?"
-	Silas: "Im from [[rural Wisconsin]], about an hour and a half north of [[Milwaukee]]. It's really pretty out there, especially in the woods during the fall."
+	Silas: "Im from rural Wisconsin, about an hour and a half north of Milwaukee. It's really pretty out there, especially in the woods during the fall."
 	set {SilasInt1_1WhereFrom} = 1.0
 	jump SilasFirstMeeting/Silas Convo
 - (Explore) What do you like to do for fun? | [if {MinervaInt1_1Hobbies} == 0.0] [else="hide"]

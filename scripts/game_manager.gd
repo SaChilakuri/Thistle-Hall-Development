@@ -15,11 +15,15 @@ extends Node
 # Index 2 is a bool to say wether the protag has learnt the info or not
 # Index 3 is the name of the Dialogic variable associated with the memory
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Currently:
+# 1xxx - Minerva
+# 2xxx - Silas
 # THIS STRUCTURE MUST BE FOLLOWED!!!!!!!!
 var memory_log = {
 	1000 : ["The girl with an afro's name", "Minerva", false, "Minerva.name"],
 	1001 : ["Where the girl is from", "a suburb of Seattle", false, "Minerva.from"],
-	1002 : ["The girl's hobbies", "knitting and crocheting", false, "Minerva.hobbies"]
+	1002 : ["The girl's hobbies", "knitting and crocheting", false, "Minerva.hobbies"],
+	2000 : ["The guy with glasses' name", "Silas", false, "Silas.name"]
 }
 
 var memory_keys_to_learn = []
