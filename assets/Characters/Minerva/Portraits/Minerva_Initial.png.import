@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bi1njhp2kkxlt"
-path="res://.godot/imported/Minerva_Initial.png-c7adbd9117e8bd462e81f5679f247dee.ctex"
+path="res://.godot/imported/Minerva_Initial.png-a9ab281cd67697bed31bf85cf10a24bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Minerva/Portraits/Minerva_Initial.png"
-dest_files=["res://.godot/imported/Minerva_Initial.png-c7adbd9117e8bd462e81f5679f247dee.ctex"]
+source_file="res://assets/Characters/Minerva/Portraits/Minerva_Initial.png"
+dest_files=["res://.godot/imported/Minerva_Initial.png-a9ab281cd67697bed31bf85cf10a24bb.ctex"]
 
 [params]
 

@@ -6,4 +6,4 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Dialogic.start("minerva_first_interaction")
+	Dialogic.start("MinervaFirstMeeting")

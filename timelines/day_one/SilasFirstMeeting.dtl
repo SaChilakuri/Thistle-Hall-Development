@@ -1,0 +1,78 @@
+[i]You peek through the peephole. There is a boy standing in the rain. He's soaked. He knocks again and glances behind himself, like he's scared hes being followed.[/i]
+[i]He knocks once more.[/i]
+- Open the door. He's drenched.
+- You already let Minerva in, what's one more?
+- Minerva wouldn't be too happy if I denied this guy shelter.
+[i]You open the door. the boy seems delighted.[/i]
+Silas: "Finally! I've been looking for somebody else for weeks! I'm [[Silas]], by the way."
+- It's nice to meet you.
+	Player: "It's nice to meet you."
+	Silas: "Yeah! It's really nice to meet you too! Would I be able to stay here for a little bit? Until the rain passes by, at least."
+	- You can stay as long as you want
+		Player: "You can stay as long as you want. I've already got one other person here for the storm, and the more the merrier."
+		Silas: "Oh! Someone else is already here? That's great! How long would you be comfortable with me staying for?"
+		Player: "I already told you. You can stay as long as you want to."
+		Silas: "Sorry, I was just making sure that I wouldn't be overstaying my welcome or anything."
+	- I don't see why not.
+		Player: "I don't see why not. Someone else is already staying here for the storm, so I guess one more couldn't hurt."
+		Silas: "Really? Thank you so much!"
+	- Just until the rain passes.
+		Player: "You can stay until the rain passes. It's probably not great to be sitting in the rain."
+		Silas: "Thank you so much! I'll try to stay out of the way until then."
+		set {SilasInt1_1Leave} = 1.0
+- He can stay until the rain passes.
+	Player: "Come on in. You can stay here until the rain passes."
+	Silas: "Thank you so much!"
+	set {SilasInt1_1Leave} = 1.0
+[i]Silas comes into the building and marvels at the lobby.[/i]
+Silas: "I haven't been on campus since before everything went down. It's amazing how you've managed to keep this place up and running!"
+- I do my best.
+	Player: "I do my best. It's not too hard with nothing else really to do."
+- Yeah, I'm pretty surprised as well.
+	Player: "Yeah, I'm pretty surprised as well. I'm not sure how I manage to do it."
+Silas: "It's really cool anyway."
+[i]Silas sits down at a table and looks out the front window before looking in his bag. He takes out a book and begins reading.[/i]
+label Silas Convo
+- (Explore) Who are you? | [if {SilasInt1_1Who} == 0.0] [else="hide"]
+	Player: "Who are you?"
+	Silas: "Well, I've already told you my name, but I used to go here back in the day. I was trying to get a [[Math]] major and a [[Biology]] minor. I guess that's becuase I like the logic of it. I also really like being outside so that's why I'm going for that minor."
+	set {SilasInt1_1Who} = 1.0
+	jump SilasFirstMeeting/Silas Convo
+- (Explore) Where are you from? | [if {SilasInt1_1WhereFrom} == 0.0] [else="hide"]
+	Player: "Where are you from?"
+	Silas: "Im from [[rural Wisconsin]], about an hour and a half north of [[Milwaukee]]. It's really pretty out there, especially in the woods during the fall."
+	set {SilasInt1_1WhereFrom} = 1.0
+	jump SilasFirstMeeting/Silas Convo
+- (Explore) What do you like to do for fun? | [if {MinervaInt1_1Hobbies} == 0.0] [else="hide"]
+	Player: "What do you like to do in your free time?"
+	Silas: "I like to [[be outside a lot. Hiking, camping, basically anything active]]. I also like to [[play video games]], but that's not really something that I can do right now, given everything that's happened."
+	set {SilasInt1_1Hobbies} = 1.0
+	jump SilasFirstMeeting/Silas Convo
+- (Explore) How long do you think you're going to stay? | [if {SilasInt1_1Leave} == 0.0 and {SilasInt1_1LeaveAsked} == 0.0] [else="hide"]
+	Player: "How long do you think you're going to end up staying here for?"
+	Silas: "Well, the last permanent-ish place I stayed at got raided by a gang or something like a month and a half ago. So, if you'd be willing, I'd be hoping to stay for quite a while."
+	set {SilasInt1_1LeaveAsked} = 1.0
+	jump SilasFirstMeeting/Silas Convo
+- (Explore) What book are you reading? | [if {SilasInt1_1BookReading} == 0.0] [else="hide"]
+	Player: "What book are you reading?"
+	Silas: "Oh, this? I'm reading Dracula right now. It's very good. Have you read it?"
+	- Yeah, I've read it.
+		Player: "Yeah, I've read it."
+		Silas: "Awesome! I'm liking it a lot."
+	- No, I haven't
+		Player: "No, I haven't read it."
+		Silas: "You really should. Do you want to borrow my copy when I'm done wiht it?"
+		- Sure.
+			Player: "Sure. It'll be something to keep myself occuiped."
+			Silas: "Cool! We can figure out how I'll get it to you later."
+		- No thank you.
+			Player: "No thank you. I'll be good without it."
+			"No worries. I'll just get to keep the book for myself then!"
+	set {SilasInt1_1BookReading} = 1.0
+- You have things to get done. | [if {SilasInt1_1Talked} > 0.0] [else="hide"]
+	Player: "It was nice talking to you, but I have some chores I need to get done."
+	Silas: "Do you need any help?"
+	Player: "No thanks, I can manage."
+- Leave him be. | [if {SilasInt1_1Talked} == 0.0] [else="hide"]
+	[i]You have chores to get done. You'd better get going.[/i]
+[i]You leave to your room. You need to take count of the supplies you still have. You tend to be forgetful as to how much you have, so being consistent in keeping stock is helpful.[/i]

@@ -24,11 +24,16 @@ GameManager="*uid://cosvkj6pnmx3f"
 [dialogic]
 
 directories/dch_directory={
-"Minerva/Minerva": "res://assets/Minerva/Minerva.dch",
-"player": "res://assets/Minerva/player.dch"
+"FoShi": "res://assets/Characters/FoShi/FoShi.dch",
+"Minerva": "res://assets/Characters/Minerva/Minerva.dch",
+"Player": "res://assets/Characters/Player/Player.dch",
+"Silas": "res://assets/Characters/Silas/Silas.dch"
 }
 directories/dtl_directory={
-"minerva_first_interaction": "res://timelines/day_one/minerva_first_interaction.dtl"
+"MinervaFirstMeeting": "res://timelines/day_one/MinervaFirstMeeting.dtl",
+"SilasFirstMeeting": "res://timelines/day_one/SilasFirstMeeting.dtl",
+"big_fight_day_1": "res://timelines/day_one/big_fight_day_1.dtl",
+"silas_talk_end1": "res://timelines/day_one/silas_talk_end1.dtl"
 }
 layout/style_directory={
 "": "res://addons/test_style.tres",

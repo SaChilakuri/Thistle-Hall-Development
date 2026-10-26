@@ -1,0 +1,63 @@
+[i]You can't really sleep after the fight earlier. You toss and turn in bed. You can't help but feel like you made the wrong choice by kicking out Fo'Shi. You look at your bedside clock. its around midnight. Suddenly, there's a knock on the door.[/i]
+[i]You get out of bed and look through the peephole in the door. Silas is on the other side. He looks disheveled, like he had been doing nothing but pulling out his hair since dinner.[/i]
+- Open the door
+	label Door Open
+	[i]You open the door.[/i]
+	Silas: "Hey. I just... wanted to talk about earlier. I'm sorry for making you kick [[Fo'Shi]] out."
+	- "I think I made a mistake with kicking him out."
+		Player: "I believe that I made a mistake in kicking him out."
+		Silas: "I feel the same way too. I really hate myself for doing that to him. I was petty and emotional and irrational. I want to go look for him tomorrow."
+	- "There's nothing to talk about. What's done is done."
+		Player: "There's nothing to talk about here. What's done is done."
+		Silas: "That's not really what I meant. I just wanted to say that I really hate myself for doing that to him. I was petty and emotional and irrational. I want to go look for him tomorrow."
+	- "I think it was the right choice. You said it yourself. He destroyed your home."
+		Player: "I think it was the right choice. You said it yourself. He destroyed your home."
+		"No! I think I'm in the wrong here. He was acting different. I think he did change for the better. I want to go find him tomorrow."
+		# this variable sets which dialogue options are avalable in the next choices. it changes because your response is you think its the right choice
+		set {silas_talk1_2.player_kick_out_opinion1_2} = 1.0
+	<Empty Text Event>
+	- "I think it would be best if he came back." | [if {silas_talk1_2.player_kick_out_opinion1_2} == 0.0] [else="hide"]
+		Player: "I think it would be best if he came back. I'll see what I can do."
+		Silas: "Well [i]I'm[/i] going out to look for him tomorrow."
+	- "Going out to look for him by yourself is dangerous."
+		Player: "Going out to look for him by yourself is dangerous."
+		Silas: "Obviously, but I was the one who put him out there to begin with."
+	- "Why do you want to look for him? He hurt you." | [if {silas_talk1_2.player_kick_out_opinion1_2} == 1.0] [else="hide"]
+		"Why do you want to look for him? He hurt you."
+		Silas: "Because I feel really bad for kicking him out!"
+	- "You can do what you want."
+		Player: "If that's what you want to do, then go ahead. I won't stop you."
+		Silas: "Then I'm going out to look for him tomorrow."
+	[i]Silas sighs and changes the topic.[/i]
+	Silas: "Anyway, I kinda just wanted someone to talk to, and since you don't really seem to hate me like Minerva does, I figured I might as well, right?"
+	- "I'm willing to talk for a bit."
+		Player: "I'm willing to talk for a bit. What did you have in mind?"
+		Silas: "I don't really know. Kinda just about anything."
+		Silas: "Actually I do have a question for you. I was wondering what you want to do now that everything is like this?"
+		- "I'd like to rebuild some sort of society."
+			Player: "I'd like to rebuild some sort of society."
+			Silas: "Wow. That project sure seems like a hail mary, but I can get behind that."
+		- "Hopefully I can meet more people."
+			Player: "Hopefully I can meet more people."
+			Silas: "Just meeting more people? I guess you do have it pretty nice here. I wouldn't mind just living in a place like this."
+		- "I'm fine with living how I am now."
+			Player: "I suppose I'm fine with living how I am now. I don't think I'd change much."
+			Silas: "If you're fine with living alone then that worksI guess."
+		- "I don't really know. I haven't thought about it too much."
+			Player: "I don't really know. I haven't thought about it too much."
+			Silas: "That's fair. If you've been focused on survival then you wouldn't have too much time for much else, right?"
+		Silas: "For me, I'd say that I just want to live a life that I enjoy. I don't really care too much about forming a society. I'd rather just be happy with wher I'm at."
+		[i]The conversation drifts off into discussions of random things, though you can't really say too much about specific things.[/i]
+		[i]Eventually, Silas' exaustion catches up to him. He wishes you a good night and returns to his room.[/i]
+		[i]You fall asleep without much effort.[/i]
+	- "I'm pretty tired. Maybe some other time."
+		Player: "I'm pretty tired. Maybe some other time."
+		Silas: "Yeah. Makes sense. Ill see you tomorrow then."
+		[i]Silas turns and walks through the hallway before disappearing into his room.[/i]
+		[i]You close the door to your room and go back to bed. You're actually able to fall asleep now, and it sleep overtakes you quickly.[/i]
+- Don't open the door
+	[i]You decide to leave the door closed. You don't feel like talking to him right now. You go back to your bed as he knocks again.[/i]
+	- Open the door
+		jump Door Open
+	- Still don't open the door
+		[i]He stops knocking. You eventually fall asleep.[/i]
