@@ -6,17 +6,17 @@ Minerva: "Hey, let me in! I know there's someone here, I can see that lamp in th
 	[i]You open the door.[/i]
 	Minerva: "Oh thank God, somebody else. Do you know how long I've been alone out there? Regardless, thank you for letting me in."
 	Player: "Of course! It's the least I can do, given that it's pouring. Stay as long as you need to. I could use the company."
-	set {Minerva.MinervaInt1_1Leave} = 0.0
+	set {Timeline_Managment.MinervaInt1_1Leave} = 0.0
 - It's pouring. It would be polite to let her stay until it lets up.
 	[i]You open the door.[/i]
 	Minerva: "Oh thank God, somebody else. Do you know how long I've been alone out there? Regardless, thank you for letting me in."
 	Player: "No problem. You can stay here until the rain lets up, whenever that is."
-	set {Minerva.MinervaInt1_1Leave} = 1.0
+	set {Timeline_Managment.MinervaInt1_1Leave} = 1.0
 - She knows you're in here, it would be stupid to pretend otherwise.
 	[i]You open the door.[/i]
 	Minerva: "Oh thank God, somebody else. Do you know how long I've been alone out there? Regardless, thank you for letting me in."
 	Player: "Yeah. Just leave when the rain stops."
-	set {Minerva.MinervaInt1_1Leave} = 2.0
+	set {Timeline_Managment.MinervaInt1_1Leave} = 2.0
 [i]You let the woman enter, and she sits down at one of the tables in the lobby.[/i]
 Minerva: "So, are you here by yourself? Seems a little... large for one person."
 label Minerva Convo
@@ -24,7 +24,7 @@ label Minerva Convo
 	Player: "Who are you?"
 	Minerva: "My name is {Minerva.name}. I probably should have introduced myself earlier. What's your name?"
 	Player: "I'm {player_name}. Nice to meet you."
-	if {Minerva.MinervaInt1_1Leave} > 0.0:
+	if {Timeline_Managment.MinervaInt1_1Leave} > 0.0:
 		"Yeah, it's nice to meet you too."
 	else:
 		Minerva: "It's nice to meet you too! I'm glad that there's someone who is willing to let me stay."
@@ -37,7 +37,7 @@ label Minerva Convo
 	jump MinervaFirstMeeting/Minerva Convo
 - (Explore) What do you like to do for fun?
 	Player: "What do you like to do for fun?"
-	if {Minerva.MinervaInt1_1Leave} > 0.0:
+	if {Timeline_Managment.MinervaInt1_1Leave} > 0.0:
 		Minerva: "Seems a little strange to ask that given you want me out after the rain lets up, but sure. Why not?"
 	Minerva: "I really love {Minerva.hobbies}. I've been out of luck in that department recently, however. Most places have been raided already."
 	[signal arg="1002"]
