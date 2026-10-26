@@ -43,10 +43,12 @@ label Silas Convo
 	Player: "Where are you from?"
 	Silas: "Im from rural Wisconsin, about an hour and a half north of Milwaukee. It's really pretty out there, especially in the woods during the fall."
 	set {SilasInt1_1WhereFrom} = 1.0
+	[signal arg="2001"]
 	jump SilasFirstMeeting/Silas Convo
 - (Explore) What do you like to do for fun? | [if {MinervaInt1_1Hobbies} == 0.0] [else="hide"]
 	Player: "What do you like to do in your free time?"
 	Silas: "I like to [[be outside a lot. Hiking, camping, basically anything active]]. I also like to [[play video games]], but that's not really something that I can do right now, given everything that's happened."
+	[signal arg="2002"]
 	set {SilasInt1_1Hobbies} = 1.0
 	jump SilasFirstMeeting/Silas Convo
 - (Explore) How long do you think you're going to stay? | [if {SilasInt1_1Leave} == 0.0 and {SilasInt1_1LeaveAsked} == 0.0] [else="hide"]
