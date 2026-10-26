@@ -16,28 +16,33 @@ extends Node
 # Index 3 is the name of the Dialogic variable associated with the memory
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # THIS STRUCTURE MUST BE FOLLOWED!!!!!!!!
-var memory_keys_to_learn = []
-
-
-
 var memory_log = {
-	1000 : ["The girl with an afro's name", "Minerva", false, "Minerva.name"]
+	1000 : ["The girl with an afro's name", "Minerva", false, "Minerva.name"],
+	1001 : ["Where the girl is from", "a suburb of Seattle", false, "Minerva.from"],
+	1002 : ["The girl's hobbies", "knitting and crocheting", false, "Minerva.hobbies"]
 }
 
+var memory_keys_to_learn = []
+
 func _ready() -> void:
-	print("ready")
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 
 func _on_dialogic_signal(signal_arg: String):
 	# Purpose:
 	# When dialogic emits a signal, check if the length of the string
-	# is 4, if it is, we know it's a mem code
+	# is 4, if it is, we know it's a mem code so we take it, and cast it to an int
+	# to use with memory_log
 	# Params:
 	# signal arg - The signal from Dialogic (string)
 	# Returns:
 	# idk yet lol
+	# IF the signal is a memory code, return that memory code as an int
+	print("signal_arg: " + signal_arg)
 	if signal_arg.length() == 4:
-		print("memory code")
+		# IF signal_arg is 4, we know it's a mem code
+		var mem_code_int = int(signal_arg)
+		print("memory code: " + signal_arg)
+		return mem_code_int
 	else:
 		print("unrelated to mem codes")
 

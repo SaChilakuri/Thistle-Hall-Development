@@ -41,9 +41,10 @@ layout/style_directory={
 }
 variables={
 "Minerva": {
-"from": "a suburb in Seattle",
+"MinervaInt1_1Leave": 0.0,
+"from": "????",
+"hobbies": "????",
 "minerva_friendship": 0.0,
-"minerva_int_1_1_leave": 0.0,
 "name": "????"
 },
 "learnt_code": 0,
