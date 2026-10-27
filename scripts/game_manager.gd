@@ -25,10 +25,12 @@ var memory_log = {
 	1002 : ["The girl's hobbies", "knitting and crocheting", false, "Minerva.hobbies"],
 	2000 : ["The guy with glasses' name", "Silas", false, "Silas.name"],
 	2001 : ["Where the guy with glasses is from", "Rural Wisconsin", false, "Silas.from"],
-	2002 : ["Glasses guy's hobbies", "Hiking and camping", false, "Silas.hobbies"]
+	2002 : ["Glasses guy's hobbies", "Hiking and camping", false, "Silas.hobbies"],
+	3000 : ["The monk's name", "Fo'Shi", false, "FoShi.name"],
+	3001 : ["Where the monk's from", "China", false, "FoShi.from"]
 }
 
-var memory_keys_to_learn = []
+var learnt_mem_codes_today = []
 
 func _ready() -> void:
 	Dialogic.signal_event.connect(_on_dialogic_signal)
@@ -48,12 +50,13 @@ func _on_dialogic_signal(signal_arg: String):
 		# IF signal_arg is 4, we know it's a mem code
 		var mem_code_int = int(signal_arg)
 		print("memory code: " + signal_arg)
-		return mem_code_int
+		learnt_mem_codes_today.append(mem_code_int)
+		print(learnt_mem_codes_today)
 	else:
 		print("unrelated to mem codes")
 
 func _end_of_day():
-	memory_keys_to_learn.clear()
+	learnt_mem_codes_today.clear()
 
 func _get_memory_learnt(key):
 	# Purpose:

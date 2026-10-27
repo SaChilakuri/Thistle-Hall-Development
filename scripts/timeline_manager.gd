@@ -6,4 +6,9 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Dialogic.timeline_ended.connect(_on_minerva_1_1_timeline_ended)
 	Dialogic.start("MinervaFirstMeeting")
+	Dialogic.start("foshi_meeting")
+
+func _on_minerva_1_1_timeline_ended():
+	Dialogic.start("SilasFirstMeeting")

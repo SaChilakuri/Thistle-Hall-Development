@@ -18,8 +18,8 @@ config/icon="uid://cqwjoxnhy3n2k"
 
 [autoload]
 
-Dialogic="*uid://ds2q0uclmolvu"
 GameManager="*uid://cosvkj6pnmx3f"
+Dialogic="*uid://ds2q0uclmolvu"
 
 [dialogic]
 
@@ -42,8 +42,12 @@ layout/style_directory={
 "test_style": "res://addons/test_style.tres"
 }
 variables={
+"FoShi": {
+"from": "?????",
+"name": "??????"
+},
 "Minerva": {
-"from": "????",
+"from": "???????",
 "hobbies": "????",
 "minerva_friendship": 0.0,
 "name": "????"
@@ -51,7 +55,8 @@ variables={
 "Silas": {
 "from": "????",
 "hobbies": "????",
-"name": "????"
+"name": "?????",
+"silas_friendship": 0.0
 },
 "Timeline_Managment": {
 "MinervaInt1_1Hobbies": 0.0,

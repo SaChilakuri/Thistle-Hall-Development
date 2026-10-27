@@ -27,15 +27,17 @@ label inital_convo
 	FoShi: “A monk is all I am and all I aspire to be, for a monk is he who seeks peace in the turbulence of life, and peace can never be fully attained."
 	FoShi: "Indeed, though I know peace, I also know that I do not know peace; after all, there is an infinite distance between peace and life, one never able to be crossed in a lifetime alone unless one transcends the dimension on which life, death, and the body exists; in other words—enlightenment."
 	Player: "I was kinda just asking for your name."
-	FoShi: "Oh? You just want my name? I am [[Fo’Shi]].”
+	FoShi: "Oh? You just want my name? I am {FoShi.name}.”
 	set {foshi_welcome1_1.foshi_who1_1} = 1.0
+	[signal arg="3000"]
 	jump inital_convo
 - "Where are you from?" | [if {foshi_welcome1_1.foshi_where_from1_1} == 0.0] [else="hide"]
 	Player: "Where are you from?"
-	FoShi: “A difficult question to answer. From a geographical view, I came from the woods to the north, and beyond that, China. Mentally, I come from a state of anguish and reproach; spiritually, I come from the stream of rebirth—old energy in a new body; and biologically, I come from my parents."
+	FoShi: “A difficult question to answer. From a geographical view, I came from the woods to the north, and beyond that, {FoShi.from}. Mentally, I come from a state of anguish and reproach; spiritually, I come from the stream of rebirth—old energy in a new body; and biologically, I come from my parents."
 	FoShi: "However, I see that none of these are the answers that you seek. I understand. You wish to know my home, yes? Well, I have traveled far and wide these lonesome lands, seen all that humanity has become—dictators, cruelty masquerading as kindness, exclusivity of others… In recent times, I have not called a place home; rather, the world has become my home.”
 	Player: "You do talk a lot, don't you?"
 	FoShi: "I simply seek to give you an accurate picture of who I am."
+	[signal arg="3001"]
 	set {foshi_welcome1_1.foshi_where_from1_1} = 1.0
 	jump inital_convo
 - "Is that a bald cap on your head" | [if {foshi_welcome1_1.foshi_bald1_1} == 0.0] [else="hide"]
@@ -62,5 +64,5 @@ label inital_convo
 - "I believe that I know you well enough."
 Player: "I believe that I know you well enough now. You can stay here."
 FoShi: "Thank you, my friend. I will not betray your trust."
-[i][[Fo'Shi]] walks over to another part of the lobby and sits down. He seems to be doing some sort of meditation.[/i]
+[i]{FoShi.name} walks over to another part of the lobby and sits down. He seems to be doing some sort of meditation.[/i]
 [i]You go to your room to start preparing dinner, now cooking for 3 more than usual.[/i]
