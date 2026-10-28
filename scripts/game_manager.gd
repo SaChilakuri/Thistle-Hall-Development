@@ -1,5 +1,5 @@
 extends Node
-	
+const Memory = preload("res://scripts/memory.gd")
 # global_memory.gd Description:
 # Global containing the Memory Dict as well as other things that
 # frequently have to be accessed/updated.
@@ -20,15 +20,15 @@ extends Node
 # 2xxx - Silas
 # 3xxx - Fo'Shi
 # THIS STRUCTURE MUST BE FOLLOWED!!!!!!!!
-var memory_log = {
-	1000 : ["The girl with an afro's name", "Minerva", false, "Minerva.name"],
-	1001 : ["Where the girl is from", "a suburb of Seattle", false, "Minerva.from"],
-	1002 : ["The girl's hobbies", "knitting and crocheting", false, "Minerva.hobbies"],
-	2000 : ["The guy with glasses' name", "Silas", false, "Silas.name"],
-	2001 : ["Where the guy with glasses is from", "Rural Wisconsin", false, "Silas.from"],
-	2002 : ["Glasses guy's hobbies", "Hiking and camping", false, "Silas.hobbies"],
-	3000 : ["The monk's name", "Fo'Shi", false, "FoShi.name"],
-	3001 : ["Where the monk's from", "China", false, "FoShi.from"]
+var memory_log : Dictionary[int, Memory]= {
+	1000 : Memory.new("The girl with an afro's name", "Minerva", "Minerva.name"),
+	1001 : Memory.new("Where the girl is from", "a suburb of Seattle", "Minerva.from"),
+	1002 : Memory.new("The girl's hobbies", "knitting and crocheting", "Minerva.hobbies"),
+	2000 : Memory.new("The guy with glasses' name", "Silas", "Silas.name"),
+	2001 : Memory.new("Where the guy with glasses is from", "Rural Wisconsin", "Silas.from"),
+	2002 : Memory.new("Glasses guy's hobbies", "Hiking and camping", "Silas.hobbies"),
+	3000 : Memory.new("The monk's name", "Fo'Shi", "FoShi.name"),
+	3001 : Memory.new("Where the monk's from", "China", "FoShi.from")
 }
 
 var important_choices = {
@@ -82,7 +82,7 @@ func _get_memory_learnt(key):
 	# key - A valid memory key (int)
 	# Returns:
 	# Wether the player has learnt the memory or not (bool)
-	return memory_log[key][2]
+	return memory_log[key].learnt
 
 func _set_memory_learnt(key, boolean):
 	# Purpose:
@@ -90,20 +90,13 @@ func _set_memory_learnt(key, boolean):
 	# Params:
 	# key - A valid memory key (int)
 	# boolean - What to change memory learnt status to (bool)
-	memory_log[key][2] = boolean
+	memory_log[key].learnt = boolean
 
-func has_learnt_memory(key: int) -> bool:
-	# Purpose:
-	# Check if a memory has been learnt or not
-	# Params:
-	# Key associated with that memory's info (int)
-	# Returns:
-	# Bool of wether the player has learnt that memory or not (bool)
-	return memory_log[key][2]
+
 
 func update_dialogic(key: int) -> void:
 	# Purpose:
 	# Updates dialogic using the memory dictionary
 	# Params:
 	# Key associated with the memory's info
-	Dialogic.VAR.set_variable(memory_log[key][3],memory_log[key][1])
+	memory_log[key].update_dialogic

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cndkumqu0y6mu"]
+
+[ext_resource type="Script" uid="uid://demferac3g8yt" path="res://scripts/journal.gd" id="1_mf1i3"]
+[ext_resource type="Texture2D" uid="uid://cqwjoxnhy3n2k" path="res://assets/Journal/open_journal1.png" id="2_pelrk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lcs2y"]
+size = Vector2(843, 479)
+
+[node name="Journal" type="Node2D" unique_id=1888205587]
+script = ExtResource("1_mf1i3")
+
+[node name="Journal_Area" type="Area2D" parent="." unique_id=1299996634]
+position = Vector2(546, 304)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Journal_Area" unique_id=2021501938]
+z_index = 1
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_lcs2y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=302415423]
+position = Vector2(636, 350)
+scale = Vector2(2, 2)
+texture = ExtResource("2_pelrk")

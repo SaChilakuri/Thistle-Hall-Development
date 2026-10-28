@@ -20,6 +20,7 @@ config/icon="uid://cqwjoxnhy3n2k"
 
 GameManager="*uid://cosvkj6pnmx3f"
 Dialogic="*uid://ds2q0uclmolvu"
+Memory="*uid://c6t63bhvluv75"
 
 [dialogic]
 
