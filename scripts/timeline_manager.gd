@@ -15,14 +15,19 @@ var timeline_chain = [
 
 var timeline_count = 0
 
+var end_of_day = false
+
 func _ready() -> void:
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
 	Dialogic.start(timeline_chain[timeline_count])
 
 func _on_timeline_ended():
-	timeline_count += 1
-	if choices_dict["FoShiKickedOut"] == true:
-		Dialogic.start(timeline_chain[5])
-	elif choices_dict["FoShiKickedOut"] == false:
-		Dialogic.start(timeline_chain[4])
-	Dialogic.start(timeline_chain[timeline_count])
+	if end_of_day == false:
+		timeline_count += 1
+		if choices_dict["FoShiKickedOut"] == true:
+			Dialogic.start(timeline_chain[5])
+			end_of_day = true
+		elif choices_dict["FoShiKickedOut"] == false:
+			Dialogic.start(timeline_chain[4])
+			end_of_day = true
+		Dialogic.start(timeline_chain[timeline_count])

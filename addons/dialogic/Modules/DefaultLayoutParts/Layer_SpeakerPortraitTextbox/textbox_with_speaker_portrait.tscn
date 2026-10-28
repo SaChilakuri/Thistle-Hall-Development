@@ -7,13 +7,7 @@
 [ext_resource type="Script" uid="uid://diexbgvrksk2k" path="res://addons/dialogic/Resources/flex_vector.gd" id="3_hywg0"]
 [ext_resource type="Script" uid="uid://dpv2dfiv5dhmr" path="res://addons/dialogic/Modules/Text/node_type_sound.gd" id="5_sr2qw"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dmg1w"]
-bg_color = Color(0.254902, 0.254902, 0.254902, 1)
-skew = Vector2(0.073, 0)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hywg0"]
 
 [sub_resource type="Resource" id="Resource_liigb"]
 script = ExtResource("3_hywg0")
@@ -54,16 +48,15 @@ mouse_filter = 2
 
 [node name="Panel" type="PanelContainer" parent="Anchor" unique_id=1800887369]
 unique_name_in_owner = true
-self_modulate = Color(0.533333, 0.376471, 0.176471, 1)
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -250.0
+offset_left = -249.0
 offset_top = -200.0
-offset_right = 250.0
+offset_right = 251.0
 offset_bottom = -50.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -73,42 +66,6 @@ mouse_filter = 2
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 15
-
-[node name="PortraitPanel" type="Panel" parent="Anchor/Panel/HBox" unique_id=1942071493]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.3
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_dmg1w")
-
-[node name="PortraitBackgroundColor" type="ColorRect" parent="Anchor/Panel/HBox/PortraitPanel" unique_id=1525845813]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -7.0
-offset_top = -3.0
-offset_right = 7.0
-offset_bottom = 3.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0, 0, 0, 0.231373)
-
-[node name="DialogicNode_PortraitContainer" type="Control" parent="Anchor/Panel/HBox/PortraitPanel/PortraitBackgroundColor" unique_id=26229883]
-anchors_preset = 0
-offset_right = 125.0
-offset_bottom = 156.0
-mouse_filter = 2
-script = ExtResource("1_4jxq7")
-mode = 1
-container_ids = PackedStringArray("1")
-container_size = SubResource("Resource_liigb")
-container_position = SubResource("Resource_5guxu")
-container_origin = SubResource("Resource_nwps4")
-debug_character_portrait = "speaker"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Anchor/Panel/HBox" unique_id=282274382]
 layout_mode = 2
@@ -136,3 +93,45 @@ textbox_root = NodePath("../../..")
 
 [node name="DialogicNode_TypeSounds" type="AudioStreamPlayer" parent="Anchor/Panel/HBox/VBoxContainer/DialogicNode_DialogText" unique_id=1944491081]
 script = ExtResource("5_sr2qw")
+
+[node name="PortraitPanel" type="Panel" parent="." unique_id=1942071493]
+unique_name_in_owner = true
+z_index = -1
+layout_mode = 0
+offset_left = 697.0
+offset_top = 312.0
+offset_right = 808.0
+offset_bottom = 462.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.3
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_hywg0")
+
+[node name="PortraitBackgroundColor" type="ColorRect" parent="PortraitPanel" unique_id=1525845813]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -7.0
+offset_top = -3.0
+offset_right = 7.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.231373)
+
+[node name="DialogicNode_PortraitContainer" type="Control" parent="PortraitPanel/PortraitBackgroundColor" unique_id=26229883]
+anchors_preset = 0
+offset_right = 125.0
+offset_bottom = 156.0
+size = Vector2(125, 156)
+mouse_filter = 2
+script = ExtResource("1_4jxq7")
+mode = 1
+container_ids = PackedStringArray("1")
+container_size = SubResource("Resource_liigb")
+container_position = SubResource("Resource_5guxu")
+container_origin = SubResource("Resource_nwps4")
+debug_character_portrait = "speaker"
