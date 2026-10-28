@@ -22,44 +22,52 @@ Player: "Talk about what?"
 FoShi: "I simply wish for you to know me better. A host should know their guests, don't you agree?"
 [i]You sit down at the table across from him.[/i]
 label inital_convo
-- "Who are you? | [if {foshi_welcome1_1.foshi_who1_1} == 0.0] [else="hide"]
+- "Who are you?" | [if {Timeline_Managment.foshi_who1_1} == 0.0] [else="hide"]
 	Player: "Who are you?"
 	FoShi: “A monk is all I am and all I aspire to be, for a monk is he who seeks peace in the turbulence of life, and peace can never be fully attained."
-	FoShi: "Indeed, though I know peace, I also know that I do not know peace; after all, there is an infinite distance between peace and life, one never able to be crossed in a lifetime alone unless one transcends the dimension on which life, death, and the body exists; in other words—enlightenment."
+	FoShi: "Indeed, though I know peace, I also know that I do not know peace; after all, there is an infinite distance between peace and life."
+	FoShi: This distance is never able to be crossed in a lifetime alone unless one transcends the dimension on which life, death, and the body exists; in other words—enlightenment."
 	Player: "I was kinda just asking for your name."
 	FoShi: "Oh? You just want my name? I am {FoShi.name}.”
-	set {foshi_welcome1_1.foshi_who1_1} = 1.0
+	set {Timeline_Managment.foshi_who1_1} = 1.0
 	[signal arg="3000"]
 	jump inital_convo
-- "Where are you from?" | [if {foshi_welcome1_1.foshi_where_from1_1} == 0.0] [else="hide"]
+- "Where are you from?" | [if {Timeline_Managment.foshi_where_from1_1} == 0.0] [else="hide"]
 	Player: "Where are you from?"
-	FoShi: “A difficult question to answer. From a geographical view, I came from the woods to the north, and beyond that, {FoShi.from}. Mentally, I come from a state of anguish and reproach; spiritually, I come from the stream of rebirth—old energy in a new body; and biologically, I come from my parents."
-	FoShi: "However, I see that none of these are the answers that you seek. I understand. You wish to know my home, yes? Well, I have traveled far and wide these lonesome lands, seen all that humanity has become—dictators, cruelty masquerading as kindness, exclusivity of others… In recent times, I have not called a place home; rather, the world has become my home.”
+	FoShi: “A difficult question to answer. From a geographical view, I came from the woods to the north, and beyond that, {FoShi.from}. Mentally, I come from a state of anguish and reproach."
+	FoShi: "Spiritually, I come from the stream of rebirth—old energy in a new body; and biologically, I come from my parents."
+	FoShi: "However, I see that none of these are the answers that you seek. I understand. You wish to know my home, yes?"
+	FoShi: "Well, I have traveled far and wide these lonesome lands, seen all that humanity has become—dictators, cruelty masquerading as kindness, exclusivity of others…"
+	FoShi: "In recent times, I have not called a place home; rather, the world has become my home.”
 	Player: "You do talk a lot, don't you?"
 	FoShi: "I simply seek to give you an accurate picture of who I am."
 	[signal arg="3001"]
-	set {foshi_welcome1_1.foshi_where_from1_1} = 1.0
+	set {Timeline_Managment.foshi_where_from1_1} = 1.0
 	jump inital_convo
-- "Is that a bald cap on your head" | [if {foshi_welcome1_1.foshi_bald1_1} == 0.0] [else="hide"]
+- "Is that a bald cap on your head?" | [if {Timeline_Managment.foshi_bald1_1} == 0.0] [else="hide"]
 	Player: "Is that a bald cap on your head?"
 	FoShi: “Indeed. Hair is a detriment to the enlightenment of the soul. To wear baldness is to forsake pride, ego, and vanity. If you wish to begin your journey toward nirvana, I will lend you baldness.”
 	Player: “No thanks, but why a bald cap? Why not just go bald?”
 	FoShi: “A barber is hard to find in these apocalyptic times. One must make do with what he can find. Are you sure you don’t want a bald cap? They are quite warm.”
 	Player: “I’m sure. Thanks.”
-	set {foshi_welcome1_1.foshi_bald1_1} = 0
+	set {Timeline_Managment.foshi_bald1_1} = 1.0
 	jump inital_convo
-- "What did you do before everything happened?" | [if {foshi_welcome1_1.foshi_past_doing1_1} == 0.0] [else="hide"]
+- "What did you do before everything happened?" | [if {Timeline_Managment.foshi_past_doing1_1} == 0.0] [else="hide"]
 	Player: "What did you do before everything happened?"
-	FoShi: “I was a student yet to realize the path to peace, favoring pursuit of knowledge over cultivation of the mind. Though I will not say I was foolish, I cannot deny I was ignorant. I believed that academics would propel me through life; I did not understand that life is more than status, wealth, and recognition.”
+	FoShi: “I was a student yet to realize the path to peace, favoring pursuit of knowledge over cultivation of the mind. Though I will not say I was foolish, I cannot deny I was ignorant.”
+	FoShi: "I believed that academics would propel me through life; I did not understand that life is more than status, wealth, and recognition.”
 	Player: "You were a student? What did you study?"
-	FoShi: “I was a practitioner in the art of physics. Those days, the secrets of the universe were all that occupied my mind. Indeed, I had not yet understood the synchronicity of self and world; that is, to cultivate the self is to unravel the world, but to learn oneself requires understanding the world.”
-	set {foshi_welcome1_1.foshi_past_doing1_1} = 1.0
+	FoShi: “I was a practitioner in the art of physics. Those days, the secrets of the universe were all that occupied my mind. Indeed, I had not yet understood the synchronicity of self and world."
+	FoShi: "That is, to cultivate the self is to unravel the world, but to learn oneself requires understanding the world.”
+	set {Timeline_Managment.foshi_past_doing1_1} = 1.0
 	jump inital_convo
-- "What have you been doing recently?" | [if {foshi_welcome1_1.foshi_current_doing1_1} == 0.0] [else="hide"]
-	FoShi: “There was a moment, months ago, when I… became a monster. I tell myself it was not me in control that night, but… ahem! I wish to rid myself of the karma accrued that day. Since then, I’ve been searching for peace in nature and the cold remnants of humanity. Aiding others and understanding the nature of being are my current priorities.”
+- "What have you been doing recently?" | [if {Timeline_Managment.foshi_current_doing1_1} == 0.0] [else="hide"]
+	Player: "What have you been doing recently?"
+	FoShi: “There was a moment, months ago, when I… became a monster. I tell myself it was not me in control that night, but… ahem! I wish to rid myself of the karma accrued that day."
+	FoShi: "Since then, I’ve been searching for peace in nature and the cold remnants of humanity. Aiding others and understanding the nature of being are my current priorities.”
 	Player: “Can you tell me more about the incident?”
 	FoShi: “It was a night of crimson. I will not speak more of it.”
-	set {foshi_welcome1_1.foshi_current_doing1_1} = 1.0
+	set {Timeline_Managment.foshi_current_doing1_1} = 1.0
 	jump inital_convo
 - "I believe that I know you well enough."
 Player: "I believe that I know you well enough now. You can stay here."

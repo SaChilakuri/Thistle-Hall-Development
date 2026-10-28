@@ -73,4 +73,4 @@ Minerva: "Oh. Yeah, I guess it is about that time, isn't it? I'll let you go the
 	set {Minerva.minerva_friendship} += 5.0
 - Leave her be.
 	[i]You silently leave and make yourself breakfast. It's nothing special, just some canned fruit and some cereal.[/i]
-[i]During your meal, Minerva asks about a room she could stay in for the time being. Regardless of the time she would be staying for, you figure it wouldn't be too much of a hassle; after all, you have plenty of empty rooms.[/i]
+[i]During your meal, {Minerva.name} asks about a room she could stay in for the time being. Regardless of the time she would be staying for, you figure it wouldn't be too much of a hassle; after all, you have plenty of empty rooms.[/i]

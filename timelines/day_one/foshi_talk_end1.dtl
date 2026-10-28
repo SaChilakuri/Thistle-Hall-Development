@@ -1,16 +1,16 @@
-[i]You can't really sleep after the fight earlier. You toss and turn in bed, worrying about Silas. You look at your bedside clock. its around midnight. Suddenly, there's a knock on the door.[/i]
-[i]You get out of bed and look through the peephole in the door. [[Fo'Shi]] is on the other side.[/i]
+[i]You can't really sleep after the fight earlier. You toss and turn in bed, worrying about {Silas.name}. You look at your bedside clock. its around midnight. Suddenly, there's a knock on the door.[/i]
+[i]You get out of bed and look through the peephole in the door. {FoShi.name} is on the other side.[/i]
 - Open the door
 	label Door Open
 	[i]You open the door.[/i]
-	FoShi: "[[Player_name]], do you have time? I would like to talk about [[Silas]]."
+	FoShi: "{Player_name}, do you have time? I would like to talk about {Silas.name}."
 	- "Yeah, I can talk."
 		Player: "Yeah, I can talk. I ahven't relaly been able to sleep after he left."
 		FoShi: "That is... unfortunate. I do wish that he had not left so suddenly. Maybe then we would have been able to make up for the past."
 		FoShi: "I came here to tell you that I intend to go look for him tomorrow."
 	- "I'm sorry, but I'm very tired."
 		Player: "I'm sorry, but I'm very tired. I would like to get some sleep."
-		FoShi: "That is understandable. I will let you know that I intend to search for [[Silas]] tomorrow."
+		FoShi: "That is understandable. I will let you know that I intend to search for {Silas.name} tomorrow."
 	<Empty Text Event>
 	- "I hope that you find him."
 		Player: "I hope that you find him. I've been worried about him all night."
@@ -37,12 +37,12 @@
 			Player: "I don't really know. I haven't thought about it too much."
 			FoShi: "I suppose you might not have, but regardless, you don't really need to. Planning for the future is something that isn't nessesary now."
 		FoShi: "Well, I have become quite tired now, so I will leave. Have a good night."
-		[i][[Fo'Shi]] leaves your room, and returns to the room he is staying in. You close the door and go back to bed.[/i]
-		[i]You manage to fall asleep quite soon after Fo'Shi leaves.[/i]
+		[i]{Fo'Shi.name} leaves your room, and returns to the room he is staying in. You close the door and go back to bed.[/i]
+		[i]You manage to fall asleep quite soon after {FoShi.name} leaves.[/i]
 	- "I would like to go to bed now."
 		Player: "I would like to go to bed now. I'm tired."
 		FoShi: "I wish you a good night."
-		[i][[Fo'Shi]] turns and walks away from your room. You close your door and go back to your bed. You fall asleep quite quickly after the conversation.[/i]
+		[i]{FoShi.name} turns and walks away from your room. You close your door and go back to your bed. You fall asleep quite quickly after the conversation.[/i]
 - Don't open the door
 	[i]You decide to leave the door closed. You don't feel like talking to him right now. You go back to your bed as he knocks again.[/i]
 	- Open the door

@@ -1,7 +1,7 @@
 [i]You peek through the peephole. There is a boy standing in the rain. He's soaked. He knocks again and glances behind himself, like he's scared hes being followed.[/i]
 [i]He knocks once more.[/i]
 - Open the door. He's drenched.
-- You already let Minerva in, what's one more?
+- You already let the other girl in, what's one more?
 - Minerva wouldn't be too happy if I denied this guy shelter.
 [i]You open the door. the boy seems delighted.[/i]
 Silas: "Finally! I've been looking for somebody else for weeks! I'm {Silas.name}, by the way."
@@ -25,14 +25,14 @@ Silas: "Finally! I've been looking for somebody else for weeks! I'm {Silas.name}
 	Player: "Come on in. You can stay here until the rain passes."
 	Silas: "Thank you so much!"
 	set {Timeline_Managment.SilasInt1_1Leave} = 1.0
-[i]Silas comes into the building and marvels at the lobby.[/i]
+[i]{Silas.name} comes into the building and marvels at the lobby.[/i]
 Silas: "I haven't been on campus since before everything went down. It's amazing how you've managed to keep this place up and running!"
 - I do my best.
 	Player: "I do my best. It's not too hard with nothing else really to do."
 - Yeah, I'm pretty surprised as well.
 	Player: "Yeah, I'm pretty surprised as well. I'm not sure how I manage to do it."
 Silas: "It's really cool anyway."
-[i]Silas sits down at a table and looks out the front window before looking in his bag. He takes out a book and begins reading.[/i]
+[i]{Silas.name} sits down at a table and looks out the front window before looking in his bag. He takes out a book and begins reading.[/i]
 label Silas Convo
 - (Explore) Who are you? | [if {Timeline_Managment.SilasInt1_1Who} == 0.0] [else="hide"]
 	Player: "Who are you?"

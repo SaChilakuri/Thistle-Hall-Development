@@ -1,51 +1,51 @@
-[i]It's evening now. You, Minvera, and Fo'Shi are sitting at one of the tables in the lobby, eating dininer.[/i]
-[i]Silas comes out from his room and walks into the main lobby. He yawns; Silas probably just woke up from a nap.[/i]
-[i]Silas stops when he sees Fo'Shi. He stays silent for a bit, just observing, though he does seem to be very focused on Fo'Shi in specific. Neither Minvera nor Fo'Shi notice him.[/i]
-- Invite Silas over to eat
-	Player: "Come over and eat with us, Silas!"
+[i]It's evening now. You, {Minvera.name}, and {Foshi.name} are sitting at one of the tables in the lobby, eating dininer.[/i]
+[i]{Silas.name} comes out from his room and walks into the main lobby. He yawns; he probably just woke up from a nap.[/i]
+[i]{Silas.name} stops when he sees the {FoShi.name}. He stays silent for a bit, just observing, though he does seem to be very focused on {FoShi.name} in specific. Neither he nor {Minerva.name} notice {Silas.name}.[/i]
+- Invite him over to eat
+	Player: "Come over and eat with us!"
 	Silas: "Yeah, in a second."
-	[i]He stares at Fo'Shi[/i]
+	[i]He stares at {Fo'Shi.name}[/i]
 	FoShi: "My friend! Come eat with us!"
-- Greet Silas
+- Greet him
 	Player: "Good evening. Did you sleep well?"
 	Silas: "Yeah, I slept fine."
 	FoShi: "My friend! Come eat with us!"
 - Stay quiet
 	[i]You see him but don't say anything and continue to eat your dinner.[/i]
-	[i]Fo'Shi eventually speaks in the conversation between him, you, and Minerva.[/i]
-[i]Silas stiffens in response to Fo'Shi. His voice seems to have made him mad for some reason.[/i]
+	[i]{FoShi.name} eventually speaks in the conversation between him, you, and {Minerva.name}.[/i]
+[i]{Silas.name} stiffens in response to {FoShi.name}. His voice seems to have made him mad for some reason.[/i]
 Silas: “Who let him in here? He needs to leave.”
 Minerva: “What? Why does he need to leave? He hasn’t done anything wrong.”
 Silas: “His gang raided my previous home. Because of him, I lost everything that I had built.”
-Minerva: “Fo’Shi, is that true?”
-[i]He nods slowly. Silas moves his gaze to Fo’Shi while he meets Silas’ gaze calmly. There is a hint of guilt in Fo’Shi’s eyes. He opens his mouth, but not a sound comes out. Silas scoffs and turns his attention to you.[/i]
+Minerva: “Fo'Shi, is that true?”
+[i]He nods slowly. {Silas.name} moves his gaze to {FoShi.name} while he meets {Silas.name}’s gaze calmly. There is a hint of guilt in {FoShi.name}’s eyes. He opens his mouth, but not a sound comes out. {Silas.name} scoffs and turns his attention to you.[/i]
 Silas: “I want him gone.”
 Minerva: “You can’t just make him leave because of what he was a part of in the past, he clearly cha—”
-[i]Silas is mad. At Minerva's defense of Fo'Shi, he snaps back, not holding his anger back anymore.[/i]
+[i]{Silas.name} is mad. At {Minerva.name}'s defense of {FoShi.name}, he snaps back, not holding his anger back anymore.[/i]
 Silas: “Do you know what it’s like to have everything you’ve made for yourself stripped away in a single night?! I had community, shelter, safety, and he and his gang destroyed it all without a second thought!”
 Minerva: “He’s not part of the gang anymore! He’s trying to do better! Can’t you see that?”
 Silas: “I don’t care! What he did to me can’t be made up for!”
-[i]Fo'Shi cuts in, trying to diffuse the tension in the room.
+[i]{FoShi.name} cuts in, trying to diffuse the tension in the room.
 FoShi: “My friend—”
 Silas: “[b]Don’t[/b] call me that. I am not your friend.”
-FoShi: “Mr. Silas. I apologize for the past, but no matter how much it haunts my sleep, I am powerless in changing it. However, I wish to remedy it with the future. Will you join me? We can find peace as brothers.”
+FoShi: “Mr. {Silas.name}. I apologize for the past, but no matter how much it haunts my sleep, I am powerless in changing it. However, I wish to remedy it with the future. Will you join me? We can find peace as brothers.”
 Silas: “Fuck you. Either you leave, or I’m leaving. I’d rather take my chances in the mist than have to live here with you.”
-FoShi: “I understand. Then, I shall take my leave. But Mr. Silas, I must warn you. The anger in your heart will grow into a demon that drains you of your best years. Find peace before it blossoms.”
+FoShi: “I understand. Then, I shall take my leave. But Mr. {Silas.name}, I must warn you. The anger in your heart will grow into a demon that drains you of your best years. Find peace before it blossoms.”
 Minerva: "Wait! You can't just leave like this! {Player_Name}, tell him! Can't you do something?"
-[i]Silas scoffs and looks away from everyone. Fo'Shi stops walking away and turns to face Minerva and you.[/i]
+[i]{Silas.name} scoffs and looks away from everyone. {FoShi.name} stops walking away and turns to face {Minerva.name} and you.[/i]
 - Fo'Shi stays.
 	Player: "He stays. You can't just kick him out because of his past mistakes."
 	Silas: “Oh fuck you! You don’t even know this guy and you’re siding with him?!”
 	Minerva: “They don’t know you either.”
 	FoShi: “My friends, let us not allow our emotions to deprive us of our judgement. Why don’t we—”
 	Silas: “Stop talking! God!”
-	[i]Silas storms off to his room before coming back out with his backpack. He leaves the building without saying anything more.[/i]
-	[i]Nobody talks for a while. Minerva slumps down in her chair. After a little bit, Fo’Shi rises.[/i]
+	[i]{Silas.name} storms off to his room before coming back out with his backpack. He leaves the building without saying anything more.[/i]
+	[i]Nobody talks for a while. {Minerva.name} slumps down in her chair. After a little bit, {FoShi.name} rises.[/i]
 	FoShi: “I will go search for him. I believe I can convince him to return.”
-	Minerva: “Not tonight. You of all people should know that nights aren’t safe. But I’ll help. Silas is a good person from what little I saw of him, he just got angry and made a stupid decision.”
+	Minerva: “Not tonight. You of all people should know that nights aren’t safe. But I’ll help. {Silas.name} is a good person from what little I saw of him, he just got angry and made a stupid decision.”
 	[i]The table falls silent for a little bit.[/i]
 	Minerva: “Ugh! Why did this have to happen?! Everything was fine!”
-	[i]Minerva stands up and goes to her room, slamming the door. Fo'Shi sighs.[/i]
+	[i]{Minerva.name} stands up and goes to her room, slamming the door. {Fo'Shi.name} sighs.[/i]
 	FoShi: “This is my fault. I apologize.”
 	- "You have nothing to apologize for. We know you’re trying to change."
 		Player: “You have nothing to apologize for. We know you’re trying to change.”
@@ -55,11 +55,11 @@ Minerva: "Wait! You can't just leave like this! {Player_Name}, tell him! Can't y
 		Player: “He was being stupid. It’s not your fault.”
 	- [i]Stay silent.[/i
 	FoShi: “Thank you. Then, I will head to my room. Good night.”
-	[i]Fo'Shi departs, leaving you alone in the silent lobby. You decide that you should probably go to bed too. You're tired.[/i]
-- Silas is right. Fo'Shi can't stay here.
+	[i]{FoShi.name} departs, leaving you alone in the silent lobby. You decide that you should probably go to bed too. You're tired.[/i]
+- He is right. He can't stay here.
 	Player: "I can't let someone who has destroyed the home of others stay here. You need to leave."
 	FoShi: “Very well. The myriad roads of life converge more than once. I believe we will meet again, friends.”
-	[i]Fo’Shi meets everyone’s eyes once more then departs. A frozen silence settles over the dining room for a brief moment. Minerva turns to you.[/i]
+	[i]{FoShi.name} meets everyone’s eyes once more then departs. A frozen silence settles over the dining room for a brief moment. Minerva turns to you.[/i]
 	Minerva: “Did you have to do that? He said he regrets his past and is trying to make up for his mistake!”
 	Silas: “You believe that? I know what people like him are like. They can never change, no matter how hard they try. He was probably here as a spy for his gang or something.”
 	Minerva: “Yes, I believe him! He was telling us about this group up north who he taught how to forage for food to eat before you came in. He also taught them how to identify poisonous plants and mushrooms. Is that really what someone who’s not trying to change would do?”
@@ -67,7 +67,7 @@ Minerva: "Wait! You can't just leave like this! {Player_Name}, tell him! Can't y
 	Silas: "He was clearly lying! People like him lie to gain your trust before they stab you in the back!"
 	Minerva: "You have no proof of anything! You don't even know him! All you know is that he used to be part of the gang that destroyed your home! And he wanted to make up for that!"
 	Silas: "Whatever! Fuck!"
-	[i]Silas storms out of the lobby and slams the door to his room. You're alone with Minvera now.[/i]
-	[i]Minerva deflates, sliding down her chair slightly. She sighs. All of sudden, she jerks up and slams the table.[/i]
-	Minerva: “And you! Why did you make Fo’Shi leave? We could’ve figured something out!”
-	[i]Minerva goes into her room and shuts the door, leaving you alone. You decide to turn in for the night.,[/i]
+	[i]{Silas.name} storms out of the lobby and slams the door to his room. You're alone with {Minvera.name} now.[/i]
+	[i]{Minerva.name} deflates, sliding down her chair slightly. She sighs. All of sudden, she jerks up and slams the table.[/i]
+	Minerva: “And you! Why did you make {FoShi.name} leave? We could’ve figured something out!”
+	[i]{Minerva.name} goes into her room and shuts the door, leaving you alone. You decide to turn in for the night.,[/i]
