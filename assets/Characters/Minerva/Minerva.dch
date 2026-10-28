@@ -10,16 +10,16 @@
 "style": "test_style",
 "suffix": ""
 },
-&"default_portrait": "Minvera",
+&"default_portrait": "Default",
 &"description": "",
 &"display_name": "{Minerva.name}",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
-"Minvera": {
+"Default": {
 "export_overrides": {
-"image": "\"res://assets/Characters/Minerva/Portraits/Minerva_Initial.png\""
+"image": "\"res://assets/Characters/Minerva/minerva_portraits/minerva_normal.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

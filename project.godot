@@ -53,7 +53,6 @@ variables={
 "name": "????"
 },
 "Silas": {
-"NewVar": "",
 "from": "????",
 "hobbies": "????",
 "name": "?????",
@@ -81,7 +80,7 @@ variables={
 },
 "learnt_code": 0,
 "mems_learnt_today": 0,
-"player_name": "Player",
+"player_name": "Nathan",
 "temp_bool": false
 }
 layout/style_list=["res://addons/test_style.tres"]
@@ -158,4 +157,5 @@ r={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"

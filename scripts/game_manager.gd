@@ -18,6 +18,7 @@ extends Node
 # Currently:
 # 1xxx - Minerva
 # 2xxx - Silas
+# 3xxx - Fo'Shi
 # THIS STRUCTURE MUST BE FOLLOWED!!!!!!!!
 var memory_log = {
 	1000 : ["The girl with an afro's name", "Minerva", false, "Minerva.name"],
@@ -30,6 +31,16 @@ var memory_log = {
 	3001 : ["Where the monk's from", "China", false, "FoShi.from"]
 }
 
+var important_choices = {
+	"FoShiKickedOut" = null,
+}
+
+# LEARNT_MEM_CODES_TODAY GUIDE:
+# A list of all memory codes obtained from dialogic's signal outputs
+# (check _on_dialogic_signal for purpose and params of that)
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# All memory codes learnt through one day will be stored here, and will be used to determine
+# What shows up in the journal as an option to remember
 var learnt_mem_codes_today = []
 
 func _ready() -> void:
@@ -53,7 +64,13 @@ func _on_dialogic_signal(signal_arg: String):
 		learnt_mem_codes_today.append(mem_code_int)
 		print(learnt_mem_codes_today)
 	else:
-		print("unrelated to mem codes")
+		if "FoShi" in signal_arg:
+			print("FoShi thing")
+			if signal_arg == "KickFoShiOut":
+				important_choices["FoShiKickedOut"] = true
+			else:
+				important_choices["FoShiKickedOut"] = false
+			print(important_choices["FoShiKickedOut"])
 
 func _end_of_day():
 	learnt_mem_codes_today.clear()
