@@ -100,7 +100,7 @@ func update_dialogic(key: int) -> void:
 	# Updates dialogic using the memory dictionary
 	# Params:
 	# Key associated with the memory's info
-	memory_log[key].update_dialogic
+	memory_log[key].update_dialogic()
 
 func test_journal():
 	learn_memory(1000)

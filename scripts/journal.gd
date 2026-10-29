@@ -27,20 +27,21 @@ func create_journal_button(memory_code: int):
 	print("I am a gamer")
 
 func on_journal_button_pressed(memory_code: int):
-	var learnt_memory = GameManager.memory_log[memory_code]
+	var _learnt_memory = GameManager.memory_log[memory_code]
 	if num_learnable != 0:
+		print("GameManager.memory_log[memory_code].get_value()")
 		print(GameManager.memory_log[memory_code].get_value())
 		num_learnable -= 1
 		_update_memories_to_learn_label()
 		display_learnt_info(memory_code)
 		GameManager.update_dialogic(memory_code)
 		GameManager._set_memory_learnt(memory_code, true)
-		print(Dialogic.VAR.Minerva.name)
 	else:
 		print("no more learning for u pal")
 
 func display_learnt_info(memory_code: int):
 	var learnt_mem_instance = GameManager.memory_log[memory_code]
+	GameManager.update_dialogic(memory_code)
 	learnt_label.visible = true
 	learnt_label.text = "You have learnt " + learnt_mem_instance.get_description().to_lower() + ": " + learnt_mem_instance.get_value()
 	learnt_label_timer.start()
