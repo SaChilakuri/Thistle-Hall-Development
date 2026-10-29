@@ -26,6 +26,7 @@ Silas: "Finally! I've been looking for somebody else for weeks! I'm {Silas.name}
 	Silas: "Thank you so much!"
 	set {Timeline_Managment.SilasInt1_1Leave} = 1.0
 [i]{Silas.name} comes into the building and marvels at the lobby.[/i]
+[i]You seem to be unable to keep his name in your head as well...
 Silas: "I haven't been on campus since before everything went down. It's amazing how you've managed to keep this place up and running!"
 - I do my best.
 	Player: "I do my best. It's not too hard with nothing else really to do."
@@ -36,18 +37,18 @@ Silas: "It's really cool anyway."
 label Silas Convo
 - (Explore) Who are you? | [if {Timeline_Managment.SilasInt1_1Who} == 0.0] [else="hide"]
 	Player: "Who are you?"
-	Silas: "Well, I've already told you my name, but I used to go here back in the day. I was trying to get a [[Math]] major and a [[Biology]] minor. I guess that's becuase I like the logic of it. I also really like being outside so that's why I'm going for that minor."
+	Silas: "Well, I've already told you my name, but I used to go here back in the day. I was trying to get a ???????????????????. I guess that's becuase I like the logic of it. I also really like being outside so that's why I'm going for that minor."
 	set {Timeline_Managment.SilasInt1_1Who} = 1.0
 	jump SilasFirstMeeting/Silas Convo
 - (Explore) Where are you from? | [if {Timeline_Managment.SilasInt1_1WhereFrom} == 0.0] [else="hide"]
 	Player: "Where are you from?"
-	Silas: "Im from rural Wisconsin, about an hour and a half north of Milwaukee. It's really pretty out there, especially in the woods during the fall."
+	Silas: "Im from ?????????????, about an hour and a half north of Milwaukee. It's really pretty out there, especially in the woods during the fall."
 	set {Timeline_Managment.SilasInt1_1WhereFrom} = 1.0
 	[signal arg="2001"]
 	jump SilasFirstMeeting/Silas Convo
 - (Explore) What do you like to do for fun? | [if {Timeline_Managment.SilasInt1_1Hobbies} == 0.0] [else="hide"]
 	Player: "What do you like to do in your free time?"
-	Silas: "I like to [[be outside a lot. Hiking, camping, basically anything active]]. I also like to [[play video games]], but that's not really something that I can do right now, given everything that's happened."
+	Silas: "I like to ???????????????, but that's not really something that I can do right now, given everything that's happened."
 	[signal arg="2002"]
 	set {Timeline_Managment.SilasInt1_1Hobbies} = 1.0
 	jump SilasFirstMeeting/Silas Convo

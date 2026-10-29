@@ -11,13 +11,13 @@
 
 [sub_resource type="Resource" id="Resource_liigb"]
 script = ExtResource("3_hywg0")
-x_value = 1.0
-y_value = 1.0
+x_value = 1.1261263
+y_value = 1.04
 
 [sub_resource type="Resource" id="Resource_5guxu"]
 script = ExtResource("3_hywg0")
-x_value = 0.5
-y_value = 1.0
+x_value = 0.4909911
+y_value = 1.0933334
 
 [sub_resource type="Resource" id="Resource_nwps4"]
 script = ExtResource("3_hywg0")
@@ -109,6 +109,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_hywg0")
 
 [node name="PortraitBackgroundColor" type="ColorRect" parent="PortraitPanel" unique_id=1525845813]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -122,11 +123,14 @@ grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 0.231373)
 
-[node name="DialogicNode_PortraitContainer" type="Control" parent="PortraitPanel/PortraitBackgroundColor" unique_id=26229883]
+[node name="DialogicNode_PortraitContainer" type="Control" parent="PortraitPanel" unique_id=26229883]
 anchors_preset = 0
-offset_right = 125.0
-offset_bottom = 156.0
-size = Vector2(125, 156)
+offset_left = -7.999996
+offset_top = 8.0
+offset_right = 117.000015
+offset_bottom = 164.0
+size = Vector2(125.000015, 156)
+position = Vector2(-7.999996, 8)
 mouse_filter = 2
 script = ExtResource("1_4jxq7")
 mode = 1

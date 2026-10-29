@@ -17,6 +17,7 @@ var timeline_chain = [
 var timeline_count = 0
 
 var end_of_day = false
+var minerva_journal = false
 
 func _ready() -> void:
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
@@ -25,7 +26,7 @@ func _ready() -> void:
 func _on_timeline_ended():
 	if end_of_day == false:
 		timeline_count += 1
-		if timeline_count == 1:
+		if timeline_count == 1 and minerva_journal == false:
 			_journal_time()
 			return
 		if choices_dict["FoShiKickedOut"] == true:
@@ -43,8 +44,16 @@ func _journal_time():
 	print('works')
 	var journal = JOURNAL.instantiate()
 	add_child(journal)
-	journal.connect("all_memories_learnt", _on_journal_finished)
+	journal.connect("all_memories_learnt", _on_journal_finished.bind(journal))
 	journal.global_position = Vector2(-550, -300)
 
-func _on_journal_finished():
-	print("journal's finished")
+func _on_journal_finished(journal):
+	GameManager.learnt_mem_codes_today = []
+	print(GameManager.learnt_mem_codes_today)
+	journal.queue_free()
+	print("TIMELINE COUNT AFTER JOURNAL:")
+	print(timeline_count)
+	if timeline_count == 1:
+		timeline_count = 0
+		minerva_journal = true
+		_on_timeline_ended()

@@ -27,6 +27,9 @@ scene = ExtResource("4_8clu0")
 script = ExtResource("2_623v0")
 scene = ExtResource("5_8xu7y")
 overrides = {
+"box_modulate_custom_color": "Color(0, 0, 0, 1)",
+"box_modulate_global_color": "false",
+"box_panel": "\"res://scenes/dialouge_box.tres\"",
 "portrait_position": "1"
 }
 
@@ -38,8 +41,7 @@ scene = ExtResource("6_8a11x")
 script = ExtResource("2_623v0")
 scene = ExtResource("7_5n806")
 overrides = {
-"boxes_min_size": "Vector2(50, 0)",
-"boxes_offset": "Vector2(-250, 0)"
+"boxes_min_size": "Vector2(50, 0)"
 }
 
 [sub_resource type="Resource" id="Resource_vv4jl"]
@@ -64,4 +66,4 @@ layer_info = {
 "15": SubResource("Resource_vv4jl"),
 "16": SubResource("Resource_w2xxu")
 }
-metadata/_latest_layer = "14"
+metadata/_latest_layer = "12"

@@ -17,9 +17,45 @@
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
+"Angry": {
+"export_overrides": {
+"image": "\"res://assets/Characters/Minerva/minerva_portraits/minerva_angry.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "Default": {
 "export_overrides": {
 "image": "\"res://assets/Characters/Minerva/minerva_portraits/minerva_normal.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Happy": {
+"export_overrides": {
+"image": "\"res://assets/Characters/Minerva/minerva_portraits/minerva_happy.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Sad": {
+"export_overrides": {
+"image": "\"res://assets/Characters/Minerva/minerva_portraits/minerva_sad.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Shock": {
+"export_overrides": {
+"image": "\"res://assets/Characters/Minerva/minerva_portraits/minerva_shock.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

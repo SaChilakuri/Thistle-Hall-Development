@@ -17,9 +17,45 @@
 &"nicknames": [""],
 &"offset": Vector2(0, 0),
 &"portraits": {
+"Angry": {
+"export_overrides": {
+"image": "\"res://assets/Characters/Silas/silas_portraits/silas_angry.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
 "Default": {
 "export_overrides": {
 "image": "\"res://assets/Characters/Silas/silas_portraits/silas_normal.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Happy": {
+"export_overrides": {
+"image": "\"res://assets/Characters/Silas/silas_portraits/silas_happy.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Sad": {
+"export_overrides": {
+"image": "\"res://assets/Characters/Silas/silas_portraits/silas_sad.png\""
+},
+"mirror": false,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+},
+"Shock": {
+"export_overrides": {
+"image": "\"res://assets/Characters/Silas/silas_portraits/silas_shock.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),

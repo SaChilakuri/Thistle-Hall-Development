@@ -4,7 +4,7 @@
 - Invite him over to eat
 	Player: "Come over and eat with us!"
 	Silas: "Yeah, in a second."
-	[i]He stares at {Fo'Shi.name}[/i]
+	Silas: [i]He stares at {Fo'Shi.name}[/i]
 	FoShi: "My friend! Come eat with us!"
 - Greet him
 	Player: "Good evening. Did you sleep well?"

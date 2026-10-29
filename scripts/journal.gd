@@ -11,7 +11,7 @@ var num_learnable = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	GameManager.test_journal()
+	#GameManager.test_journal()
 	for key in GameManager.learnt_mem_codes_today:
 		create_journal_button(key)
 	num_learnable = int(GameManager.learnt_mem_codes_today.size() / 2 + 1)

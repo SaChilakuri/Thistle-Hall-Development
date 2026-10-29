@@ -120,7 +120,9 @@ audio/channel_defaults={
 "volume": 0.0
 }
 }
-animations/join_default="Fade In Up"
+animations/join_default="Instant In"
+animations/leave_default="Instant Out"
+animations/cross_fade_default="Fade Cross"
 
 [display]
 
