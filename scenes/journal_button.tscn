@@ -1,12 +1,15 @@
 [gd_scene format=3 uid="uid://be3gi0vgs81x1"]
 
 [ext_resource type="Theme" uid="uid://dogrw0aqja42d" path="res://Journal.tres" id="1_3j770"]
-[ext_resource type="Script" uid="uid://d2dixutvet0mm" path="res://scenes/journal_button.gd" id="1_mbmp7"]
+[ext_resource type="Script" uid="uid://d2dixutvet0mm" path="res://scripts/journal_button.gd" id="1_mbmp7"]
 
-[node name="JournalButton" type="Node2D" unique_id=429580163]
+[node name="JournalButton" type="Control" unique_id=2126876549]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_mbmp7")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=612970737]
+layout_mode = 0
 offset_right = 214.0
 offset_bottom = 40.0
 
@@ -14,3 +17,5 @@ offset_bottom = 40.0
 layout_mode = 2
 theme = ExtResource("1_3j770")
 text = "Default"
+
+[connection signal="pressed" from="PanelContainer/button" to="." method="_on_button_pressed"]

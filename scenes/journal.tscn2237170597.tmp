@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cndkumqu0y6mu"]
+
+[ext_resource type="Script" uid="uid://demferac3g8yt" path="res://scripts/journal.gd" id="1_mf1i3"]
+[ext_resource type="Texture2D" uid="uid://cqwjoxnhy3n2k" path="res://assets/Journal/open_journal1.png" id="2_pelrk"]
+
+[node name="Journal" type="Node2D" unique_id=1888205587]
+script = ExtResource("1_mf1i3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=302415423]
+position = Vector2(636, 350)
+scale = Vector2(2, 2)
+texture = ExtResource("2_pelrk")
