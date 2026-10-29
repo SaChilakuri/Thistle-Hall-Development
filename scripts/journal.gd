@@ -9,12 +9,12 @@ func _ready() -> void:
 	var journal_button:Control = journal_button_path.instantiate()
 	journal_button.memory_code = 1000
 	
-	LeftPage.add_child(journal_button)
+	RightPage.add_child(journal_button)
 	
 	journal_button = journal_button_path.instantiate()
 	journal_button.memory_code = 1001
 	
-	LeftPage.add_child(journal_button)
+	RightPage.add_child(journal_button)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

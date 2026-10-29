@@ -8,7 +8,6 @@ func _ready() -> void:
 	if memory_code != -1:
 		var memory = GameManager.memory_log[memory_code]
 		button_ref.text = memory.description
-		custom_minimum_size = button_ref.get_combined_maximum_size()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
