@@ -31,7 +31,7 @@ Silas (Angry): “[b]Don’t[/b] call me that. I am not your friend.”
 FoShi (Sad): “Mr. {Silas.name}. I apologize for the past, but no matter how much it haunts my sleep, I am powerless in changing it. However, I wish to remedy it with the future. Will you join me? We can find peace as brothers.”
 Silas (Angry): “Fuck you. Either you leave, or I’m leaving. I’d rather take my chances in the mist than have to live here with you.”
 FoShi (Sad): “I understand. Then, I shall take my leave. But Mr. {Silas.name}, I must warn you. The anger in your heart will grow into a demon that drains you of your best years. Find peace before it blossoms.”
-Minerva (Angry): "Wait! You can't just leave like this! {Player_Name}, tell him! Can't you do something?"
+Minerva (Angry): "Wait! You can't just leave like this! {player_name}, tell him! Can't you do something?"
 [i]{Silas.name} scoffs and looks away from everyone. {FoShi.name} stops walking away and turns to face {Minerva.name} and you.[/i]
 - Fo'Shi stays.
 	[signal arg="LetFoShiStay"]
@@ -69,7 +69,7 @@ Minerva (Angry): "Wait! You can't just leave like this! {Player_Name}, tell him!
 	Silas (Angry): "He was clearly lying! People like him lie to gain your trust before they stab you in the back!"
 	Minerva (Angry): "You have no proof of anything! You don't even know him! All you know is that he used to be part of the gang that destroyed your home! And he wanted to make up for that!"
 	Silas (Angry): "Whatever! Fuck!"
-	[i]{Silas.name} storms out of the lobby and slams the door to his room. You're alone with {Minvera.name} now.[/i]
+	[i]{Silas.name} storms out of the lobby and slams the door to his room. You're alone with {Minerva.name} now.[/i]
 	[i]{Minerva.name} deflates, sliding down her chair slightly. She sighs. All of sudden, she jerks up and slams the table.[/i]
 	Minerva (Angry): “And you! Why did you make {FoShi.name} leave? We could’ve figured something out!”
 	[i]{Minerva.name} goes into her room and shuts the door, leaving you alone. You decide to turn in for the night.,[/i]

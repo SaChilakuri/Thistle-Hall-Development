@@ -4,9 +4,6 @@ extends Node
 ## Replaces the arrays in memory log, way easier to use the memory log
 ## outside of the game_manager.gd
 
-
-
-
 ## Description of the memory
 var description: String = "";
 

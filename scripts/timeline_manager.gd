@@ -2,6 +2,7 @@ extends Node2D
 
 var choices_dict = GameManager.important_choices
 const JOURNAL = preload("uid://cndkumqu0y6mu")
+@onready var tyforplaying: Label = $tyforplaying
 
 # timeline_manager.gd Descrption:
 # This script will run the Dialogic.start methods for the game
@@ -26,7 +27,7 @@ func _ready() -> void:
 func _on_timeline_ended():
 	if end_of_day == false:
 		timeline_count += 1
-		if timeline_count == 1 and minerva_journal == false:
+		if timeline_count == 1 and minerva_journal == false and GameManager.learnt_mem_codes_today != []:
 			_journal_time()
 			return
 		if choices_dict["FoShiKickedOut"] == true:
@@ -41,7 +42,7 @@ func _on_timeline_ended():
 
 func _journal_time():
 	#Starts up the journal
-	print('works')
+	print('journal start works')
 	var journal = JOURNAL.instantiate()
 	add_child(journal)
 	journal.connect("all_memories_learnt", _on_journal_finished.bind(journal))
@@ -57,3 +58,5 @@ func _on_journal_finished(journal):
 		timeline_count = 0
 		minerva_journal = true
 		_on_timeline_ended()
+	if timeline_count == 4:
+		tyforplaying.visible = true

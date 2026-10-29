@@ -15,6 +15,8 @@ func _ready() -> void:
 	for key in GameManager.learnt_mem_codes_today:
 		create_journal_button(key)
 	num_learnable = int(GameManager.learnt_mem_codes_today.size() / 2 + 1)
+	if GameManager.learnt_mem_codes_today == []:
+		num_learnable = 0
 	_update_memories_to_learn_label()
 	print(num_learnable)
 
