@@ -32,6 +32,7 @@ offset_transform_enabled = true
 theme_override_constants/v_separation = 50
 
 [node name="LearntLabel" type="Label" parent="." unique_id=28038332]
+visible = false
 offset_left = 6.0
 offset_right = 749.0
 offset_bottom = 88.0
@@ -43,9 +44,9 @@ wait_time = 3.0
 
 [node name="NumLearnableLabel" type="Label" parent="." unique_id=1923096092]
 offset_left = 6.0
-offset_top = 600.0
+offset_top = 555.0
 offset_right = 237.0
-offset_bottom = 645.0
+offset_bottom = 600.0
 theme_override_font_sizes/font_size = 32
 text = "num_learnable"
 

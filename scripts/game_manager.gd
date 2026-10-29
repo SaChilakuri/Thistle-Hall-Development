@@ -95,7 +95,6 @@ func _set_memory_learnt(key, boolean):
 func learn_memory(key):
 	learnt_mem_codes_today.append(key)
 
-
 func update_dialogic(key: int) -> void:
 	# Purpose:
 	# Updates dialogic using the memory dictionary

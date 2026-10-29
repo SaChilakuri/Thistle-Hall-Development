@@ -43,4 +43,8 @@ func _journal_time():
 	print('works')
 	var journal = JOURNAL.instantiate()
 	add_child(journal)
+	journal.connect("all_memories_learnt", _on_journal_finished)
 	journal.global_position = Vector2(-550, -300)
+
+func _on_journal_finished():
+	print("journal's finished")
