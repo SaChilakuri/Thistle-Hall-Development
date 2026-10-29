@@ -10,10 +10,5 @@ func _ready() -> void:
 		button_ref.text = memory.description
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-
-
 func _on_button_pressed():
 	pressed.emit(memory_code)

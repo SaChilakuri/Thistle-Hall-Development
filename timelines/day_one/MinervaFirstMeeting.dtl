@@ -20,7 +20,14 @@ Minerva: "Hey, let me in! I know there's someone here, I can see that lamp in th
 [i]You let the woman enter, and she sits down at one of the tables in the lobby.[/i]
 Minerva: "So, are you here by yourself? Seems a little... large for one person."
 label Minerva Convo
+if {Timeline_Managment.MinervaInt1_1_MemCodesLearnt} == 1.0:
+	[i]For some reason, it feels like this information is difficult to hold onto, like your brain loses its grasp...
+elif {Timeline_Managment.MinervaInt1_1_MemCodesLearnt} == 2.0:
+	[i]Your head can't hold onto this information either... what's going on?
+elif {Timeline_Managment.MinervaInt1_1_MemCodesLearnt} == 3.0:
+	[i]This is driving you mad. You can't make out anything she's saying. You have a sudden urge to journal.
 - (Explore) Who are you? | [if {Timeline_Managment.MinervaInt1_1Who} == 0.0] [else="hide"]
+	set {Timeline_Managment.MinervaInt1_1_MemCodesLearnt} += 1.0
 	Player: "Who are you?"
 	Minerva: "My name is {Minerva.name}. I probably should have introduced myself earlier. What's your name?"
 	Player: "I'm {player_name}. Nice to meet you."
@@ -32,12 +39,14 @@ label Minerva Convo
 	set {Timeline_Managment.MinervaInt1_1Who} = 1.0
 	jump MinervaFirstMeeting/Minerva Convo
 - (Explore) Where are you from? | [if {Timeline_Managment.MinervaInt1_1WhereFrom} == 0.0] [else="hide"]
+	set {Timeline_Managment.MinervaInt1_1_MemCodesLearnt} += 1.0
 	Player: "Where are you from?"
 	Minerva: "Not really sure it matters anymore, but I'm from {Minerva.from}. You'd think I'd be used to this weather because of that, but it actually doesn't really get this bad there."
 	[signal arg="1001"]
 	set {Timeline_Managment.MinervaInt1_1WhereFrom} = 1.0
 	jump MinervaFirstMeeting/Minerva Convo
 - (Explore) What do you like to do for fun? | [if {Timeline_Managment.MinervaInt1_1Hobbies} == 0.0] [else="hide"]
+	set {Timeline_Managment.MinervaInt1_1_MemCodesLearnt} += 1.0
 	Player: "What do you like to do for fun?"
 	if {Timeline_Managment.MinervaInt1_1Leave} > 0.0:
 		Minerva: "Seems a little strange to ask that given you want me out after the rain lets up, but sure. Why not?"
@@ -74,3 +83,4 @@ Minerva: "Oh. Yeah, I guess it is about that time, isn't it? I'll let you go the
 - Leave her be.
 	[i]You silently leave and make yourself breakfast. It's nothing special, just some canned fruit and some cereal.[/i]
 [i]During your meal, {Minerva.name} asks about a room she could stay in for the time being. Regardless of the time she would be staying for, you figure it wouldn't be too much of a hassle; after all, you have plenty of empty rooms.[/i]
+[i]{Minerva.name} heads off to her room... you have a sudden urge to journal...

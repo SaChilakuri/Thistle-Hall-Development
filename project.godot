@@ -45,18 +45,18 @@ layout/style_directory={
 variables={
 "FoShi": {
 "from": "?????",
-"name": "??????"
+"name": "F?????"
 },
 "Minerva": {
 "from": "???????",
 "hobbies": "????",
 "minerva_friendship": 0.0,
-"name": "????"
+"name": "M??????"
 },
 "Silas": {
 "from": "????",
 "hobbies": "????",
-"name": "?????",
+"name": "S????",
 "silas_friendship": 0.0
 },
 "Timeline_Managment": {
@@ -65,6 +65,7 @@ variables={
 "MinervaInt1_1LeaveAsked": 0.0,
 "MinervaInt1_1WhereFrom": 0.0,
 "MinervaInt1_1Who": 0.0,
+"MinervaInt1_1_MemCodesLearnt": 0.0,
 "SilasInt1_1BookReading": 0.0,
 "SilasInt1_1Hobbies": 0.0,
 "SilasInt1_1Leave": 0.0,
