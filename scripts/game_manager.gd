@@ -61,7 +61,7 @@ func _on_dialogic_signal(signal_arg: String):
 		# IF signal_arg is 4, we know it's a mem code
 		var mem_code_int = int(signal_arg)
 		print("memory code: " + signal_arg)
-		learnt_mem_codes_today.append(mem_code_int)
+		learn_memory(mem_code_int)
 		print(learnt_mem_codes_today)
 	else:
 		if "FoShi" in signal_arg:
@@ -92,6 +92,8 @@ func _set_memory_learnt(key, boolean):
 	# boolean - What to change memory learnt status to (bool)
 	memory_log[key].learnt = boolean
 
+func learn_memory(key):
+	learnt_mem_codes_today.append(key)
 
 
 func update_dialogic(key: int) -> void:
@@ -100,3 +102,8 @@ func update_dialogic(key: int) -> void:
 	# Params:
 	# Key associated with the memory's info
 	memory_log[key].update_dialogic
+
+func test_journal():
+	learn_memory(1000)
+	learn_memory(2000)
+	learn_memory(3000)
