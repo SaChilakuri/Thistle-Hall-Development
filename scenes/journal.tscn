@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cqwjoxnhy3n2k" path="res://assets/Journal/open_journal1.png" id="2_pelrk"]
 
 [node name="Journal" type="Node2D" unique_id=1138658115]
+z_index = 3
 script = ExtResource("1_mf1i3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=302415423]
