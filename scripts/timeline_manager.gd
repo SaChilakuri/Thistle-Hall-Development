@@ -35,8 +35,11 @@ func _on_timeline_ended():
 			Dialogic.start(timeline_chain[4])
 			end_of_day = true
 		Dialogic.start(timeline_chain[timeline_count])
+	else:
+		_journal_time()
 
 func _journal_time():
+	#Starts up the journal
 	print('works')
 	var journal = JOURNAL.instantiate()
 	add_child(journal)

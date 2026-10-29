@@ -27,5 +27,11 @@ func _init(Description: String, Value: String, Dialogic_Var_Name: String) -> voi
 func update_dialogic():
 	Dialogic.VAR.set_variable(dialogic_var_name,value)
 
+func get_value():
+	return value
+
+func get_description():
+	return description
+
 static func isLearnt(mem: memory):
 	return mem.learnt 
