@@ -54,7 +54,7 @@ Minerva (Angry): "Wait! You can't just leave like this! {player_name}, tell him!
 		Player (Default): “Don’t worry about it. We’ll find him.”
 	- “He was being stupid. It’s not your fault.”
 		Player (Angry): “He was being stupid. It’s not your fault.”
-	- [i]Stay silent.[/i
+	- Stay silent.
 	FoShi (Sad): “Thank you. Then, I will head to my room. Good night.”
 	[i]{FoShi.name} departs, leaving you alone in the silent lobby. You decide that you should probably go to bed too. You're tired.[/i]
 - He is right. He can't stay here.
