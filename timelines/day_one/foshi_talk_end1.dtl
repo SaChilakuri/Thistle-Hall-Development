@@ -5,7 +5,7 @@
 	[i]You open the door.[/i]
 	FoShi (Frustrated): "{player_name}, do you have time? I would like to talk about {Silas.name}."
 	- "Yeah, I can talk."
-		Player (Default): "Yeah, I can talk. I haven't relaly been able to sleep after he left."
+		Player (Default): "Yeah, I can talk. I haven't really been able to sleep after he left."
 		FoShi (Sad): "That is... unfortunate. I do wish that he had not left so suddenly. Maybe then we would have been able to make up for the past."
 		FoShi (Sad): "I came here to tell you that I intend to go look for him tomorrow."
 	- "I'm sorry, but I'm very tired."
