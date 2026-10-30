@@ -32,7 +32,7 @@ elif {Timeline_Managment.MinervaInt1_1_MemCodesLearnt} == 3.0:
 	Minerva (Default): "My name is {Minerva.name}. I probably should have introduced myself earlier. What's your name?"
 	Player (Default): "I'm {player_name}. Nice to meet you."
 	if {Timeline_Managment.MinervaInt1_1Leave} > 0.0:
-		"Yeah, it's nice to meet you too."
+		Minerva: "Yeah, it's nice to meet you too."
 	else:
 		Minerva (Happy): "It's nice to meet you too! I'm glad that there's someone who is willing to let me stay."
 	[signal arg="1000"]

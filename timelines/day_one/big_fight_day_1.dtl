@@ -33,7 +33,7 @@ Silas (Angry): “Fuck you. Either you leave, or I’m leaving. I’d rather tak
 FoShi (Sad): “I understand. Then, I shall take my leave. But Mr. {Silas.name}, I must warn you. The anger in your heart will grow into a demon that drains you of your best years. Find peace before it blossoms.”
 Minerva (Angry): "Wait! You can't just leave like this! {player_name}, tell him! Can't you do something?"
 [i]{Silas.name} scoffs and looks away from everyone. {FoShi.name} stops walking away and turns to face {Minerva.name} and you.[/i]
-- Fo'Shi stays.
+- He stays.
 	[signal arg="LetFoShiStay"]
 	Player (Default): "He stays. You can't just kick him out because of his past mistakes."
 	Silas (Angry): “Oh fuck you! You don’t even know this guy and you’re siding with him?!”
