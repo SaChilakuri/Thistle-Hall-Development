@@ -1,0 +1,54 @@
+if {Timeline_Managment.MinervaInt1_1Leave} > 0.0:
+	[i]As the rain lets up, {Minerva.name} calls you over to talk with you. She stand by the door with her backpack.[/i]
+	Minerva (Default): "So I'm going to leave now that the rain has let up. I hope that you can manage to keep afloat. You've got a good thing going here."
+	- "I wish you luck outside."
+		Player (Default): "I wish you luck outside. Stay safe."
+		[i]{Minerva.name} nods[/i]
+		Minerva (Happy): "Same to you, though I imagine that you'll have an easier time doing that."
+		Minerva (Default): "Just try to be careful. I've heard rumors of something that lives in the mist."
+		Minerva (Happy): "Probably just an urban legend, but you can never be too sure, right?"
+		[i]{Minerva.name} gives you one last wave before walking out of the door and leaving Thistle Hall.[/i]
+		[i]You're alone now. It's quiet.[/i]
+		[end_timeline]
+	- "You don't have to leave."
+		Player (Happy): "you don't have to leave. You can stay here if you want to."
+		Minerva (Happy): "You sure? You seemed pretty adamant about me leaving after the rain."
+		- "I changed my mind."
+			Player (Default): "I changed my mind."
+		- "I was being stupid."
+			Player (Default): "I was being stupid."
+		Minerva (Happy): "Well, I'm glad that you decided to let me stay. I guess I don't have to worry about finding shelter anymore!"
+		Minerva (Default): "Anyway, now that {FoShi.name} is gone, I wanted to talk to you about some stuff privately."
+		jump Else
+else:
+	[i]As the rain lets up, {Minerva.name} calls you over to talk with you.[/i]
+	Minerva (Default): "Hey. I kinda wanted to talk to you about some stuff, kinda privately."
+	label Else
+	- "Sure. I can talk."
+		Player (Default): "Sure. I can talk."
+	- "What needs to be private?"
+		Player (Default): "What do you want to talk about that needs to be private?"
+	Minerva (Default): "It's just that you seem to not really remember things all that well. I don't think I've seen you use a name of anyone here at all."
+	Minerva (Sad): "You also seem to not remember a lot of things, like how you got all the food you have here."
+	Minerva (Default): "Do you know how that happened?"
+	- "You're going to hate me for saying this. I don't remember."
+		Player (Default): "You're going to hate me for saying this. I don't remember."
+	- "I honestly don't know."
+		Player: "I honestly don't know."
+	- "It's been like this for as long as I can remember."
+		Player: "It's been like this for as long as I can remember."
+	Minerva (Angry): "I don't even know why I asked. Clearly you wouldn't know."
+	Player (Sad): "I'm sorry, I just can't remember anything!"
+	Minerva: "No, it's not your fault, you don't need to apologize."
+	Minerva: "Just don't worry about it. It's not a huge deal. That's what the journal is for, right? To keep track of things?"
+	- "Yeah, that's what I use it for."
+		Player: "Yeah, that's what I use it for."
+	- "It helps."
+		Player: "It helps, yeah."
+	- "I just need to remember to write things down."
+		Player: "I just need to remember to write things down."
+	Minerva (Happy): "Well I'm glad you have a way to remember things."
+	Minerva (Default): "I won't tell anyone else about your memory."
+	Player (Happy): "Thanks."
+	[i]{Minerva.name} goes into her room, and shuts the door. You're alone in the lobby now.[/i]
+	[i]It's quiet.[/i]

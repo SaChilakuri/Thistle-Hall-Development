@@ -1,0 +1,20 @@
+[i]{Minerva.name} stands off to the side of the lobby, just staring at {Silas.name} and {FoShi.name}.[/i]
+[i]As you walk up to her, she turns to face you.[/i]
+Minerva (Sad): "I don't even know what to say. I'm glad that he's back, but I really don't want to believe him. I had heard of some sort of monster being out there, but..."
+- "At least he's safe now."
+	Player (Default): "At least he's safe now."
+	Minerva: "I know. I'm really glad that he's safe."
+- "I know, but I'm inclined to believe him."
+	Player (Sad): "I know, but I'm inclined to believe him. He seems really shaken up."
+	Minerva: "Me too. I hope that he's not lying, but if he is we might be in trouble."
+	Player: "Trouble? Why?"
+	Minerva: "I mean what if it followed him? What then?"
+	[i]She's right. If it did follow them back, you all might be in big trouble, whatever this thing is.[/i]
+- "We can fight it off if it comes here."
+	Player (Happy): "We can fight it off if it comes here. We have a team here, right?
+	Minerva (Sad): "..."
+	Minerva (Sad): "I really don't know. People I've talked to about it seemed scared of it, even if they were capable fighters."
+[i]{Minerva.name} yawns.[/i]
+Minerva: "It's getting late, and I'm probably not going to sleep super well tonight."
+Minerva: "I'm going to go to bed now so I can sleep as much as I can. Have a good night."
+[i]{Minerva.name} leaves abruptly without giving you a chance to say anything.[/i]
