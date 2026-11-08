@@ -34,7 +34,7 @@ FoShi (Sad): “I understand. Then, I shall take my leave. But Mr. {Silas.name},
 Minerva (Angry): "Wait! You can't just leave like this! {player_name}, tell him! Can't you do something?"
 [i]{Silas.name} scoffs and looks away from everyone. {FoShi.name} stops walking away and turns to face {Minerva.name} and you.[/i]
 - He stays.
-	[signal arg="LetFoShiStay"]
+	[signal arg="aaB"]
 	Player (Default): "He stays. You can't just kick him out because of his past mistakes."
 	Silas (Angry): “Oh fuck you! You don’t even know this guy and you’re siding with him?!”
 	Minerva (Sad): “They don’t know you either.”
@@ -58,7 +58,7 @@ Minerva (Angry): "Wait! You can't just leave like this! {player_name}, tell him!
 	FoShi (Sad): “Thank you. Then, I will head to my room. Good night.”
 	[i]{FoShi.name} departs, leaving you alone in the silent lobby. You decide that you should probably go to bed too. You're tired.[/i]
 - He is right. He can't stay here.
-	[signal arg="KickFoShiOut"]
+	[signal arg="aaC"]
 	Player (Angry): "I can't let someone who has destroyed the home of others stay here. You need to leave."
 	FoShi (Sad): “Very well. The myriad roads of life converge more than once. I believe we will meet again, friends.”
 	[i]{FoShi.name} meets everyone’s eyes once more then departs. A frozen silence settles over the dining room for a brief moment. Minerva turns to you.[/i]

@@ -65,7 +65,6 @@ elif {Timeline_Managment.MinervaInt1_1_MemCodesLearnt} == 3.0:
 		Minerva (Happy): "I'm glad you seem open to me staying here. I'll try to be helpful."
 	- We'll play it by ear.
 		Player (Default): "We can see how it goes. I don't have any immediate objections."
-		Minerva (Default): "That's fair. You don't know me, and I just kinda showed up on your doorstep."
 	set {Timeline_Managment.MinervaInt1_1LeaveAsked} = 1.0
 	jump MinervaFirstMeeting/Minerva Convo
 - I'm hungry. It's time for breakfast.

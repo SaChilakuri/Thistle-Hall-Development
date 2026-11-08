@@ -32,6 +32,8 @@ var memory_log : Dictionary[int, Memory]= {
 }
 
 var journal_after_timeline = false
+var current_timeline = 'aaa'
+var timeline_count = 0
 
 var important_choices = {
 	"FoShiKickedOut" = null,
@@ -68,14 +70,11 @@ func _on_dialogic_signal(signal_arg: String):
 	elif signal_arg == "journal":
 		journal_after_timeline = true
 		print("journal" + str(journal_after_timeline))
-	else:
-		if "FoShi" in signal_arg:
-			print("FoShi thing")
-			if signal_arg == "KickFoShiOut":
-				important_choices["FoShiKickedOut"] = true
-			else:
-				important_choices["FoShiKickedOut"] = false
-			print(important_choices["FoShiKickedOut"])
+	elif signal_arg.length() == 3:
+		current_timeline = signal_arg
+		timeline_count = 0
+		print("new timeline")
+		print(timeline_count)
 
 func _end_of_day():
 	learnt_mem_codes_today.clear()

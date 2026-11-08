@@ -9,33 +9,31 @@ const JOURNAL = preload("uid://cndkumqu0y6mu")
 # (AT LEAST FOR FIRST PLAYTEST, FUTURE WHO KNOWS)
 
 # Called when the node enters the scene tree for the first time.
-var timeline_chain = [
-	"res://timelines/day_one/MinervaFirstMeeting.dtl", "res://timelines/day_one/SilasFirstMeeting.dtl", 
-	"res://timelines/day_one/foshi_meeting.dtl", "res://timelines/day_one/big_fight_day_1.dtl",
-	"res://timelines/day_one/foshi_talk_end1.dtl", "res://timelines/day_one/silas_talk_end1.dtl" 
-]
+var timeline_chains = {
+	'aaa' : ["res://timelines/day_one/MinervaFirstMeeting.dtl", "res://timelines/day_one/SilasFirstMeeting.dtl", 
+	"res://timelines/day_one/foshi_meeting.dtl", "res://timelines/day_one/big_fight_day_1.dtl"],
+	# SPLIT ONE - Kicking Fo'Shi out or not
+	'aaB' : ["res://timelines/day_one/foshi_talk_end1.dtl"],
+	'aaC' : ["res://timelines/day_one/silas_talk_end1.dtl"]
+}
 
-var timeline_count = 0
 
 var end_of_day = false
-var minerva_journal = false
 
 func _ready() -> void:
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
-	Dialogic.start(timeline_chain[timeline_count])
+
+
+	Dialogic.start(timeline_chains[GameManager.current_timeline][GameManager.timeline_count])
 
 func _on_timeline_ended():
-	timeline_count += 1
 	if GameManager.journal_after_timeline == true:
 		_journal_time()
-	elif end_of_day == false:
-		if choices_dict["FoShiKickedOut"] == true:
-			Dialogic.start(timeline_chain[5])
-			end_of_day = true
-		elif choices_dict["FoShiKickedOut"] == false:
-			Dialogic.start(timeline_chain[4])
-			end_of_day = true
-		Dialogic.start(timeline_chain[timeline_count])
+	else:
+		if GameManager.timeline_count != timeline_chains[GameManager.current_timeline].size() - 1:
+			GameManager.timeline_count += 1
+		print('TL COUNT')
+		Dialogic.start(timeline_chains[GameManager.current_timeline][GameManager.timeline_count])
 
 func _journal_time():
 	#Starts up the journal
@@ -46,14 +44,10 @@ func _journal_time():
 	journal.global_position = Vector2(-550, -300)
 
 func _on_journal_finished(journal):
-	GameManager.learnt_mem_codes_today = []
-	print(GameManager.learnt_mem_codes_today)
+	# Clears the journal from the screen and moves onto next thing
+	GameManager.learnt_mem_codes_today.clear()
+	GameManager.journal_after_timeline = false
 	journal.queue_free()
 	print("TIMELINE COUNT AFTER JOURNAL:")
-	print(timeline_count)
-	if timeline_count == 1:
-		timeline_count = 0
-		minerva_journal = true
-		_on_timeline_ended()
-	if timeline_count == 4:
-		tyforplaying.visible = true
+	print(GameManager.timeline_count)
+	_on_timeline_ended()

@@ -1,7 +1,6 @@
 extends CharacterBody2D
 @onready var label: Label = $"../Label"
 
-
 const SPEED = 500
 const JUMP_VELOCITY = -400.0
 
