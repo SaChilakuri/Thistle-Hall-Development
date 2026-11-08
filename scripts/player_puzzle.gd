@@ -1,5 +1,6 @@
 extends CharacterBody2D
 @onready var label: Label = $"../Label"
+@onready var player_sprite: Sprite2D = $Sprite2D
 
 const SPEED = 500
 const JUMP_VELOCITY = -400.0
@@ -19,6 +20,10 @@ func _physics_process(delta: float) -> void:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 		
 		var y_direction := Input.get_axis("player_up", "player_down")
+		if y_direction == 1:
+			player_sprite.z_index = -1
+		elif y_direction == -1:
+			player_sprite.z_index = 1
 		if y_direction:
 			velocity.y = y_direction * SPEED
 			label.text = "Moving: True"
