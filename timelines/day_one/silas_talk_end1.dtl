@@ -62,3 +62,4 @@
 		jump Door Open
 	- Still don't open the door
 		[i]He stops knocking. You eventually fall asleep.[/i]
+[signal arg="journal"]
