@@ -25,11 +25,10 @@ func _ready() -> void:
 	Dialogic.start(timeline_chain[timeline_count])
 
 func _on_timeline_ended():
-	if end_of_day == false:
-		timeline_count += 1
-		if timeline_count == 1 and minerva_journal == false and GameManager.learnt_mem_codes_today != []:
-			_journal_time()
-			return
+	timeline_count += 1
+	if GameManager.journal_after_timeline == true:
+		_journal_time()
+	elif end_of_day == false:
 		if choices_dict["FoShiKickedOut"] == true:
 			Dialogic.start(timeline_chain[5])
 			end_of_day = true
@@ -37,8 +36,6 @@ func _on_timeline_ended():
 			Dialogic.start(timeline_chain[4])
 			end_of_day = true
 		Dialogic.start(timeline_chain[timeline_count])
-	else:
-		_journal_time()
 
 func _journal_time():
 	#Starts up the journal

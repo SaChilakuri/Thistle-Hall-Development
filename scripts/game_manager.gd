@@ -31,6 +31,8 @@ var memory_log : Dictionary[int, Memory]= {
 	3001 : Memory.new("Where the monk's from", "China", "FoShi.from")
 }
 
+var journal_after_timeline = false
+
 var important_choices = {
 	"FoShiKickedOut" = null,
 }
@@ -48,7 +50,7 @@ func _ready() -> void:
 
 func _on_dialogic_signal(signal_arg: String):
 	# Purpose:
-	# When dialogic emits a signal, check if the length of the string
+	# When dialogic emits a signal, determine what to do with it based on it's argument
 	# is 4, if it is, we know it's a mem code so we take it, and cast it to an int
 	# to use with memory_log
 	# Params:
@@ -63,6 +65,9 @@ func _on_dialogic_signal(signal_arg: String):
 		print("memory code: " + signal_arg)
 		learn_memory(mem_code_int)
 		print(learnt_mem_codes_today)
+	elif signal_arg == "journal":
+		journal_after_timeline = true
+		print("journal" + str(journal_after_timeline))
 	else:
 		if "FoShi" in signal_arg:
 			print("FoShi thing")
