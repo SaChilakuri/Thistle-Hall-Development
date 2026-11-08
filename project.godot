@@ -34,6 +34,11 @@ directories/dtl_directory={
 "MinervaFirstMeeting": "res://timelines/day_one/MinervaFirstMeeting.dtl",
 "SilasFirstMeeting": "res://timelines/day_one/SilasFirstMeeting.dtl",
 "big_fight_day_1": "res://timelines/day_one/big_fight_day_1.dtl",
+"day_two_minerva_after_monster_encounter": "res://timelines/day_two/day_two_minerva_after_monster_encounter.dtl",
+"day_two_minerva_post_group_foshi_gone": "res://timelines/day_two/day_two_minerva_post_group_foshi_gone.dtl",
+"day_two_minerva_post_group_silas_gone": "res://timelines/day_two/day_two_minerva_post_group_silas_gone.dtl",
+"day_two_minerva_rain_midday_foshi_gone": "res://timelines/day_two/day_two_minerva_rain_midday_foshi_gone.dtl",
+"day_two_minerva_rain_midday_silas_gone": "res://timelines/day_two/day_two_minerva_rain_midday_silas_gone.dtl",
 "foshi_meeting": "res://timelines/day_one/foshi_meeting.dtl",
 "foshi_talk_end1": "res://timelines/day_one/foshi_talk_end1.dtl",
 "silas_talk_end1": "res://timelines/day_one/silas_talk_end1.dtl"
