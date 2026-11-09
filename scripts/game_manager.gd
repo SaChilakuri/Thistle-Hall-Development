@@ -32,8 +32,8 @@ var memory_log : Dictionary[int, Memory]= {
 }
 
 var journal_after_timeline = false
-var current_timeline = 'aaa'
-var timeline_count = 0
+var current_timeline = 'aaB'
+var timeline_count = 1
 
 var important_choices = {
 	"FoShiKickedOut" = null,

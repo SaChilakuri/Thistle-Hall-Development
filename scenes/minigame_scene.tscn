@@ -4,21 +4,25 @@
 [ext_resource type="Texture2D" uid="uid://bl8i3f2ftcj4a" path="res://assets/puzzle/player-puzzle.png" id="2_5p48e"]
 [ext_resource type="Texture2D" uid="uid://ba75rjfpbcgst" path="res://assets/puzzle/puzzle-board.png" id="4_2s1hm"]
 [ext_resource type="Texture2D" uid="uid://dl3jl331531y0" path="res://assets/puzzle/puzzle-wall-h.png" id="4_5p48e"]
+[ext_resource type="Texture2D" uid="uid://ccbsdxnpxpvn5" path="res://assets/puzzle/puzzle-piece.png" id="5_2s1hm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kgjkr"]
-size = Vector2(70, 70)
+size = Vector2(68, 68)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tuu34"]
-size = Vector2(470, 36.1875)
+size = Vector2(470, 36.09375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3m0gp"]
 size = Vector2(170, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kgjkr"]
+radius = 34.0
 
 [node name="minigame scene" type="Node2D" unique_id=326021952]
 
 [node name="player" type="CharacterBody2D" parent="." unique_id=2071360907]
 z_index = 2
-position = Vector2(-176, -177)
+position = Vector2(-96, -97)
 script = ExtResource("1_iq87t")
 
 [node name="Sprite2D" type="Sprite2D" parent="player" unique_id=1924441729]
@@ -42,29 +46,28 @@ text = "Waiting for movement"
 [node name="board_sprite" type="Sprite2D" parent="board" unique_id=1661812016]
 texture = ExtResource("4_2s1hm")
 
-[node name="top_wall" type="CollisionShape2D" parent="board" unique_id=1833653595]
-position = Vector2(0, -253)
-shape = SubResource("RectangleShape2D_tuu34")
-
 [node name="left_wall" type="CollisionShape2D" parent="board" unique_id=585443551]
 position = Vector2(-253, -4.2632564e-14)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_tuu34")
 
-[node name="left_wall2" type="CollisionShape2D" parent="board" unique_id=1004195321]
-position = Vector2(253, 0)
+[node name="left_wall2" type="CollisionShape2D" parent="board" unique_id=552828337]
+position = Vector2(253, -4.2632564e-14)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_tuu34")
 
-[node name="bottom_wall" type="CollisionShape2D" parent="board" unique_id=1647623165]
-z_index = 1
-position = Vector2(0, 253.09375)
+[node name="top_wall" type="CollisionShape2D" parent="board" unique_id=821367240]
+position = Vector2(3, -255)
+shape = SubResource("RectangleShape2D_tuu34")
+
+[node name="bottom_wall" type="CollisionShape2D" parent="board" unique_id=1361932466]
+position = Vector2(0, 253)
 shape = SubResource("RectangleShape2D_tuu34")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=695517616]
 
 [node name="horizontal_wall" type="StaticBody2D" parent="." unique_id=1479748209]
-position = Vector2(-160, 0)
+position = Vector2(-160, 160)
 
 [node name="Sprite2D" type="Sprite2D" parent="horizontal_wall" unique_id=1495921313]
 z_index = 1
@@ -74,3 +77,16 @@ texture = ExtResource("4_5p48e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="horizontal_wall" unique_id=424171168]
 shape = SubResource("RectangleShape2D_3m0gp")
+
+[node name="puzzle_piece" type="Area2D" parent="." unique_id=1624138089]
+position = Vector2(200, 40)
+
+[node name="Sprite2D" type="Sprite2D" parent="puzzle_piece" unique_id=378313328]
+position = Vector2(-1.1444092e-05, -5.9604645e-08)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_2s1hm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzle_piece" unique_id=433509130]
+shape = SubResource("CircleShape2D_kgjkr")
+
+[connection signal="body_entered" from="puzzle_piece" to="player" method="_on_puzzle_piece_body_entered"]

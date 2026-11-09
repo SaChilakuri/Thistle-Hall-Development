@@ -13,8 +13,8 @@ var timeline_chains = {
 	'aaa' : ["res://timelines/day_one/MinervaFirstMeeting.dtl", "res://timelines/day_one/SilasFirstMeeting.dtl", 
 	"res://timelines/day_one/foshi_meeting.dtl", "res://timelines/day_one/big_fight_day_1.dtl"],
 	# SPLIT ONE - Kicking Fo'Shi out or not
-	'aaB' : ["res://timelines/day_one/foshi_talk_end1.dtl"],
-	'aaC' : ["res://timelines/day_one/silas_talk_end1.dtl"]
+	'aaB' : ["res://timelines/day_one/foshi_talk_end1.dtl", "res://timelines/day_two/day_two_minerva_post_group_silas_gone.dtl", "res://timelines/day_two/day_two_minerva_rain_midday_silas_gone.dtl"],
+	'aaC' : ["res://timelines/day_one/silas_talk_end1.dtl", "res://timelines/day_two/day_two_minerva_post_group_foshi_gone.dtl", "res://timelines/day_two/day_two_minerva_rain_midday_foshi_gone.dtl"],
 }
 
 

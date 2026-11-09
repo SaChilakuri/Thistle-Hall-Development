@@ -20,7 +20,7 @@ Minerva (Sad): "I'm worried about him, though {FoShi.name} did say he was going 
 	Player (Sad): "Yeah, I've been worried as well, but he was fine for a while without shelter, so he can probably handle himself."
 	Minerva (Default): "I suppose you're right. He'll probably be fine until {FoShi.name} finds him."
 Minerva: "Kind of random, but do you have any yarn? I've been fresh out of luck anywhere for finding it."
-- "For your knitting?"
+- "For your knitting?" | [if {Minerva.hobbies} != "????"] [else="disable" alt_text="something"]
 	Player (Default): "For your knitting?"
 	Minerva (Happy): "Yeah! I just want some more so I can knit some more!"
 	Minerva (Default): "I don't suppose there's any in all the rooms you have in this place?"

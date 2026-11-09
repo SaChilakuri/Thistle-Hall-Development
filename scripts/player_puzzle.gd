@@ -1,6 +1,7 @@
 extends CharacterBody2D
 @onready var label: Label = $"../Label"
 @onready var player_sprite: Sprite2D = $Sprite2D
+@onready var puzzle_piece: Area2D = $"../puzzle_piece"
 
 const SPEED = 500
 const JUMP_VELOCITY = -400.0
@@ -16,6 +17,8 @@ func _physics_process(delta: float) -> void:
 		if x_direction:
 			label.text = "Moving: True"
 			velocity.x = x_direction * SPEED
+			global_position.x = round(global_position.x)
+			print(global_position.x)
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 		
@@ -27,6 +30,8 @@ func _physics_process(delta: float) -> void:
 		if y_direction:
 			velocity.y = y_direction * SPEED
 			label.text = "Moving: True"
+			global_position.y = round(global_position.y)
+			print(global_position.y)
 		else:
 			velocity.y = y_direction * SPEED
 		
@@ -38,3 +43,9 @@ func _physics_process(delta: float) -> void:
 		
 	
 	move_and_slide()
+
+
+
+
+func _on_puzzle_piece_body_entered(body: Node2D) -> void:
+	puzzle_piece.visible = false
