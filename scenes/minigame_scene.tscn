@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://bpychkfoh1utj"]
 
 [ext_resource type="Script" uid="uid://b36fcfrkogmwe" path="res://scripts/player_puzzle.gd" id="1_iq87t"]
+[ext_resource type="Script" uid="uid://24ag0cw3gaug" path="res://scenes/puzzle_scene.gd" id="1_ms72j"]
 [ext_resource type="Texture2D" uid="uid://bl8i3f2ftcj4a" path="res://assets/puzzle/player-puzzle.png" id="2_5p48e"]
 [ext_resource type="Texture2D" uid="uid://ba75rjfpbcgst" path="res://assets/puzzle/puzzle-board.png" id="4_2s1hm"]
-[ext_resource type="Texture2D" uid="uid://dl3jl331531y0" path="res://assets/puzzle/puzzle-wall-h.png" id="4_5p48e"]
 [ext_resource type="Texture2D" uid="uid://ccbsdxnpxpvn5" path="res://assets/puzzle/puzzle-piece.png" id="5_2s1hm"]
+[ext_resource type="PackedScene" uid="uid://ciirkdwewqb2h" path="res://scenes/puzzle_h_wall.tscn" id="6_ms72j"]
+[ext_resource type="PackedScene" uid="uid://cmcl0tnjkgtbs" path="res://scenes/puzzle_v_wall.tscn" id="7_2bixc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kgjkr"]
 size = Vector2(68, 68)
@@ -12,13 +14,11 @@ size = Vector2(68, 68)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tuu34"]
 size = Vector2(470, 36.09375)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3m0gp"]
-size = Vector2(170, 10)
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_kgjkr"]
 radius = 34.0
 
 [node name="minigame scene" type="Node2D" unique_id=326021952]
+script = ExtResource("1_ms72j")
 
 [node name="player" type="CharacterBody2D" parent="." unique_id=2071360907]
 z_index = 2
@@ -66,18 +66,6 @@ shape = SubResource("RectangleShape2D_tuu34")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=695517616]
 
-[node name="horizontal_wall" type="StaticBody2D" parent="." unique_id=1479748209]
-position = Vector2(-160, 160)
-
-[node name="Sprite2D" type="Sprite2D" parent="horizontal_wall" unique_id=1495921313]
-z_index = 1
-position = Vector2(0, -5)
-scale = Vector2(0.9444444, 0.9860599)
-texture = ExtResource("4_5p48e")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="horizontal_wall" unique_id=424171168]
-shape = SubResource("RectangleShape2D_3m0gp")
-
 [node name="puzzle_piece" type="Area2D" parent="." unique_id=1624138089]
 position = Vector2(200, 40)
 
@@ -88,5 +76,57 @@ texture = ExtResource("5_2s1hm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="puzzle_piece" unique_id=433509130]
 shape = SubResource("CircleShape2D_kgjkr")
+
+[node name="wall_markers" type="Node" parent="." unique_id=240261106]
+
+[node name="Marker2D13" type="Marker2D" parent="wall_markers" unique_id=303857514]
+
+[node name="Marker2D14" type="Marker2D" parent="wall_markers" unique_id=984843429]
+position = Vector2(-160, 0)
+
+[node name="Marker2D15" type="Marker2D" parent="wall_markers" unique_id=148680254]
+position = Vector2(160, 0)
+
+[node name="Marker2D10" type="Marker2D" parent="wall_markers" unique_id=56917227]
+position = Vector2(160, -160)
+
+[node name="Marker2D11" type="Marker2D" parent="wall_markers" unique_id=445316552]
+position = Vector2(-160, -160)
+
+[node name="Marker2D12" type="Marker2D" parent="wall_markers" unique_id=868144395]
+position = Vector2(0, -160)
+
+[node name="Marker2D" type="Marker2D" parent="wall_markers" unique_id=780750578]
+position = Vector2(0, 160)
+
+[node name="Marker2D2" type="Marker2D" parent="wall_markers" unique_id=689129379]
+position = Vector2(-160, 160)
+
+[node name="Marker2D3" type="Marker2D" parent="wall_markers" unique_id=2018573514]
+position = Vector2(160, 160)
+
+[node name="Marker2D4" type="Marker2D" parent="wall_markers" unique_id=835177537]
+position = Vector2(160, 80)
+
+[node name="Marker2D5" type="Marker2D" parent="wall_markers" unique_id=1752390409]
+position = Vector2(-160, 80)
+
+[node name="Marker2D6" type="Marker2D" parent="wall_markers" unique_id=2109176207]
+position = Vector2(0, 80)
+
+[node name="Marker2D7" type="Marker2D" parent="wall_markers" unique_id=1423501335]
+position = Vector2(160, -80)
+
+[node name="Marker2D8" type="Marker2D" parent="wall_markers" unique_id=1174700588]
+position = Vector2(-160, -80)
+
+[node name="Marker2D9" type="Marker2D" parent="wall_markers" unique_id=1463800173]
+position = Vector2(0, -80)
+
+[node name="h_wall" parent="." unique_id=1590175917 instance=ExtResource("6_ms72j")]
+position = Vector2(0, -5)
+
+[node name="v_wall" parent="." unique_id=1227712785 instance=ExtResource("7_2bixc")]
+position = Vector2(160, -80)
 
 [connection signal="body_entered" from="puzzle_piece" to="player" method="_on_puzzle_piece_body_entered"]

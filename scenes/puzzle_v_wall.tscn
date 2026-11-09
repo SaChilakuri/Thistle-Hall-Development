@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cmcl0tnjkgtbs"]
+
+[ext_resource type="Texture2D" uid="uid://bxieiupmyywfa" path="res://assets/puzzle/puzzle-wall-v.png" id="1_j1yxw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tuu34"]
+size = Vector2(10, 160)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1227712785]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1913279481]
+texture = ExtResource("1_j1yxw")
+region_enabled = true
+region_rect = Rect2(0, 10, 10, 170)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1625517636]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_tuu34")
