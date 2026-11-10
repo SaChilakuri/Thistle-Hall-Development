@@ -1,0 +1,33 @@
+[i]{Silas.name} sits by himself at the dining table. His leg bounces nervously as you walk up to him.[/i]
+Silas (Default): "Oh hey. I was hoping that you'd stop by to talk a little bit."
+Silas (Sad): "I'm going to go out to look for {FoShi.name} after the rain stops, and I just wanted to tell you again that I'm really sorry about making you kick him out."
+- "We'll find him."
+	Player: "We'll find him. Don't worry so much."
+	Silas: "It's hard not to worry when we have no idea where he is."
+- "It's not your fault."
+	Player (Happy): "It's not your fault. I was the one who made the final call on it."
+	Silas (Sad): "You know how I feel about this. It doesn't matter if you made the final call or not, I was the one who told you to."
+- "Don't worry about it. It was justified."
+	Player: "Don't worry about it. It was justified. His gang were the ones who destroyed your home."
+	Silas: "You've seen it yourself, he's changed. That's why I'm going out to look for him."
+- "You need to make up for it."
+	Player (Angry): "You need to make up for doing that. Good thing you're going out to look for him."
+	Silas (Angry): "If you're going to be like that, I'm not going to talk to you."
+	set {Silas.silas_friendship} -= 5.0
+	- "I'm sorry, I'm just stressed."
+		Player (Sad): "I'm sorry, I'm just really stressed right now."
+		Silas (Angry): "We all are. That's not an excuse to be a jerk."
+		[i]{Silas.name} turns away from you and refuses to interact more.[/i]
+		[end_timeline]
+	- "I'm just telling the truth."
+		Player (Default): "I'm just telling the truth."
+		Silas: "Then we don't have anything else to talk about."
+		[i]{Silas.name} turns away from you and refuses to interact more.[/i]
+		[end_timeline]
+	- "I didn't want to talk to you anyway."
+		Player (Angry): "I didn't want to talk to you anyway."
+		Silas (Angry): "Then why did you come over here in the first place?"
+		[i]{Silas.name} turns away from you and refuses to interact more.[/i]
+		[end_timeline]
+[i]{Silas.name} fidgets with his hands for a little bit before speaking again.[/i]
+Silas (Happy): "I also wanted to say that I'm thankful to you for providing shelter and food. I was getting a little low on supplies and I wasn't really sure where I would find more."
