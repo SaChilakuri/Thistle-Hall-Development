@@ -1,4 +1,5 @@
-[i]{Silas.name} sits by himself at the dining table. His leg bounces nervously as you walk up to him.[/i]
+[i]{Silas.name} sits by himself at the dining table, reading a book. His leg bounces nervously as you walk up to him.[/i]
+[i]When you approach, he turns up from his book to look at you.[/i]
 Silas (Default): "Oh hey. I was hoping that you'd stop by to talk a little bit."
 Silas (Sad): "I'm going to go out to look for {FoShi.name} after the rain stops, and I just wanted to tell you again that I'm really sorry about making you kick him out."
 - "We'll find him."
@@ -31,3 +32,19 @@ Silas (Sad): "I'm going to go out to look for {FoShi.name} after the rain stops,
 		[end_timeline]
 [i]{Silas.name} fidgets with his hands for a little bit before speaking again.[/i]
 Silas (Happy): "I also wanted to say that I'm thankful to you for providing shelter and food. I was getting a little low on supplies and I wasn't really sure where I would find more."
+Silas (Default): "I was also wondering if you know a recipe for tater tot casserole? I've been wanting to have it for a while but can't recall any."
+- "That's a midwest thing, right?" | [if {Silas.from} != "????"] [else="disable" alt_text="something"]
+	Player (Happy): "That's a midwest thing, right? Oh yeah, you're from Wisconsin. Is it good?"
+	Silas (Happy): "Yeah, it's really good! It doesn't even need a ton of ingredients either!"
+	Player (Default): "I guess I'll have to try it out then sometime."
+	Silas (Happy): "I'll hold you to it!"
+	set {Silas.silas_friendship} += 5.0
+- "Why that specifically? Sounds weird."
+	Player (Default): "Why that specifically? Sounds weird. Is that like a regional dish or something?"
+	Silas (Shock): "Yeah it is. Didn't I tell you I'm from {Silas.from}?"
+- "Can't say that I do."
+	Player (Default): "Can't say that I do. I've never heard of tater tot casserole."
+	Silas (Happy): "Oh, you have to try it then! It's really good!"
+[i]The rain outside sets a low background noise for the conversation as it drifts off. Neither of you have anything more to say to each other.[/i]
+Silas (Happy): "Well, I'll let you get back to doing whatever you were doing then!"
+[i]He turns back to the book he was reading, leaving you to go about your business.[/i]

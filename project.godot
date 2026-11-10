@@ -39,7 +39,7 @@ directories/dtl_directory={
 "day_two_minerva_post_group_silas_gone": "res://timelines/day_two/day_two_minerva_post_group_silas_gone.dtl",
 "day_two_minerva_rain_midday_foshi_gone": "res://timelines/day_two/day_two_minerva_rain_midday_foshi_gone.dtl",
 "day_two_minerva_rain_midday_silas_gone": "res://timelines/day_two/day_two_minerva_rain_midday_silas_gone.dtl",
-"day_two_silas_post_group": "res://day_two_silas_post_group.dtl",
+"day_two_silas_post_group": "res://timelines/day_two/day_two_silas_post_group.dtl",
 "foshi_meeting": "res://timelines/day_one/foshi_meeting.dtl",
 "foshi_talk_end1": "res://timelines/day_one/foshi_talk_end1.dtl",
 "silas_talk_end1": "res://timelines/day_one/silas_talk_end1.dtl"
