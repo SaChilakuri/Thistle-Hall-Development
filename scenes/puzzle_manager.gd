@@ -18,4 +18,18 @@ func _process(delta: float) -> void:
 func _next_puzzle():
 	if puzzles_left >= 0:
 		var new_puzzle = PUZZLE_SCENE.instantiate()
+		new_puzzle.connect("puzzle_complete", _on_puzzle_complete)
 		add_child(new_puzzle)
+	print('complete!')
+
+func _on_puzzle_complete():
+	if puzzles_left <= 0:
+		print('finished!')
+	else:
+		puzzles_left -= 1
+		_next_puzzle()
+	
+
+func _on_timer_timeout() -> void:
+	if puzzles_left != 0:
+		print('you lose :(')

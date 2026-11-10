@@ -1,31 +1,13 @@
 [gd_scene format=3 uid="uid://bpychkfoh1utj"]
 
 [ext_resource type="Script" uid="uid://24ag0cw3gaug" path="res://scripts/puzzle scripts/puzzle_scene.gd" id="1_qrhv5"]
-[ext_resource type="Script" uid="uid://b36fcfrkogmwe" path="res://scripts/puzzle scripts/player_puzzle.gd" id="2_h8yee"]
-[ext_resource type="Texture2D" uid="uid://bl8i3f2ftcj4a" path="res://assets/Puzzle/player-puzzle.png" id="3_d0a8b"]
 [ext_resource type="Texture2D" uid="uid://ba75rjfpbcgst" path="res://assets/Puzzle/puzzle-board.png" id="4_6qwyr"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kgjkr"]
-size = Vector2(42, 42)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tuu34"]
 size = Vector2(470, 36.09375)
 
 [node name="puzzle_scene" type="Node2D" unique_id=326021952]
 script = ExtResource("1_qrhv5")
-
-[node name="player" type="CharacterBody2D" parent="." unique_id=2071360907]
-z_index = 2
-position = Vector2(-199, -120)
-script = ExtResource("2_h8yee")
-
-[node name="Sprite2D" type="Sprite2D" parent="player" unique_id=1924441729]
-position = Vector2(-1.847744e-06, -1.9073486e-06)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("3_d0a8b")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=581783981]
-shape = SubResource("RectangleShape2D_kgjkr")
 
 [node name="board" type="StaticBody2D" parent="." unique_id=1626904406]
 z_index = -1

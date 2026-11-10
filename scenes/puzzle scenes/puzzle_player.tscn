@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://debf07nuvr4ll"]
+
+[ext_resource type="Script" uid="uid://b36fcfrkogmwe" path="res://scripts/puzzle scripts/player_puzzle.gd" id="1_hgwrv"]
+[ext_resource type="Texture2D" uid="uid://bl8i3f2ftcj4a" path="res://assets/Puzzle/player-puzzle.png" id="2_mkths"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kgjkr"]
+size = Vector2(42, 42)
+
+[node name="player" type="CharacterBody2D" unique_id=1812727733]
+z_index = 2
+script = ExtResource("1_hgwrv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1390549273]
+position = Vector2(-1.847744e-06, -1.9073486e-06)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_mkths")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1896716847]
+shape = SubResource("RectangleShape2D_kgjkr")

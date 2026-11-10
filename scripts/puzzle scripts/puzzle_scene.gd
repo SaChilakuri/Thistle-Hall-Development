@@ -6,12 +6,14 @@ extends Node2D
 const PUZZLE_H_WALL = preload("uid://ciirkdwewqb2h")
 const PUZZLE_V_WALL = preload("uid://cmcl0tnjkgtbs")
 const PUZZLE_PIECE = preload("uid://p3ligdab2mog")
+const PUZZLE_PLAYER = preload("uid://debf07nuvr4ll")
 
 var v_wall_positions = []
 var h_wall_positions = []
 var board_spots = []
 var num_walls = 5
 var num_pieces = 5
+signal puzzle_complete
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -36,8 +38,7 @@ func _create_board():
 		instance = PUZZLE_H_WALL.instantiate()
 		instance.position = rand_pos
 		add_child(instance)
-	
-	
+		
 	for i in num_pieces:
 		var rand_pos = board_spots.pick_random()
 		instance = PUZZLE_PIECE.instantiate()
@@ -46,7 +47,14 @@ func _create_board():
 		instance.z_index = 0
 		instance.connect("piece_collected", _on_piece_picked_up)
 		add_child(instance)
+	
+	var player = PUZZLE_PLAYER.instantiate()
+	player.position = board_spots.pick_random()
+	add_child(player)
 
 func _on_piece_picked_up():
 	num_pieces -= 1
 	print(num_pieces)
+	if num_pieces == 0:
+		queue_free()
+		emit_signal("puzzle_complete")
