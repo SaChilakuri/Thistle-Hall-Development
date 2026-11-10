@@ -88,6 +88,18 @@ position = Vector2(-160, 160)
 [node name="Marker2D3" type="Marker2D" parent="wall_markers" unique_id=2018573514]
 position = Vector2(160, 160)
 
+[node name="Marker2D4" type="Marker2D" parent="wall_markers" unique_id=1287214012]
+position = Vector2(-80, 80)
+
+[node name="Marker2D5" type="Marker2D" parent="wall_markers" unique_id=2102696064]
+position = Vector2(80, 80)
+
+[node name="Marker2D5" type="Marker2D" parent="." unique_id=2104332797]
+position = Vector2(80, -80)
+
+[node name="Marker2D4" type="Marker2D" parent="." unique_id=2128778742]
+position = Vector2(-80, -80)
+
 [node name="puzzle_spot_markers" type="Node" parent="." unique_id=699578709]
 
 [node name="Marker2D3" type="Marker2D" parent="puzzle_spot_markers" unique_id=1809255686]
@@ -130,7 +142,7 @@ position = Vector2(41, 120)
 position = Vector2(40, -41)
 
 [node name="Marker2D14" type="Marker2D" parent="puzzle_spot_markers" unique_id=2023736131]
-position = Vector2(-40, -41)
+position = Vector2(-40, -40)
 
 [node name="Marker2D15" type="Marker2D" parent="puzzle_spot_markers" unique_id=1499265822]
 position = Vector2(-202, -41)
