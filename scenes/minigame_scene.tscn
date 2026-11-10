@@ -1,47 +1,41 @@
 [gd_scene format=3 uid="uid://bpychkfoh1utj"]
 
 [ext_resource type="Script" uid="uid://b36fcfrkogmwe" path="res://scripts/player_puzzle.gd" id="1_iq87t"]
-[ext_resource type="Script" uid="uid://24ag0cw3gaug" path="res://scenes/puzzle_scene.gd" id="1_ms72j"]
+[ext_resource type="Script" uid="uid://24ag0cw3gaug" path="res://scripts/puzzle_scene.gd" id="1_ms72j"]
 [ext_resource type="Texture2D" uid="uid://bl8i3f2ftcj4a" path="res://assets/puzzle/player-puzzle.png" id="2_5p48e"]
 [ext_resource type="Texture2D" uid="uid://ba75rjfpbcgst" path="res://assets/puzzle/puzzle-board.png" id="4_2s1hm"]
-[ext_resource type="Texture2D" uid="uid://ccbsdxnpxpvn5" path="res://assets/puzzle/puzzle-piece.png" id="5_2s1hm"]
-[ext_resource type="PackedScene" uid="uid://ciirkdwewqb2h" path="res://scenes/puzzle_h_wall.tscn" id="6_ms72j"]
-[ext_resource type="PackedScene" uid="uid://cmcl0tnjkgtbs" path="res://scenes/puzzle_v_wall.tscn" id="7_2bixc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kgjkr"]
-size = Vector2(68, 68)
+size = Vector2(42, 42)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tuu34"]
 size = Vector2(470, 36.09375)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_kgjkr"]
-radius = 34.0
 
 [node name="minigame scene" type="Node2D" unique_id=326021952]
 script = ExtResource("1_ms72j")
 
 [node name="player" type="CharacterBody2D" parent="." unique_id=2071360907]
 z_index = 2
-position = Vector2(-96, -97)
+position = Vector2(-119, -120)
 script = ExtResource("1_iq87t")
 
 [node name="Sprite2D" type="Sprite2D" parent="player" unique_id=1924441729]
-position = Vector2(-24, -23)
+position = Vector2(-1.847744e-06, -1.9073486e-06)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_5p48e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=581783981]
-position = Vector2(-24, -23)
 shape = SubResource("RectangleShape2D_kgjkr")
 
 [node name="Label" type="Label" parent="." unique_id=881353493]
-offset_left = 87.0
-offset_top = 76.0
-offset_right = 133.0
-offset_bottom = 99.0
+offset_left = -521.0
+offset_top = -230.0
+offset_right = -347.0
+offset_bottom = -207.0
 text = "Waiting for movement"
 
 [node name="board" type="StaticBody2D" parent="." unique_id=1626904406]
+z_index = -1
 
 [node name="board_sprite" type="Sprite2D" parent="board" unique_id=1661812016]
 texture = ExtResource("4_2s1hm")
@@ -65,17 +59,6 @@ position = Vector2(0, 253)
 shape = SubResource("RectangleShape2D_tuu34")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=695517616]
-
-[node name="puzzle_piece" type="Area2D" parent="." unique_id=1624138089]
-position = Vector2(200, 40)
-
-[node name="Sprite2D" type="Sprite2D" parent="puzzle_piece" unique_id=378313328]
-position = Vector2(-1.1444092e-05, -5.9604645e-08)
-scale = Vector2(0.7, 0.7)
-texture = ExtResource("5_2s1hm")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="puzzle_piece" unique_id=433509130]
-shape = SubResource("CircleShape2D_kgjkr")
 
 [node name="wall_markers" type="Node" parent="." unique_id=240261106]
 
@@ -105,28 +88,112 @@ position = Vector2(-160, 160)
 [node name="Marker2D3" type="Marker2D" parent="wall_markers" unique_id=2018573514]
 position = Vector2(160, 160)
 
-[node name="Marker2D4" type="Marker2D" parent="wall_markers" unique_id=835177537]
-position = Vector2(160, 80)
+[node name="puzzle_spot_markers" type="Node" parent="." unique_id=699578709]
 
-[node name="Marker2D5" type="Marker2D" parent="wall_markers" unique_id=1752390409]
-position = Vector2(-160, 80)
+[node name="Marker2D3" type="Marker2D" parent="puzzle_spot_markers" unique_id=1809255686]
+position = Vector2(41, 201)
 
-[node name="Marker2D6" type="Marker2D" parent="wall_markers" unique_id=2109176207]
-position = Vector2(0, 80)
+[node name="Marker2D4" type="Marker2D" parent="puzzle_spot_markers" unique_id=703352760]
+position = Vector2(-39, 201)
 
-[node name="Marker2D7" type="Marker2D" parent="wall_markers" unique_id=1423501335]
-position = Vector2(160, -80)
+[node name="Marker2D" type="Marker2D" parent="puzzle_spot_markers" unique_id=2020177926]
+position = Vector2(-201, 201)
 
-[node name="Marker2D8" type="Marker2D" parent="wall_markers" unique_id=1174700588]
-position = Vector2(-160, -80)
+[node name="Marker2D2" type="Marker2D" parent="puzzle_spot_markers" unique_id=899355831]
+position = Vector2(-121, 201)
 
-[node name="Marker2D9" type="Marker2D" parent="wall_markers" unique_id=1463800173]
-position = Vector2(0, -80)
+[node name="Marker2D5" type="Marker2D" parent="puzzle_spot_markers" unique_id=1743434831]
+position = Vector2(200, 201)
 
-[node name="h_wall" parent="." unique_id=1590175917 instance=ExtResource("6_ms72j")]
-position = Vector2(0, -5)
+[node name="Marker2D6" type="Marker2D" parent="puzzle_spot_markers" unique_id=488492262]
+position = Vector2(120, 201)
 
-[node name="v_wall" parent="." unique_id=1227712785 instance=ExtResource("7_2bixc")]
-position = Vector2(160, -80)
+[node name="Marker2D7" type="Marker2D" parent="puzzle_spot_markers" unique_id=1793575460]
+position = Vector2(120, 120)
 
-[connection signal="body_entered" from="puzzle_piece" to="player" method="_on_puzzle_piece_body_entered"]
+[node name="Marker2D8" type="Marker2D" parent="puzzle_spot_markers" unique_id=2049471832]
+position = Vector2(200, 120)
+
+[node name="Marker2D9" type="Marker2D" parent="puzzle_spot_markers" unique_id=1500381139]
+position = Vector2(-121, 120)
+
+[node name="Marker2D10" type="Marker2D" parent="puzzle_spot_markers" unique_id=1659065898]
+position = Vector2(-201, 120)
+
+[node name="Marker2D11" type="Marker2D" parent="puzzle_spot_markers" unique_id=1102567289]
+position = Vector2(-40, 120)
+
+[node name="Marker2D12" type="Marker2D" parent="puzzle_spot_markers" unique_id=2015567062]
+position = Vector2(41, 120)
+
+[node name="Marker2D13" type="Marker2D" parent="puzzle_spot_markers" unique_id=1743157788]
+position = Vector2(40, -41)
+
+[node name="Marker2D14" type="Marker2D" parent="puzzle_spot_markers" unique_id=2023736131]
+position = Vector2(-40, -41)
+
+[node name="Marker2D15" type="Marker2D" parent="puzzle_spot_markers" unique_id=1499265822]
+position = Vector2(-202, -41)
+
+[node name="Marker2D16" type="Marker2D" parent="puzzle_spot_markers" unique_id=893642487]
+position = Vector2(-122, -41)
+
+[node name="Marker2D17" type="Marker2D" parent="puzzle_spot_markers" unique_id=1443539752]
+position = Vector2(199, -41)
+
+[node name="Marker2D18" type="Marker2D" parent="puzzle_spot_markers" unique_id=1624604065]
+position = Vector2(119, -41)
+
+[node name="Marker2D19" type="Marker2D" parent="puzzle_spot_markers" unique_id=2142167404]
+position = Vector2(119, 40)
+
+[node name="Marker2D20" type="Marker2D" parent="puzzle_spot_markers" unique_id=732745188]
+position = Vector2(199, 40)
+
+[node name="Marker2D21" type="Marker2D" parent="puzzle_spot_markers" unique_id=683401387]
+position = Vector2(-122, 40)
+
+[node name="Marker2D22" type="Marker2D" parent="puzzle_spot_markers" unique_id=1694612948]
+position = Vector2(-202, 40)
+
+[node name="Marker2D23" type="Marker2D" parent="puzzle_spot_markers" unique_id=539927560]
+position = Vector2(-40, 40)
+
+[node name="Marker2D24" type="Marker2D" parent="puzzle_spot_markers" unique_id=1714916617]
+position = Vector2(40, 40)
+
+[node name="Marker2D25" type="Marker2D" parent="puzzle_spot_markers" unique_id=351571600]
+position = Vector2(40, -120)
+
+[node name="Marker2D26" type="Marker2D" parent="puzzle_spot_markers" unique_id=1663227228]
+position = Vector2(-40, -120)
+
+[node name="Marker2D27" type="Marker2D" parent="puzzle_spot_markers" unique_id=1266835086]
+position = Vector2(-202, -120)
+
+[node name="Marker2D28" type="Marker2D" parent="puzzle_spot_markers" unique_id=1117080179]
+position = Vector2(-120, -120)
+
+[node name="Marker2D29" type="Marker2D" parent="puzzle_spot_markers" unique_id=337244498]
+position = Vector2(199, -120)
+
+[node name="Marker2D30" type="Marker2D" parent="puzzle_spot_markers" unique_id=439215706]
+position = Vector2(119, -120)
+
+[node name="Marker2D31" type="Marker2D" parent="puzzle_spot_markers" unique_id=1014377139]
+position = Vector2(119, -201)
+
+[node name="Marker2D32" type="Marker2D" parent="puzzle_spot_markers" unique_id=1055235172]
+position = Vector2(199, -201)
+
+[node name="Marker2D33" type="Marker2D" parent="puzzle_spot_markers" unique_id=1786020055]
+position = Vector2(-122, -201)
+
+[node name="Marker2D34" type="Marker2D" parent="puzzle_spot_markers" unique_id=272412611]
+position = Vector2(-202, -201)
+
+[node name="Marker2D35" type="Marker2D" parent="puzzle_spot_markers" unique_id=1456355304]
+position = Vector2(-40, -201)
+
+[node name="Marker2D36" type="Marker2D" parent="puzzle_spot_markers" unique_id=2033645550]
+position = Vector2(40, -201)
