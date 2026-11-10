@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dt3qty3p6wc37"]
+
+[ext_resource type="Script" uid="uid://dbuu2ncihl8hm" path="res://scenes/puzzle_manager.gd" id="1_4lwn6"]
+
+[node name="puzzle_manager" type="Node2D" unique_id=554286022]
+script = ExtResource("1_4lwn6")
+
+[node name="Timer" type="Timer" parent="." unique_id=1690237140]
+wait_time = 60.0
+one_shot = true
+autostart = true
+
+[node name="Camera2D" type="Camera2D" parent="Timer" unique_id=427628826]
+
+[node name="count_label" type="Label" parent="." unique_id=927422275]
+offset_left = -561.0
+offset_top = -305.0
+offset_right = -128.0
+offset_bottom = -217.0
+theme_override_font_sizes/font_size = 32
+text = "Puzzle Count: "
+
+[node name="timer_label" type="Label" parent="." unique_id=33226280]
+offset_left = -561.0
+offset_top = -259.0
+offset_right = -128.0
+offset_bottom = -171.0
+theme_override_font_sizes/font_size = 32
+text = "Time Remaining:"

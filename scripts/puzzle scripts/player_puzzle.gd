@@ -1,5 +1,4 @@
 extends CharacterBody2D
-@onready var label: Label = $"../Label"
 @onready var player_sprite: Sprite2D = $Sprite2D
 @onready var player: CharacterBody2D = $"."
 @onready var puzzle_spot_markers: Node = $"../puzzle_spot_markers"
@@ -22,7 +21,6 @@ func _physics_process(delta: float) -> void:
 	if not moving:
 		var x_direction := Input.get_axis("player_left", "player_right")
 		if x_direction:
-			label.text = "Moving: True"
 			velocity.x = x_direction * SPEED
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
@@ -34,7 +32,6 @@ func _physics_process(delta: float) -> void:
 			player_sprite.z_index = 1
 		if y_direction:
 			velocity.y = y_direction * SPEED
-			label.text = "Moving: True"
 		else:
 			velocity.y = y_direction * SPEED
 		
@@ -43,7 +40,7 @@ func _physics_process(delta: float) -> void:
 		
 		if Input.is_action_just_pressed("click"):
 			var mouse_pos = get_viewport().get_mouse_position()
-			mouse_pos.y -= 290
+			mouse_pos.y -= 320
 			mouse_pos.x -= 580
 			print('MOUSE POSITION:')
 			print(mouse_pos)
@@ -51,7 +48,6 @@ func _physics_process(delta: float) -> void:
 	elif velocity.x == 0 and velocity.y == 0:
 		moving = false
 		global_position = _get_closest_tile(player.global_position)
-		label.text = "Moving: False"
 	move_and_slide()
 
 func _get_closest_tile(body_location):

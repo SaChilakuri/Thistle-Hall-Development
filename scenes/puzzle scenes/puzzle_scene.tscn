@@ -1,0 +1,384 @@
+[gd_scene format=3 uid="uid://bpychkfoh1utj"]
+
+[ext_resource type="Script" uid="uid://24ag0cw3gaug" path="res://scripts/puzzle scripts/puzzle_scene.gd" id="1_qrhv5"]
+[ext_resource type="Script" uid="uid://b36fcfrkogmwe" path="res://scripts/puzzle scripts/player_puzzle.gd" id="2_h8yee"]
+[ext_resource type="Texture2D" uid="uid://bl8i3f2ftcj4a" path="res://assets/Puzzle/player-puzzle.png" id="3_d0a8b"]
+[ext_resource type="Texture2D" uid="uid://ba75rjfpbcgst" path="res://assets/Puzzle/puzzle-board.png" id="4_6qwyr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kgjkr"]
+size = Vector2(42, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tuu34"]
+size = Vector2(470, 36.09375)
+
+[node name="puzzle_scene" type="Node2D" unique_id=326021952]
+script = ExtResource("1_qrhv5")
+
+[node name="player" type="CharacterBody2D" parent="." unique_id=2071360907]
+z_index = 2
+position = Vector2(-199, -120)
+script = ExtResource("2_h8yee")
+
+[node name="Sprite2D" type="Sprite2D" parent="player" unique_id=1924441729]
+position = Vector2(-1.847744e-06, -1.9073486e-06)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_d0a8b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player" unique_id=581783981]
+shape = SubResource("RectangleShape2D_kgjkr")
+
+[node name="board" type="StaticBody2D" parent="." unique_id=1626904406]
+z_index = -1
+
+[node name="board_sprite" type="Sprite2D" parent="board" unique_id=1661812016]
+texture = ExtResource("4_6qwyr")
+
+[node name="left_wall" type="CollisionShape2D" parent="board" unique_id=585443551]
+position = Vector2(-253, -4.2632564e-14)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_tuu34")
+
+[node name="left_wall2" type="CollisionShape2D" parent="board" unique_id=552828337]
+position = Vector2(253, -4.2632564e-14)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_tuu34")
+
+[node name="top_wall" type="CollisionShape2D" parent="board" unique_id=821367240]
+position = Vector2(3, -255)
+shape = SubResource("RectangleShape2D_tuu34")
+
+[node name="bottom_wall" type="CollisionShape2D" parent="board" unique_id=1361932466]
+position = Vector2(0, 253)
+shape = SubResource("RectangleShape2D_tuu34")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=695517616]
+
+[node name="v_wall_markers" type="Node" parent="." unique_id=240261106]
+
+[node name="Marker2D6" type="Marker2D" parent="v_wall_markers" unique_id=1926093354]
+position = Vector2(-160, -40)
+
+[node name="Marker2D5" type="Marker2D" parent="v_wall_markers" unique_id=1049379244]
+position = Vector2(-160, -120)
+
+[node name="Marker2D4" type="Marker2D" parent="v_wall_markers" unique_id=712006812]
+position = Vector2(-160, -200)
+
+[node name="Marker2D" type="Marker2D" parent="v_wall_markers" unique_id=509392114]
+position = Vector2(-160, 40)
+
+[node name="Marker2D2" type="Marker2D" parent="v_wall_markers" unique_id=1806220698]
+position = Vector2(-160, 120)
+
+[node name="Marker2D3" type="Marker2D" parent="v_wall_markers" unique_id=1816096492]
+position = Vector2(-160, 200)
+
+[node name="Marker2D7" type="Marker2D" parent="v_wall_markers" unique_id=1838319176]
+position = Vector2(-80, 200)
+
+[node name="Marker2D8" type="Marker2D" parent="v_wall_markers" unique_id=660800971]
+position = Vector2(-80, 120)
+
+[node name="Marker2D9" type="Marker2D" parent="v_wall_markers" unique_id=1902894770]
+position = Vector2(-80, 40)
+
+[node name="Marker2D10" type="Marker2D" parent="v_wall_markers" unique_id=84929330]
+position = Vector2(-80, -200)
+
+[node name="Marker2D11" type="Marker2D" parent="v_wall_markers" unique_id=347875808]
+position = Vector2(-80, -120)
+
+[node name="Marker2D12" type="Marker2D" parent="v_wall_markers" unique_id=826981244]
+position = Vector2(-80, -40)
+
+[node name="Marker2D18" type="Marker2D" parent="v_wall_markers" unique_id=1791633204]
+position = Vector2(160, -40)
+
+[node name="Marker2D17" type="Marker2D" parent="v_wall_markers" unique_id=2089103586]
+position = Vector2(160, -120)
+
+[node name="Marker2D16" type="Marker2D" parent="v_wall_markers" unique_id=1724761194]
+position = Vector2(160, -200)
+
+[node name="Marker2D15" type="Marker2D" parent="v_wall_markers" unique_id=1187396522]
+position = Vector2(160, 40)
+
+[node name="Marker2D14" type="Marker2D" parent="v_wall_markers" unique_id=708019967]
+position = Vector2(160, 120)
+
+[node name="Marker2D13" type="Marker2D" parent="v_wall_markers" unique_id=50360889]
+position = Vector2(160, 200)
+
+[node name="Marker2D19" type="Marker2D" parent="v_wall_markers" unique_id=87510322]
+position = Vector2(80, 200)
+
+[node name="Marker2D20" type="Marker2D" parent="v_wall_markers" unique_id=1961039621]
+position = Vector2(80, 120)
+
+[node name="Marker2D21" type="Marker2D" parent="v_wall_markers" unique_id=804721153]
+position = Vector2(80, 40)
+
+[node name="Marker2D22" type="Marker2D" parent="v_wall_markers" unique_id=1637773827]
+position = Vector2(80, -200)
+
+[node name="Marker2D23" type="Marker2D" parent="v_wall_markers" unique_id=1552336135]
+position = Vector2(80, -120)
+
+[node name="Marker2D24" type="Marker2D" parent="v_wall_markers" unique_id=901415148]
+position = Vector2(80, -40)
+
+[node name="Marker2D25" type="Marker2D" parent="v_wall_markers" unique_id=1436265115]
+position = Vector2(0, -40)
+
+[node name="Marker2D26" type="Marker2D" parent="v_wall_markers" unique_id=1479649667]
+position = Vector2(0, -120)
+
+[node name="Marker2D27" type="Marker2D" parent="v_wall_markers" unique_id=1265657894]
+position = Vector2(0, -200)
+
+[node name="Marker2D28" type="Marker2D" parent="v_wall_markers" unique_id=890377331]
+position = Vector2(0, 40)
+
+[node name="Marker2D29" type="Marker2D" parent="v_wall_markers" unique_id=85807373]
+position = Vector2(0, 120)
+
+[node name="Marker2D30" type="Marker2D" parent="v_wall_markers" unique_id=1087977664]
+position = Vector2(0, 200)
+
+[node name="puzzle_spot_markers" type="Node" parent="." unique_id=699578709]
+
+[node name="Marker2D3" type="Marker2D" parent="puzzle_spot_markers" unique_id=1809255686]
+visible = false
+position = Vector2(40, 200)
+
+[node name="Marker2D4" type="Marker2D" parent="puzzle_spot_markers" unique_id=703352760]
+visible = false
+position = Vector2(-40, 200)
+
+[node name="Marker2D" type="Marker2D" parent="puzzle_spot_markers" unique_id=2020177926]
+visible = false
+position = Vector2(-200, 200)
+
+[node name="Marker2D2" type="Marker2D" parent="puzzle_spot_markers" unique_id=899355831]
+visible = false
+position = Vector2(-120, 200)
+
+[node name="Marker2D5" type="Marker2D" parent="puzzle_spot_markers" unique_id=1743434831]
+visible = false
+position = Vector2(200, 200)
+
+[node name="Marker2D6" type="Marker2D" parent="puzzle_spot_markers" unique_id=488492262]
+visible = false
+position = Vector2(120, 200)
+
+[node name="Marker2D7" type="Marker2D" parent="puzzle_spot_markers" unique_id=1793575460]
+visible = false
+position = Vector2(120, 120)
+
+[node name="Marker2D8" type="Marker2D" parent="puzzle_spot_markers" unique_id=2049471832]
+visible = false
+position = Vector2(200, 120)
+
+[node name="Marker2D9" type="Marker2D" parent="puzzle_spot_markers" unique_id=1500381139]
+visible = false
+position = Vector2(-120, 120)
+
+[node name="Marker2D10" type="Marker2D" parent="puzzle_spot_markers" unique_id=1659065898]
+visible = false
+position = Vector2(-200, 120)
+
+[node name="Marker2D11" type="Marker2D" parent="puzzle_spot_markers" unique_id=1102567289]
+visible = false
+position = Vector2(-40, 120)
+
+[node name="Marker2D12" type="Marker2D" parent="puzzle_spot_markers" unique_id=2015567062]
+visible = false
+position = Vector2(40, 120)
+
+[node name="Marker2D13" type="Marker2D" parent="puzzle_spot_markers" unique_id=1743157788]
+visible = false
+position = Vector2(40, -40)
+
+[node name="Marker2D14" type="Marker2D" parent="puzzle_spot_markers" unique_id=2023736131]
+visible = false
+position = Vector2(-40, -40)
+
+[node name="Marker2D15" type="Marker2D" parent="puzzle_spot_markers" unique_id=1499265822]
+visible = false
+position = Vector2(-200, -40)
+
+[node name="Marker2D16" type="Marker2D" parent="puzzle_spot_markers" unique_id=893642487]
+visible = false
+position = Vector2(-120, -40)
+
+[node name="Marker2D17" type="Marker2D" parent="puzzle_spot_markers" unique_id=1443539752]
+visible = false
+position = Vector2(200, -40)
+
+[node name="Marker2D18" type="Marker2D" parent="puzzle_spot_markers" unique_id=1624604065]
+visible = false
+position = Vector2(120, -40)
+
+[node name="Marker2D19" type="Marker2D" parent="puzzle_spot_markers" unique_id=2142167404]
+visible = false
+position = Vector2(120, 40)
+
+[node name="Marker2D20" type="Marker2D" parent="puzzle_spot_markers" unique_id=732745188]
+visible = false
+position = Vector2(200, 40)
+
+[node name="Marker2D21" type="Marker2D" parent="puzzle_spot_markers" unique_id=683401387]
+visible = false
+position = Vector2(-120, 40)
+
+[node name="Marker2D22" type="Marker2D" parent="puzzle_spot_markers" unique_id=1694612948]
+visible = false
+position = Vector2(-200, 40)
+
+[node name="Marker2D23" type="Marker2D" parent="puzzle_spot_markers" unique_id=539927560]
+visible = false
+position = Vector2(-40, 40)
+
+[node name="Marker2D24" type="Marker2D" parent="puzzle_spot_markers" unique_id=1714916617]
+visible = false
+position = Vector2(40, 40)
+
+[node name="Marker2D25" type="Marker2D" parent="puzzle_spot_markers" unique_id=351571600]
+visible = false
+position = Vector2(40, -120)
+
+[node name="Marker2D26" type="Marker2D" parent="puzzle_spot_markers" unique_id=1663227228]
+visible = false
+position = Vector2(-40, -120)
+
+[node name="Marker2D27" type="Marker2D" parent="puzzle_spot_markers" unique_id=1266835086]
+visible = false
+position = Vector2(-200, -120)
+
+[node name="Marker2D28" type="Marker2D" parent="puzzle_spot_markers" unique_id=1117080179]
+visible = false
+position = Vector2(-120, -120)
+
+[node name="Marker2D29" type="Marker2D" parent="puzzle_spot_markers" unique_id=337244498]
+visible = false
+position = Vector2(200, -120)
+
+[node name="Marker2D30" type="Marker2D" parent="puzzle_spot_markers" unique_id=439215706]
+visible = false
+position = Vector2(119, -120)
+
+[node name="Marker2D31" type="Marker2D" parent="puzzle_spot_markers" unique_id=1014377139]
+visible = false
+position = Vector2(119, -200)
+
+[node name="Marker2D32" type="Marker2D" parent="puzzle_spot_markers" unique_id=1055235172]
+visible = false
+position = Vector2(200, -200)
+
+[node name="Marker2D33" type="Marker2D" parent="puzzle_spot_markers" unique_id=1786020055]
+visible = false
+position = Vector2(-120, -200)
+
+[node name="Marker2D34" type="Marker2D" parent="puzzle_spot_markers" unique_id=272412611]
+visible = false
+position = Vector2(-200, -200)
+
+[node name="Marker2D35" type="Marker2D" parent="puzzle_spot_markers" unique_id=1456355304]
+visible = false
+position = Vector2(-40, -200)
+
+[node name="Marker2D36" type="Marker2D" parent="puzzle_spot_markers" unique_id=2033645550]
+visible = false
+position = Vector2(40, -200)
+
+[node name="h_wall_markers" type="Node" parent="." unique_id=381876908]
+
+[node name="Marker2D29" type="Marker2D" parent="h_wall_markers" unique_id=2104555182]
+position = Vector2(200, 80)
+
+[node name="Marker2D30" type="Marker2D" parent="h_wall_markers" unique_id=1218431025]
+position = Vector2(200, -80)
+
+[node name="Marker2D31" type="Marker2D" parent="h_wall_markers" unique_id=703034206]
+position = Vector2(200, 160)
+
+[node name="Marker2D32" type="Marker2D" parent="h_wall_markers" unique_id=1997147346]
+position = Vector2(200, 0)
+
+[node name="Marker2D33" type="Marker2D" parent="h_wall_markers" unique_id=1862936410]
+position = Vector2(200, -160)
+
+[node name="Marker2D16" type="Marker2D" parent="h_wall_markers" unique_id=1889010705]
+position = Vector2(40, 80)
+
+[node name="Marker2D22" type="Marker2D" parent="h_wall_markers" unique_id=478365008]
+position = Vector2(40, -80)
+
+[node name="Marker2D17" type="Marker2D" parent="h_wall_markers" unique_id=275298988]
+position = Vector2(40, 160)
+
+[node name="Marker2D18" type="Marker2D" parent="h_wall_markers" unique_id=778553317]
+position = Vector2(40, 0)
+
+[node name="Marker2D23" type="Marker2D" parent="h_wall_markers" unique_id=1717945593]
+position = Vector2(40, -160)
+
+[node name="Marker2D14" type="Marker2D" parent="h_wall_markers" unique_id=404587287]
+position = Vector2(-40, 80)
+
+[node name="Marker2D20" type="Marker2D" parent="h_wall_markers" unique_id=385724459]
+position = Vector2(-40, -80)
+
+[node name="Marker2D5" type="Marker2D" parent="h_wall_markers" unique_id=1646342134]
+position = Vector2(-40, 160)
+
+[node name="Marker2D9" type="Marker2D" parent="h_wall_markers" unique_id=418035101]
+position = Vector2(-40, 0)
+
+[node name="Marker2D10" type="Marker2D" parent="h_wall_markers" unique_id=1614793209]
+position = Vector2(-40, -160)
+
+[node name="Marker2D8" type="Marker2D" parent="h_wall_markers" unique_id=752795301]
+position = Vector2(-120, -160)
+
+[node name="Marker2D7" type="Marker2D" parent="h_wall_markers" unique_id=438028229]
+position = Vector2(-120, 0)
+
+[node name="Marker2D4" type="Marker2D" parent="h_wall_markers" unique_id=1268835962]
+position = Vector2(-120, 160)
+
+[node name="Marker2D19" type="Marker2D" parent="h_wall_markers" unique_id=580573428]
+position = Vector2(-120, -80)
+
+[node name="Marker2D13" type="Marker2D" parent="h_wall_markers" unique_id=416577161]
+position = Vector2(-120, 80)
+
+[node name="Marker2D15" type="Marker2D" parent="h_wall_markers" unique_id=807833856]
+position = Vector2(-200, 80)
+
+[node name="Marker2D21" type="Marker2D" parent="h_wall_markers" unique_id=2078610528]
+position = Vector2(-200, -80)
+
+[node name="Marker2D6" type="Marker2D" parent="h_wall_markers" unique_id=474552717]
+position = Vector2(-200, 160)
+
+[node name="Marker2D11" type="Marker2D" parent="h_wall_markers" unique_id=390411505]
+position = Vector2(-200, 0)
+
+[node name="Marker2D12" type="Marker2D" parent="h_wall_markers" unique_id=555564872]
+position = Vector2(-200, -160)
+
+[node name="Marker2D24" type="Marker2D" parent="h_wall_markers" unique_id=1747059581]
+position = Vector2(120, 80)
+
+[node name="Marker2D25" type="Marker2D" parent="h_wall_markers" unique_id=1127459636]
+position = Vector2(120, -80)
+
+[node name="Marker2D26" type="Marker2D" parent="h_wall_markers" unique_id=1498032397]
+position = Vector2(120, 160)
+
+[node name="Marker2D27" type="Marker2D" parent="h_wall_markers" unique_id=540562432]
+position = Vector2(120, 0)
+
+[node name="Marker2D28" type="Marker2D" parent="h_wall_markers" unique_id=1389978163]
+position = Vector2(120, -160)

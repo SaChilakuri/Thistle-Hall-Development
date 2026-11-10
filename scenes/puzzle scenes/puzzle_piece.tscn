@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://p3ligdab2mog"]
 
-[ext_resource type="Script" uid="uid://cjwpjpn5r2e0x" path="res://scripts/puzzle_piece.gd" id="1_7wynd"]
-[ext_resource type="Texture2D" uid="uid://ccbsdxnpxpvn5" path="res://assets/Puzzle/puzzle-piece.png" id="1_a0ykv"]
+[ext_resource type="Script" uid="uid://cjwpjpn5r2e0x" path="res://scripts/puzzle scripts/puzzle_piece.gd" id="1_kl17w"]
+[ext_resource type="Texture2D" uid="uid://ccbsdxnpxpvn5" path="res://assets/Puzzle/puzzle-piece.png" id="2_kd4mf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xadyu"]
 radius = 27.0
 
 [node name="Area2D" type="Area2D" unique_id=1270781742]
-script = ExtResource("1_7wynd")
+script = ExtResource("1_kl17w")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1372554964]
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("1_a0ykv")
+texture = ExtResource("2_kd4mf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=657087870]
 shape = SubResource("CircleShape2D_xadyu")
