@@ -6,11 +6,7 @@
 script = ExtResource("1_4lwn6")
 
 [node name="Timer" type="Timer" parent="." unique_id=1690237140]
-wait_time = 60.0
-one_shot = true
 autostart = true
-
-[node name="Camera2D" type="Camera2D" parent="Timer" unique_id=427628826]
 
 [node name="count_label" type="Label" parent="." unique_id=927422275]
 offset_left = -561.0
@@ -27,5 +23,7 @@ offset_right = -128.0
 offset_bottom = -171.0
 theme_override_font_sizes/font_size = 32
 text = "Time Remaining:"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=427628826]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

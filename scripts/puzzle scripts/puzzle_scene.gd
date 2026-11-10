@@ -11,7 +11,7 @@ const PUZZLE_PLAYER = preload("uid://debf07nuvr4ll")
 var v_wall_positions = []
 var h_wall_positions = []
 var board_spots: Array = []
-var num_walls = 5
+var num_walls = 7
 var num_pieces = 5
 signal puzzle_complete
 
