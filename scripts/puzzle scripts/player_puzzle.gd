@@ -1,19 +1,12 @@
 extends CharacterBody2D
 @onready var player_sprite: Sprite2D = $Sprite2D
 @onready var player: CharacterBody2D = $"."
-@onready var puzzle_spot_markers: Node = $"../puzzle_spot_markers"
 
 
 const SPEED = 500
 const JUMP_VELOCITY = -400.0
-
 var moving = false
-
 var board_spots = []
-
-func _ready() -> void:
-	for marker in puzzle_spot_markers.get_children():
-		board_spots.append(marker.global_position)
 
 func _physics_process(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
@@ -44,13 +37,13 @@ func _physics_process(delta: float) -> void:
 			mouse_pos.x -= 580
 			print('MOUSE POSITION:')
 			print(mouse_pos)
-			global_position = _get_closest_tile(mouse_pos)
+			global_position = _get_closest_tile(mouse_pos, board_spots)
 	elif velocity.x == 0 and velocity.y == 0:
 		moving = false
-		global_position = _get_closest_tile(player.global_position)
+		_get_closest_tile(player.global_position, board_spots)
 	move_and_slide()
 
-func _get_closest_tile(body_location):
+func _get_closest_tile(body_location, board_spots):
 	var closest_pos = 99999
 	var closest_spot = ''
 	for spot in board_spots:
@@ -61,3 +54,4 @@ func _get_closest_tile(body_location):
 	print('CLOSEST SPOT:')
 	print(closest_spot)
 	return closest_spot
+	

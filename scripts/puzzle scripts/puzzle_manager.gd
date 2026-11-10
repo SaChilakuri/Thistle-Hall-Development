@@ -27,7 +27,7 @@ func _on_puzzle_complete():
 		print('finished!')
 	else:
 		puzzles_left -= 1
-		_next_puzzle()
+		_next_puzzle.call_deferred()
 	
 
 func _on_timer_timeout() -> void:

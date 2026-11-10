@@ -10,7 +10,7 @@ const PUZZLE_PLAYER = preload("uid://debf07nuvr4ll")
 
 var v_wall_positions = []
 var h_wall_positions = []
-var board_spots = []
+var board_spots: Array = []
 var num_walls = 5
 var num_pieces = 5
 signal puzzle_complete
@@ -38,19 +38,21 @@ func _create_board():
 		instance = PUZZLE_H_WALL.instantiate()
 		instance.position = rand_pos
 		add_child(instance)
-		
+	
+	var player = PUZZLE_PLAYER.instantiate()
+	player.position = board_spots.pick_random()
+	player.board_spots = board_spots.duplicate()
+	board_spots.erase(player.position)
+	add_child(player)
+	
 	for i in num_pieces:
 		var rand_pos = board_spots.pick_random()
 		instance = PUZZLE_PIECE.instantiate()
 		instance.position = rand_pos
-		board_spots.erase(rand_pos)
 		instance.z_index = 0
+		board_spots.erase(rand_pos)
 		instance.connect("piece_collected", _on_piece_picked_up)
 		add_child(instance)
-	
-	var player = PUZZLE_PLAYER.instantiate()
-	player.position = board_spots.pick_random()
-	add_child(player)
 
 func _on_piece_picked_up():
 	num_pieces -= 1

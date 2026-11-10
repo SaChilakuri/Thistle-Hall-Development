@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dt3qty3p6wc37"]
 
-[ext_resource type="Script" uid="uid://dbuu2ncihl8hm" path="res://scenes/puzzle_manager.gd" id="1_4lwn6"]
+[ext_resource type="Script" uid="uid://dbuu2ncihl8hm" path="res://scripts/puzzle scripts/puzzle_manager.gd" id="1_4lwn6"]
 
 [node name="puzzle_manager" type="Node2D" unique_id=554286022]
 script = ExtResource("1_4lwn6")
