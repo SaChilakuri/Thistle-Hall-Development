@@ -5,7 +5,7 @@ const PUZZLE_SCENE = preload("uid://bpychkfoh1utj")
 @onready var timer_label: Label = $timer_label
 @onready var count_label: Label = $count_label
 var puzzles_left = 5
-var time = 60
+var time = 120
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -32,6 +32,8 @@ func _on_puzzle_complete():
 		puzzles_left -= 1
 		_next_puzzle.call_deferred()
 	
-
 func _on_timer_timeout() -> void:
-	time -= 1
+	if time > 0:
+		time -= 1
+	else:
+		print('L')
