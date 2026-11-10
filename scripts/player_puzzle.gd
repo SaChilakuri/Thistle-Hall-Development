@@ -1,7 +1,6 @@
 extends CharacterBody2D
 @onready var label: Label = $"../Label"
 @onready var player_sprite: Sprite2D = $Sprite2D
-@onready var puzzle_piece: Area2D = $"../puzzle_piece"
 @onready var player: CharacterBody2D = $"."
 @onready var puzzle_spot_markers: Node = $"../puzzle_spot_markers"
 
@@ -25,8 +24,6 @@ func _physics_process(delta: float) -> void:
 		if x_direction:
 			label.text = "Moving: True"
 			velocity.x = x_direction * SPEED
-			global_position.x = round(global_position.x)
-			print(global_position.x)
 		else:
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 		
@@ -38,26 +35,33 @@ func _physics_process(delta: float) -> void:
 		if y_direction:
 			velocity.y = y_direction * SPEED
 			label.text = "Moving: True"
-			global_position.y = round(global_position.y)
-			print(global_position.y)
 		else:
 			velocity.y = y_direction * SPEED
 		
 		if y_direction != 0 or x_direction != 0:
 			moving = true
+		
+		if Input.is_action_just_pressed("click"):
+			var mouse_pos = get_viewport().get_mouse_position()
+			mouse_pos.y -= 290
+			mouse_pos.x -= 580
+			print('MOUSE POSITION:')
+			print(mouse_pos)
+			global_position = _get_closest_tile(mouse_pos)
 	elif velocity.x == 0 and velocity.y == 0:
 		moving = false
-		global_position = _get_closest_tile()
+		global_position = _get_closest_tile(player.global_position)
 		label.text = "Moving: False"
 	move_and_slide()
 
-func _get_closest_tile():
-	var closest_pos = 9999
+func _get_closest_tile(body_location):
+	var closest_pos = 99999
 	var closest_spot = ''
 	for spot in board_spots:
-		var dist = player.global_position.distance_to(spot)
+		var dist = body_location.distance_to(spot)
 		if dist < closest_pos:
 			closest_pos = dist
 			closest_spot = spot
+	print('CLOSEST SPOT:')
 	print(closest_spot)
 	return closest_spot

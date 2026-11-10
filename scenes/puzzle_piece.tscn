@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://p3ligdab2mog"]
 
-[ext_resource type="Script" uid="uid://cjwpjpn5r2e0x" path="res://scenes/puzzle_piece.gd" id="1_7wynd"]
-[ext_resource type="Texture2D" uid="uid://ccbsdxnpxpvn5" path="res://assets/puzzle/puzzle-piece.png" id="1_a0ykv"]
+[ext_resource type="Script" uid="uid://cjwpjpn5r2e0x" path="res://scripts/puzzle_piece.gd" id="1_7wynd"]
+[ext_resource type="Texture2D" uid="uid://ccbsdxnpxpvn5" path="res://assets/Puzzle/puzzle-piece.png" id="1_a0ykv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xadyu"]
 radius = 27.0
