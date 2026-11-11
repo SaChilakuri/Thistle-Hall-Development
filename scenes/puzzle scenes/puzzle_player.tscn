@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://debf07nuvr4ll"]
 
 [ext_resource type="Script" uid="uid://b36fcfrkogmwe" path="res://scripts/puzzle scripts/player_puzzle.gd" id="1_hgwrv"]
-[ext_resource type="Texture2D" uid="uid://bl8i3f2ftcj4a" path="res://assets/Puzzle/player-puzzle.png" id="2_mkths"]
+[ext_resource type="Texture2D" uid="uid://bl8i3f2ftcj4a" path="res://assets/puzzle/player-puzzle.png" id="2_mkths"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kgjkr"]
 size = Vector2(42, 42)

@@ -14,7 +14,9 @@ var board_spots: Array = []
 var num_walls = 7
 var num_pieces = 5
 signal puzzle_complete
-
+var player
+var instance
+var walls = []
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for marker in v_wall_markers.get_children():
@@ -26,20 +28,21 @@ func _ready() -> void:
 	_create_board()
 
 func _create_board():
-	var instance = ''
 	for i in num_walls:
 		var rand_pos = v_wall_positions.pick_random()
 		instance = PUZZLE_V_WALL.instantiate()
 		v_wall_positions.erase(rand_pos)
 		instance.position = rand_pos
 		instance.z_index = 1
+		walls.append(instance)
 		add_child(instance)
 		rand_pos = h_wall_positions.pick_random()
 		instance = PUZZLE_H_WALL.instantiate()
 		instance.position = rand_pos
+		walls.append(instance)
 		add_child(instance)
 	
-	var player = PUZZLE_PLAYER.instantiate()
+	player = PUZZLE_PLAYER.instantiate()
 	player.position = board_spots.pick_random()
 	player.board_spots = board_spots.duplicate()
 	board_spots.erase(player.position)
@@ -59,4 +62,11 @@ func _on_piece_picked_up():
 	print(num_pieces)
 	if num_pieces == 0:
 		emit_signal("puzzle_complete")
+		player.queue_free()
+		_remove_walls()
+		await get_tree().create_timer(1.33).timeout
 		queue_free()
+
+func _remove_walls():
+	for wall in walls:
+		wall.queue_free()

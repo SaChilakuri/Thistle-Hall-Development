@@ -26,7 +26,7 @@ func _next_puzzle():
 	if puzzles_left >= 0:
 		new_puzzle = PUZZLE_SCENE.instantiate()
 		new_puzzle.connect("puzzle_complete", _on_puzzle_complete)
-		add_child(new_puzzle)		
+		add_child(new_puzzle)
 
 func _on_puzzle_complete():
 	if puzzles_left <= 0:

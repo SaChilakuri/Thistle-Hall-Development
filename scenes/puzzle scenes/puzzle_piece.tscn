@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cjwpjpn5r2e0x" path="res://scripts/puzzle scripts/puzzle_piece.gd" id="1_kl17w"]
 [ext_resource type="Texture2D" uid="uid://ccbsdxnpxpvn5" path="res://assets/puzzle/puzzle-piece.png" id="2_kd4mf"]
 [ext_resource type="PackedScene" uid="uid://qpf6q61tu007" path="res://scenes/puzzle scenes/funny_nathan_test_particle.tscn" id="3_kd4mf"]
+[ext_resource type="AudioStream" uid="uid://cpfrdh0ch5q5x" path="res://assets/puzzle/piece_pickup_sfx_thistle_hall.wav" id="4_7vwwq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xadyu"]
 radius = 27.0
@@ -20,6 +21,10 @@ shape = SubResource("CircleShape2D_xadyu")
 [node name="GPUParticles2D" parent="." unique_id=113473142 instance=ExtResource("3_kd4mf")]
 z_index = 2
 emitting = false
+lifetime = 1.33
 one_shot = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1632392389]
+stream = ExtResource("4_7vwwq")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
