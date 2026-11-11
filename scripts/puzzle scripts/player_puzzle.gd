@@ -8,7 +8,7 @@ const JUMP_VELOCITY = -400.0
 var moving = false
 var board_spots = []
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	if not moving:
@@ -41,10 +41,10 @@ func _physics_process(delta: float) -> void:
 		_get_closest_tile(player.global_position, board_spots)
 	move_and_slide()
 
-func _get_closest_tile(body_location, board_spots):
+func _get_closest_tile(body_location, board_tiles):
 	var closest_pos = 99999
 	var closest_spot = ''
-	for spot in board_spots:
+	for spot in board_tiles:
 		var dist = body_location.distance_to(spot)
 		if dist < closest_pos:
 			closest_pos = dist
