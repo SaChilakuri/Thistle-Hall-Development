@@ -1,3 +1,4 @@
+[background arg="res://assets/Unsorted/rainy_night_lobbyfirstperson.png" fade="0.0"]
 [i]You can't really sleep after the fight earlier. You toss and turn in bed, worrying about {Silas.name}. You look at your bedside clock. its around midnight. Suddenly, there's a knock on the door.[/i]
 [i]You get out of bed and look through the peephole in the door. {FoShi.name} is on the other side.[/i]
 - Open the door

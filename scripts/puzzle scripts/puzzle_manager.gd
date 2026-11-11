@@ -5,6 +5,8 @@ const PUZZLE_SCENE = preload("uid://bpychkfoh1utj")
 @onready var timer_label: Label = $timer_label
 @onready var count_label: Label = $count_label
 @onready var complete: Label = $complete
+signal puzzle_complete
+signal puzzles_solved
 var puzzles_left = 5
 var time = 120
 
@@ -24,12 +26,12 @@ func _next_puzzle():
 		var new_puzzle = PUZZLE_SCENE.instantiate()
 		new_puzzle.connect("puzzle_complete", _on_puzzle_complete)
 		add_child(new_puzzle)
-	print('complete!')
 
 func _on_puzzle_complete():
 	if puzzles_left <= 0:
 		print('finished!')
 		complete.visible = true
+		emit_signal("puzzles_solved")
 		timer.stop()
 	else:
 		puzzles_left -= 1

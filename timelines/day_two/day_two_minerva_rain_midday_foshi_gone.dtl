@@ -1,3 +1,4 @@
+[background arg="res://assets/Unsorted/rainy_day_lobbyfirstperson.png" fade="0.0"]
 if {Timeline_Managment.MinervaInt1_1Leave} > 0.0:
 	[i]As the rain lets up, {Minerva.name} calls you over to talk with you. She stand by the door with her backpack.[/i]
 	Minerva (Default): "So I'm going to leave now that the rain has let up. I hope that you can manage to keep afloat. You've got a good thing going here."

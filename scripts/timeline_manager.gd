@@ -2,6 +2,7 @@ extends Node2D
 
 var choices_dict = GameManager.important_choices
 const JOURNAL = preload("uid://cndkumqu0y6mu")
+const PUZZLE_MANAGER = preload("uid://dt3qty3p6wc37")
 @onready var tyforplaying: Label = $tyforplaying
 
 # timeline_manager.gd Descrption:
@@ -27,6 +28,8 @@ func _ready() -> void:
 func _on_timeline_ended():
 	if GameManager.journal_after_timeline == true:
 		_journal_time()
+	elif GameManager.puzzle_after_timeline == true:
+		_puzzle_time()
 	else:
 		if GameManager.timeline_count != timeline_chains[GameManager.current_timeline].size() - 1:
 			GameManager.timeline_count += 1
@@ -41,6 +44,13 @@ func _journal_time():
 	journal.connect("all_memories_learnt", _on_journal_finished.bind(journal))
 	journal.global_position = Vector2(-550, -300)
 
+func _puzzle_time():
+	#Starts up the puzzle
+	var puzzle = PUZZLE_MANAGER.instantiate()
+	GameManager.puzzle_after_timeline = false
+	puzzle.connect("puzzles_solved",_on_puzzle_finished.bind(puzzle))
+	add_child(puzzle)
+
 func _on_journal_finished(journal):
 	# Clears the journal from the screen and moves onto next thing
 	GameManager.learnt_mem_codes_today.clear()
@@ -48,4 +58,8 @@ func _on_journal_finished(journal):
 	journal.queue_free()
 	print("TIMELINE COUNT AFTER JOURNAL:")
 	print(GameManager.timeline_count)
+	_on_timeline_ended()
+
+func _on_puzzle_finished(puzzle):
+	print('_on_puzzle_finished')
 	_on_timeline_ended()

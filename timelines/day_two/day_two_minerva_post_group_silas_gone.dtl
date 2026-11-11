@@ -1,3 +1,4 @@
+[background arg="res://assets/Unsorted/rainy_day_lobbyfirstperson.png" fade="0.0"]
 [i]You approach {Minerva.name}. After that big conversation earlier between you, her and {FoShi.name}, things seemed to have cooled off a little bit.[/i]
 Minerva (Happy): "Hey. How are you doing?"
 - "Optimistic."
