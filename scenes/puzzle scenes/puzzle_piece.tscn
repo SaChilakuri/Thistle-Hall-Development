@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://p3ligdab2mog"]
 
 [ext_resource type="Script" uid="uid://cjwpjpn5r2e0x" path="res://scripts/puzzle scripts/puzzle_piece.gd" id="1_kl17w"]
-[ext_resource type="Texture2D" uid="uid://ccbsdxnpxpvn5" path="res://assets/Puzzle/puzzle-piece.png" id="2_kd4mf"]
+[ext_resource type="Texture2D" uid="uid://ccbsdxnpxpvn5" path="res://assets/puzzle/puzzle-piece.png" id="2_kd4mf"]
+[ext_resource type="PackedScene" uid="uid://qpf6q61tu007" path="res://scenes/funny_nathan_test_particle.tscn" id="3_kd4mf"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xadyu"]
 radius = 27.0
@@ -15,5 +16,10 @@ texture = ExtResource("2_kd4mf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=657087870]
 shape = SubResource("CircleShape2D_xadyu")
+
+[node name="GPUParticles2D" parent="." unique_id=113473142 instance=ExtResource("3_kd4mf")]
+z_index = 2
+emitting = false
+one_shot = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -26,4 +26,13 @@ text = "Time Remaining:"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=427628826]
 
+[node name="complete" type="Label" parent="." unique_id=1417261139]
+visible = false
+offset_left = -241.0
+offset_top = -34.0
+offset_right = 242.0
+offset_bottom = 33.0
+theme_override_font_sizes/font_size = 48
+text = "Puzzle Complete!!! :D"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

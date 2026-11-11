@@ -35,8 +35,8 @@ func _physics_process(delta: float) -> void:
 			var mouse_pos = get_viewport().get_mouse_position()
 			mouse_pos.y -= 320
 			mouse_pos.x -= 580
-			print('MOUSE POSITION:')
-			print(mouse_pos)
+			#print('MOUSE POSITION:')
+			#print(mouse_pos)
 			global_position = _get_closest_tile(mouse_pos, board_spots)
 	elif velocity.x == 0 and velocity.y == 0:
 		moving = false
@@ -51,7 +51,7 @@ func _get_closest_tile(body_location, board_spots):
 		if dist < closest_pos:
 			closest_pos = dist
 			closest_spot = spot
-	print('CLOSEST SPOT:')
-	print(closest_spot)
+	#print('CLOSEST SPOT:')
+	#print(closest_spot)
 	return closest_spot
 	

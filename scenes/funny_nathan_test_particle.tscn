@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://qpf6q61tu007"]
+
+[ext_resource type="Texture2D" uid="uid://cad2c3v70dauk" path="res://assets/Characters/Nathan/nathan_portraits/nathan_happy.png" id="1_m2klp"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_tuu34"]
+particle_flag_disable_z = true
+angle_min = -645.4
+angle_max = 373.7
+spread = 144.529
+initial_velocity_min = 37.629997
+initial_velocity_max = 177.41
+gravity = Vector3(0, 98, 0)
+scale_min = 0.099999994
+scale_max = 0.5
+
+[node name="GPUParticles2D" type="GPUParticles2D" unique_id=113473142]
+texture = ExtResource("1_m2klp")
+speed_scale = 0.85
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_tuu34")

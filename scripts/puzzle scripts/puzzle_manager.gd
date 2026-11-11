@@ -4,6 +4,7 @@ const PUZZLE_SCENE = preload("uid://bpychkfoh1utj")
 @onready var timer: Timer = $Timer
 @onready var timer_label: Label = $timer_label
 @onready var count_label: Label = $count_label
+@onready var complete: Label = $complete
 var puzzles_left = 5
 var time = 120
 
@@ -28,6 +29,8 @@ func _next_puzzle():
 func _on_puzzle_complete():
 	if puzzles_left <= 0:
 		print('finished!')
+		complete.visible = true
+		timer.stop()
 	else:
 		puzzles_left -= 1
 		_next_puzzle.call_deferred()
