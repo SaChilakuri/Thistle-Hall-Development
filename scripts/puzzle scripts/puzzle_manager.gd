@@ -6,6 +6,7 @@ const PUZZLE_SCENE = preload("uid://bpychkfoh1utj")
 @onready var count_label: Label = $count_label
 @onready var complete: Label = $complete
 signal puzzles_solved
+signal puzzles_failed
 var puzzles_left = 5
 var time = 120
 var new_puzzle
@@ -43,4 +44,5 @@ func _on_timer_timeout() -> void:
 		time -= 1
 	else:
 		print('L')
+		emit_signal("puzzles_failed")
 		timer.stop()

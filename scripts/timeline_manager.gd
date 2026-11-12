@@ -18,9 +18,6 @@ var timeline_chains = {
 	'aaC' : ["res://timelines/day_one/silas_talk_end1.dtl", "res://timelines/day_two/day_two_minerva_post_group_foshi_gone.dtl", "res://timelines/day_two/day_two_minerva_rain_midday_foshi_gone.dtl"],
 }
 
-
-var end_of_day = false
-
 func _ready() -> void:
 	Dialogic.timeline_ended.connect(_on_timeline_ended)
 	Dialogic.start(timeline_chains[GameManager.current_timeline][GameManager.timeline_count])
@@ -49,6 +46,7 @@ func _puzzle_time():
 	var puzzle = PUZZLE_MANAGER.instantiate()
 	GameManager.puzzle_after_timeline = false
 	puzzle.connect("puzzles_solved",_on_puzzle_finished.bind(puzzle))
+	puzzle.connect("puzzles_failed",_on_puzzle_failed.bind(puzzle))
 	add_child(puzzle)
 
 func _on_journal_finished(journal):
@@ -62,4 +60,8 @@ func _on_journal_finished(journal):
 
 func _on_puzzle_finished(puzzle):
 	print('_on_puzzle_finished')
+	_on_timeline_ended()
+
+func _on_puzzle_failed(puzzle):
+	print('failed puzzle :(')
 	_on_timeline_ended()

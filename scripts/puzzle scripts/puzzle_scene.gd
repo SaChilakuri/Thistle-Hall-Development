@@ -59,7 +59,6 @@ func _create_board():
 
 func _on_piece_picked_up():
 	num_pieces -= 1
-	print(num_pieces)
 	if num_pieces == 0:
 		emit_signal("puzzle_complete")
 		player.queue_free()
