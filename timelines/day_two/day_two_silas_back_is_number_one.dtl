@@ -1,0 +1,15 @@
+[i]{Silas.name} sits by the door to his room. He keeps looking over in the direction of the front door of the building, scared that something might come in.[/i]
+[i]He looks up at you when you approach him.[/i]
+Silas (Shock): "Please tell me that you believe me. I'm not crazy, I know that something was out there! It was stalking me!"
+- "I believe you."
+	Player: "I believe you. I've heard the others say that they've heard stories about some kind of monster."
+	Silas: "Thank you! At least somebody believes me!"
+- "I don't know if it was a monster."
+	Player: "I don't know if it was a monster. It could have just been a person who was stalking you."
+	Silas: "It wasn't human! It was at least two feet taller than me, and it was walking around on all fours!"
+- "You're just imagining things."
+	Player: "Nothing was out there. You're just imagining things and being paranoid."
+	Silas: "You can say that all you want, but I know what I saw."
+[i]{Silas.name} flinches as he sees {FoShi.name} walk by out of the corner of his eye.[/i]
+Silas: "I can't stay out here. I'm too paranoid for this."
+[i]He stands up and retreats to his room, locking the door behind himself.[/i]
