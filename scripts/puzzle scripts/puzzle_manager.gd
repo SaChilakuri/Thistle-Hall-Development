@@ -13,23 +13,39 @@ var new_puzzle
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	# Start the timer and create the first puzzle
 	_next_puzzle()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	timer_label.text = "Time Remaining: " + str(time)
 	count_label.text = "Puzzles Remaining: " + str(puzzles_left)
+
+	# If player jumps, remove 5 seconds from the timer
 	if Input.is_action_just_pressed("click"):
 		if time >= 5:
 			time -= 5
 
 func _next_puzzle():
+	# Purpose:
+	# Create a new puzzle and add it to the scene tree, and connect the puzzle_complete signal to the _on_puzzle_complete function
+	# Params:
+	# None
+	# Returns:
+	# None
 	if puzzles_left >= 0:
 		new_puzzle = PUZZLE_SCENE.instantiate()
 		new_puzzle.connect("puzzle_complete", _on_puzzle_complete)
 		add_child(new_puzzle)
 
 func _on_puzzle_complete():
+	# Purpose:
+	# Remove the puzzle from the scene tree, and check if there are any puzzles left to
+	# complete. If there are no puzzles left, emit the puzzles_solved signal, otherwise, create a new puzzle.
+	# Params:
+	# None
+	# Returns:
+	# None
 	if puzzles_left <= 0:
 		print('finished!')
 		complete.visible = true
@@ -40,6 +56,12 @@ func _on_puzzle_complete():
 		_next_puzzle.call_deferred()
 	
 func _on_timer_timeout() -> void:
+	# Purpose:
+	# This is just a pseudo timer, since the timer node itself doesn't let you subtract time.
+	# Params:
+	# None
+	# Returns:
+	# None
 	if time > 0:
 		time -= 1
 	else:

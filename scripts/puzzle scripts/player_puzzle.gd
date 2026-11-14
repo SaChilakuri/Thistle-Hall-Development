@@ -9,8 +9,10 @@ var moving = false
 var board_spots = []
 
 func _physics_process(_delta: float) -> void:
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
+	# INTENDED MOVEMENT:
+	# Player should only move when they are not moving, and when they are moving, they should move in the direction of the input axis
+	# Player should be unable to move diagonally, and should be unable to change directions while moving
+	# Player should be able to click on a tile to jump to that tile, and should be unable to move while jumping to a tile
 	if not moving:
 		var x_direction := Input.get_axis("player_left", "player_right")
 		if x_direction:
@@ -42,6 +44,13 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 
 func _get_closest_tile(body_location, board_tiles):
+	# Purpose:
+	# Get the closest tile to the player, and return that tile's position
+	# Params:
+	# body_location - The player's global position (Vector2)
+	# board_tiles - An array of all the board tile positions (Array of Vector2)
+	# Returns:
+	# The closest tile's position (Vector2)
 	var closest_pos = 99999
 	var closest_spot = ''
 	for spot in board_tiles:

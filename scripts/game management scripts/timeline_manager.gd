@@ -10,6 +10,10 @@ const PUZZLE_MANAGER = preload("uid://dt3qty3p6wc37")
 # (AT LEAST FOR FIRST PLAYTEST, FUTURE WHO KNOWS)
 
 # Called when the node enters the scene tree for the first time.
+
+# TIMELINE CHAINS GUIDE:
+# The key is a string that represents the current timeline and is always 3 alphabetic characters, and the value is an array of
+# the timelines that will be played in order for that timeline chain.
 var timeline_chains = {
 	'aaa' : ["res://timelines/day_one/MinervaFirstMeeting.dtl", "res://timelines/day_one/SilasFirstMeeting.dtl", 
 	"res://timelines/day_one/foshi_meeting.dtl", "res://timelines/day_one/big_fight_day_1.dtl"],
@@ -58,10 +62,10 @@ func _on_journal_finished(journal):
 	print(GameManager.timeline_count)
 	_on_timeline_ended()
 
-func _on_puzzle_finished(puzzle):
+func _on_puzzle_finished():
 	print('_on_puzzle_finished')
 	_on_timeline_ended()
 
-func _on_puzzle_failed(puzzle):
+func _on_puzzle_failed():
 	print('failed puzzle :(')
 	_on_timeline_ended()

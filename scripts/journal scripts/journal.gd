@@ -14,13 +14,20 @@ func _ready() -> void:
 	GameManager.test_journal()
 	for key in GameManager.learnt_mem_codes_today:
 		create_journal_button(key)
-	num_learnable = int(GameManager.learnt_mem_codes_today.size() / 2 + 1)
+	# THIS IS THE MEMORIES LEARNT, NEED TO DESIGN & FIX SOMETIME
+	num_learnable = int(GameManager.learnt_mem_codes_today.size() / 2 + 1) 
 	if GameManager.learnt_mem_codes_today == []:
 		num_learnable = 0
 	_update_memories_to_learn_label()
 	print(num_learnable)
 
 func create_journal_button(memory_code: int):
+	# Purpose:
+	# Creates a journal button for the memory code passed in
+	# Params:
+	# memory_code - A valid memory code (int)
+	# Returns:
+	# None
 	var journal_button:Control = journal_button_path.instantiate()
 	journal_button = journal_button_path.instantiate()
 	journal_button.memory_code = memory_code
@@ -29,6 +36,12 @@ func create_journal_button(memory_code: int):
 	print("I am a gamer")
 
 func on_journal_button_pressed(memory_code: int):
+	# Purpose:
+	# Logs the memory when a journal is pressed, and updates the dialogic variable associated with that memory
+	# Params:
+	# memory_code - A valid memory code (int)
+	# Returns:
+	# None
 	var _learnt_memory = GameManager.memory_log[memory_code]
 	if num_learnable != 0:
 		print("GameManager.memory_log[memory_code].get_value()")
@@ -42,6 +55,12 @@ func on_journal_button_pressed(memory_code: int):
 		print("no more learning for u pal")
 
 func display_learnt_info(memory_code: int):
+	# Purpose:
+	# Change the label to display the memory learnt, and start the timer to hide it after a few seconds
+	# Params:
+	# memory_code - A valid memory code (int)
+	# Returns:
+	# None
 	var learnt_mem_instance = GameManager.memory_log[memory_code]
 	GameManager.update_dialogic(memory_code)
 	learnt_label.visible = true
@@ -49,9 +68,21 @@ func display_learnt_info(memory_code: int):
 	learnt_label_timer.start()
 
 func _on_label_timer_timeout() -> void:
+	# Purpose:
+	# Hide the label after a few seconds, and check if all memories have been learnt
+	# Params:
+	# None
+	# Returns:
+	# None
 	learnt_label.visible = false
 	if num_learnable == 0:
 		emit_signal("all_memories_learnt")
 
 func _update_memories_to_learn_label():
+	# Purpose:
+	# Update the label to display the number of memories left to learn
+	# Params:
+	# None
+	# Returns:
+	# None
 	num_learnable_label.text = "Number of Memories you can Learn: " + str(num_learnable)

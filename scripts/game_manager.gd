@@ -80,6 +80,12 @@ func _on_dialogic_signal(signal_arg: String):
 		print(timeline_count)
 
 func _end_of_day():
+	# Purpose:
+	# Reset the list of memory codes learnt, so that memories are not relearnt. THIS MIGHT CHANGE LATER IF WE WANT TO ALLOW RELEARNING MEMORIES
+	# Params:
+	# None
+	# Returns:
+	# None
 	learnt_mem_codes_today.clear()
 
 func _get_memory_learnt(key):
@@ -110,6 +116,13 @@ func update_dialogic(key: int) -> void:
 	memory_log[key].update_dialogic()
 
 func test_journal():
+	# Purpose:
+	# Test function to see if the journal is working properly
+	# Params:
+	# None
+	# Returns:
+	# None
+	print("Test journal is running, is this intended?")
 	learn_memory(1000)
 	learn_memory(2000)
 	learn_memory(3000)

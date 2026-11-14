@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dl3jl331531y0"
-path="res://.godot/imported/puzzle-wall-h.png-77f4087ee5df39ba76b6737cb2cf4bf9.ctex"
+path="res://.godot/imported/puzzle-wall-h.png-17acab18caaafbf58cdf25e260588dab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Puzzle/puzzle-wall-h.png"
-dest_files=["res://.godot/imported/puzzle-wall-h.png-77f4087ee5df39ba76b6737cb2cf4bf9.ctex"]
+source_file="res://assets/puzzle/puzzle-wall-h.png"
+dest_files=["res://.godot/imported/puzzle-wall-h.png-17acab18caaafbf58cdf25e260588dab.ctex"]
 
 [params]
 
