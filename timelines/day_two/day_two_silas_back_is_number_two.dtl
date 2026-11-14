@@ -1,0 +1,53 @@
+[i]{Silas.name} stands at one of the front windows of the building, looking outside. It's dark and fog seems to be starting to roll in, so there isn't much to see.[/i]
+[i]He turns over as you walk up to him[/i]
+Silas: "Hey. I was hoping I'd get to talk to you one on one for a bit."
+Silas: "{FoShi.name} seems to be really scared. I was talking with him on our way back, and he would not stop talking about that monster that he saw."
+- "I got that vibe too."
+	Player: "I got that vibe too. He seems really shaken up."
+	Silas: "I'm worried about him. He seems very serious about this monster."
+- "Do you believe him?"
+	Player: "Do you believe him? About the monster, I mean."
+	Silas: "I get the vibe that he isn't someone who's easily shaken up. When I yelled at him last night, he was very calm about him. I believe him."
+- "How do you know he's scared when you two haven't talked?"
+	Player: "How do you know what he's like when he's scared if the two of you haven't talked at all?"
+	Silas: "You can tell when someone is scared. It's not that difficult."
+[i]{Silas.name} looks over to where {FoShi.name} sits in the lobby and sighs.[/i]
+- "You're thinking this is your fault."
+	Player: "You're thinking this is your fault."
+	Silas: "I won't talk about that. I've been annoying you too much about it."
+- "He's safe now. You can take a break."
+	Player: "He's safe now. You can take a break."
+	Silas: "I know, but how long will he be safe for? What if the monster followed us?"
+- Stay Silent.
+	[i]You stay silent.[/i]
+Silas: "I'm worried about the monster. {FoShi.name} described it stalking him, and from what he said, it sounds smart."
+Silas: "There's a non-zero chance that it could come here next."
+- "We'll fight it off."
+	Player: "We can fight it off. We have numbers."
+	Silas: "You could be right, but we have no idea how strong this thing is. Even if it's like a bear, we can't really do much to that."
+	Silas: "But I don't know if we have to worry about that. From what I've heard, this thing is like an urban legend, and people have said it only shows up when you're alone."
+- "Why would it come here?"
+	Player: "Why would it come here? Didn't it only show up when he was alone?"
+	Silas: "You're probably right. From what I've heard, this thing is like an urban legend, and people have said it only shows up when you're alone."
+[i]A slightly uncomfortable silence falls between the two of you. {Silas.name} rubs his eyes.[/i]
+Silas: "I'm exhaused. I need to go to bed. I'll see you tomorrow."
+- "Sleep well."
+	Player: "Sleep well."
+	Silas: "You too."
+- "See you tomorrow."
+	Player: "See you tomorrow."
+	Silas: "Have a good night."
+- "Don't let the bedbugs bite."
+	Player: "Don't let the bedbugs bite."
+	Silas: "You don't actually have bedbugs here, right?"
+	- "No."
+		Player: "No. I'm just joking."
+		Silas: "Okay, good."
+	- "Hopefully not."
+		Player: "Hopefully not."
+		Silas: "I'm going to go with no, there aren't any."
+	- Shrug.
+		[i]You shrug.[/i]
+		Silas (Shock): "What's that supposed to mean?"
+		[i]You shrug again.[/i]
+[i]{Silas.name} walks off to his room and closes the door.[/i]
