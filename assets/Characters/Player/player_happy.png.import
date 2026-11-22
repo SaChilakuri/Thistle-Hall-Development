@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3fc68yk2xgco"
-path="res://.godot/imported/foshi_frustrated.png-1c1514aacdf608999f4f044fe29d276d.ctex"
+uid="uid://bm55vyunqb0uy"
+path="res://.godot/imported/player_happy.png-1c1b9f79becaa7fb59ab086190de91ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/FoShi/foshi_portraits/foshi_frustrated.png"
-dest_files=["res://.godot/imported/foshi_frustrated.png-1c1514aacdf608999f4f044fe29d276d.ctex"]
+source_file="res://assets/Characters/Player/player_happy.png"
+dest_files=["res://.godot/imported/player_happy.png-1c1b9f79becaa7fb59ab086190de91ca.ctex"]
 
 [params]
 

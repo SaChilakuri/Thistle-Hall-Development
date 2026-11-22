@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbg720vyjn4li"
-path="res://.godot/imported/foshi_sad.png-06f185eebbe139714f1744e743e18d25.ctex"
+uid="uid://bnjnpch16njp3"
+path="res://.godot/imported/minerva_scared.png-0ae6f03523ad99f54fa754ac62f10f57.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/FoShi/foshi_portraits/foshi_sad.png"
-dest_files=["res://.godot/imported/foshi_sad.png-06f185eebbe139714f1744e743e18d25.ctex"]
+source_file="res://assets/Characters/Minerva/minerva_portraits/minerva_scared.png"
+dest_files=["res://.godot/imported/minerva_scared.png-0ae6f03523ad99f54fa754ac62f10f57.ctex"]
 
 [params]
 

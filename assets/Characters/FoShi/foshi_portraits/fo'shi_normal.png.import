@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4qvgrqd0o4e"
-path="res://.godot/imported/foshi_normal.png-273892f76021edfd4c428416061ddf2e.ctex"
+uid="uid://c27cna527ll0w"
+path="res://.godot/imported/fo'shi_normal.png-681552262f38b654cb6ed20a3505c7ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Characters/FoShi/foshi_portraits/foshi_normal.png"
-dest_files=["res://.godot/imported/foshi_normal.png-273892f76021edfd4c428416061ddf2e.ctex"]
+source_file="res://assets/Characters/FoShi/foshi_portraits/fo'shi_normal.png"
+dest_files=["res://.godot/imported/fo'shi_normal.png-681552262f38b654cb6ed20a3505c7ca.ctex"]
 
 [params]
 
