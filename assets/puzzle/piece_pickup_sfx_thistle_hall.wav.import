@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://cpfrdh0ch5q5x"
-path="res://.godot/imported/piece_pickup_sfx_thistle_hall.wav-729bc4604d10af0af05e1a8b25fe2856.sample"
+path="res://.godot/imported/piece_pickup_sfx_thistle_hall.wav-a75ab0afdc4ab8b7cc946a0a5b36f52f.sample"
 
 [deps]
 
-source_file="res://assets/puzzle/piece_pickup_sfx_thistle_hall.wav"
-dest_files=["res://.godot/imported/piece_pickup_sfx_thistle_hall.wav-729bc4604d10af0af05e1a8b25fe2856.sample"]
+source_file="res://assets/Puzzle/piece_pickup_sfx_thistle_hall.wav"
+dest_files=["res://.godot/imported/piece_pickup_sfx_thistle_hall.wav-a75ab0afdc4ab8b7cc946a0a5b36f52f.sample"]
 
 [params]
 

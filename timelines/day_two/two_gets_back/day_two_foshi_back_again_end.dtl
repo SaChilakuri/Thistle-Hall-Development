@@ -1,0 +1,31 @@
+[i]There is a frantic knocking on the front door just after the sun lowers over the horizon. You look outside to see {Silas.name} and {FoShi.name} standing just outside. You let them in[/i]
+[i]{FoShi.name} walks through the doorway. His posture is upright, his steps confident, but his eyes shiftily dart around the lobby as if he is agitated.[/i]
+[i]{Silas.name} follows, out of breath.[/i]
+[i]{Minerva.name} and {Nathan.name} both come over quickly at the arrival of the two.[/i]
+FoShi: “My friends. Brother {Silas.name} has informed me my presence is welcome. Indeed, that fills my heart with joy.”
+Silas: "I found him in a nearby grocery store. He was really scared when I found him, I think he wants to tell you why."
+FoShi: “My friends, there is a monster out there. From my sightings, it was tall—around 8 feet tall—and pale as the moon. It was shaped like a horse but without hair and with human-like features.”
+[i]{Minerva.name} gasps and {Nathan.name} just laughs at him.[/i]
+nathan: “Monsters? Big dawg, we’re wayyyy past the age where we’d believe that shit. You either found some top-tier LSD or you’re a Stephen King wannabe, and if you are a Stephen King wannabe, you gotta up your game. I mean, come on, a horse-human? That’s a centaur dude!”
+[i]Nobody joins in {Nathan.name}'s laugh. {Minerva.name} glares at him.[/i]
+Minerva: "Why are you being an asshole?! From my interactions with {FoShi.name}, I know that he would never joke about stuff like this. If he's saying this, he's serious."
+nathan: “Like I said, monsters aren’t real. Nobody’s believed that since they were, like, five! Or, wait… don’t tell me…”
+[i]Nathan’s eyes widen with mock surprise. His hands fly up to cover his mouth as he lets out a gasp.[/i]
+nathan: “You think monsters are real?”
+[i]{Minerva.name} walks up to {Nathan.name} and slaps him in the cheek.[/i]
+[i]Everyone goes silent. Nobody speaks for a good ten seconds.[/i]
+- Side with {Minerva.name}
+	Player: "You can't just say stuff like that when he's clearly being serious."
+	nathan: “Yo, you’re seriously siding with her? She just fucking slapped me for no reason!”
+	Minerva: "You were being an asshole."
+- Side with {Nathan.name}
+	Player: "You can't just slap people like that."
+	Minerva: "But he was being an asshole! Can't you see that {FoShi.name} is clearly scared of something, and {Nathan.name} is making fun of that!"
+- Say nothing
+[i]{Minerva.name} scoffs and walks away to look for a first aid kit.[/i]
+FoShi: “My friends, I would not deceive you. There is a monster roaming around. It pains me that you do not believe me.”
+“Yeah, yeah, whatever bro.”
+[i]{Minerva.name} gets back with the first aid and looks over {FoShi.name} and {Silas.name} for any injuries[/i]
+Silas (Happy): "I'm glad that I found {FoShi.name} so soon. I don't know what could have happened to him if he'd been out there for much longer."
+Minerva (Happy): "I'm thankful as well. I'm also glad that neither of you have any injuries."
+[i]{Minerva.name} leaves to put the first aid kit away. {Nathan.name} scoffs and walks off. {Silas.name} and {FoShi.name} both go off to somewhere in the building.[/i]

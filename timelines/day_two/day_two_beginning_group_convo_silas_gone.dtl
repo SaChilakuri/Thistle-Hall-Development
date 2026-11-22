@@ -1,0 +1,17 @@
+[i]You wake up from a deep sleep. There is faint chatter coming from the lobby, and you can smell pancakes.[/i]
+[i]You make your way out of your room to see {Minerva.name} and {FoShi.name} sitting at the big table in the room. They are eating pancakes. {Minerva.name} turns to you as you enter.[/i]
+Minerva (Happy): "Good morning! I found some pancake mix lying around and used that, I hope you don't mind."
+- "Thank you for making breakfast."
+	Player (Happy): "Thank you for making breakfast. It smells very good."
+	Minerva (Happy): "You're welcome! It's the least I could do given you're giving us all shelter."
+- "Good morning."
+	Player: "Good morning to you as well."
+- Stay silent and sit down.
+	[i]You stay silent and sit down at the table as the two of them continue eating.[/i]
+Minerva: "So {Fo'Shi.name} is going to be going out to look for {Silas.name} after the rain lets up."
+FoShi: “I am decently acquainted with our surroundings. I have in mind a few locations where Silas might have gone.”
+[i]Nobody speaks for a little bit. The sound of rain tapping on the windows fills the room quietly. {FoShi.name} lets out a sigh.[/i]
+FoShi: "I find the departure of Silas particularly awful. The emotions he holds will no doubt form a heart demon that will hinder any progress toward inner peace.”
+FoShi: “I have seen it happen before; before, in the dead of night, survivors from groups my former gang raided would attack us. I know how moonlight glints off of maddened eyes, and that is not how I wish to behold our friend Silas.”
+Minerva: "I agree. I hope he's okay out there."
+[i]{Minerva.name} and {FoShi.name} finish their breakfast and leave the table. You eat your pancakes alone while the others tend to themselves.[/i]

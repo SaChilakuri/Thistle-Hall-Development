@@ -1,0 +1,27 @@
+[i]You wake up from a deep sleep. There is faint chatter coming from the lobby, and you can smell pancakes.[/i]
+[i]You make your way out of your room to see {Minerva.name} and {Silas.name} sitting at the big table in the room. They are eating pancakes. {Minerva.name} turns to you as you enter.[/i]
+Minerva (Happy): "Good morning! I found some pancake mix lying around and used that, I hope you don't mind."
+- "Thank you for making breakfast."
+	Player (Happy): "Thank you for making breakfast. It smells very good."
+	Minerva (Happy): "You're welcome! It's the least I could do given you're giving us all shelter."
+- "Good morning."
+	Player: "Good morning to you as well."
+- Stay silent and sit down.
+	[i]You stay silent and sit down at the table as the two of them continue eating.[/i]
+Minerva: "So {Silas.name} is going to be going out to look for {FoShi.name} after the rain lets up."
+FoShi: “I am decently acquainted with our surroundings. I have in mind a few locations where Silas might have gone.”
+[i]Nobody speaks for a little bit. The sound of rain tapping on the windows fills the room quietly. {Minerva.name} lets out a sigh and turns to you.[/i]
+Minerva: "I still think that you kicking out {FoShi.name} was a bad move, and I'm mad about it still.
+- "It was a mistake in the heat of the moment."
+	Player: "It was a mistake in the heat of the moment. I was under a lot of pressure."
+	Minerva: "I guess you were. I can't really fault you for that."
+- "He had done bad things in the past."
+	Player: "He had done bad things in the past. Who's to say he wouldn't have done them again?"
+	Minerva: "As much as I disagree, you hadn't known much about {FoShi.name} anyway, so you didn't know that he was making efforts to change."
+- "He got here second."
+	Player: "He got here second."
+	Minerva: "That's a really stupid reason for kicking him out, but whatever."
+[i]{Minerva.name} seems to have forgiven you, at least enough to where it's not a huge deal. Soon after she falls silent, {Silas.name} speak up.[/i]
+Silas: "I will say that I have some ideas as to where {FoShi.name} could be. In my time alone I usually got food and water from abandoned grocery stores."
+Silas: "They're usually surprisingly not empty. I bet I can find him around one."
+[i]{Minerva.name} and {Silas.name} finish their breakfast and leave the table. You eat your pancakes alone while the others tend to themselves.[/i]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bc1mviy55mitb"]
 
-[ext_resource type="Script" uid="uid://f55drq8obia2" path="res://scripts/timeline_manager.gd" id="1_o5qli"]
+[ext_resource type="Script" uid="uid://f55drq8obia2" path="res://scripts/game management scripts/timeline_manager.gd" id="1_o5qli"]
 [ext_resource type="Texture2D" uid="uid://c4leytjd5ssly" path="res://assets/Unsorted/th_bg.png" id="3_sugp2"]
 
 [node name="Node2D" type="Node2D" unique_id=1086051408]

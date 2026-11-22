@@ -1,0 +1,9 @@
+[i]There is a frantic knocking on the front door just after the sun lowers over the horizon. You look outside to see {Silas.name} and {FoShi.name} standing just outside. You let them in[/i]
+[i]{FoShi.name} walks through the doorway. His posture is upright, his steps confident, but his eyes shiftily dart around the lobby as if he is agitated.[/i]
+[i]{Silas.name} follows, out of breath.[/i]
+FoShi: “My friend. Brother {Silas.name} has informed me my presence is welcome. Indeed, that fills my heart with joy.”
+Silas: "I found him in a nearby grocery store. He was really scared when I found him, I think he wants to tell you why."
+FoShi: “My friends, there is a monster out there. From my sightings, it was tall—around 8 feet tall—and pale as the moon. It was shaped like a horse but without hair and with human-like features.”
+Silas (Happy): "I'm glad that I found {FoShi.name} so soon. I don't know what could have happened to him if he'd been out there for much longer."
+Minerva (Happy): "I'm thankful as well. I'm also glad that neither of you have any injuries."
+[i]{Silas.name} and {FoShi.name} both go off to somewhere in the building.[/i]

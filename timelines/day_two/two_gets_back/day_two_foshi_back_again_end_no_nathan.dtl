@@ -1,0 +1,17 @@
+[i]There is a frantic knocking on the front door just after the sun lowers over the horizon. You look outside to see {Silas.name} and {FoShi.name} standing just outside. You let them in[/i]
+[i]{FoShi.name} walks through the doorway. His posture is upright, his steps confident, but his eyes shiftily dart around the lobby as if he is agitated.[/i]
+[i]{Silas.name} follows, out of breath.[/i]
+[i]{Minerva.name} comes over quickly at the arrival of the two.[/i]
+FoShi: “My friends. Brother {Silas.name} has informed me my presence is welcome. Indeed, that fills my heart with joy.”
+Silas: "I found him in a nearby grocery store. He was really scared when I found him, I think he wants to tell you why."
+FoShi: “My friends, there is a monster out there. From my sightings, it was tall—around 8 feet tall—and pale as the moon. It was shaped like a horse but without hair and with human-like features.”
+[i]{Minerva.name} gasps.[/i]
+Minerva: "That's horrible! How did you get away?"
+FoShi: "I was lucky. {Silas.name} came to my assistance right in time. The monster left just as he arrived."
+Minerva: "Thank goodness {Silas.name} showed up right in time."
+[i]{Minerva.name} walks away to look for a first aid kit.[/i]
+FoShi: “My friends, I would not deceive you. There is a monster roaming around. It pains me that you do not believe me.”
+[i]{Minerva.name} gets back with the first aid and looks over {FoShi.name} and {Silas.name} for any injuries[/i]
+Silas (Happy): "I'm glad that I found {FoShi.name} so soon. I don't know what could have happened to him if he'd been out there for much longer."
+Minerva (Happy): "I'm thankful as well. I'm also glad that neither of you have any injuries."
+[i]{Minerva.name} leaves to put the first aid kit away. {Silas.name} and {FoShi.name} both go off to somewhere in the building.[/i]

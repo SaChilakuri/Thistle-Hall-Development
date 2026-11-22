@@ -1,0 +1,18 @@
+[i]There is a frantic knocking on the front door just after the sun lowers over the horizon. You look outside to see {Silas.name} and {FoShi.name} standing just outside. You let them in[/i]
+[i]{FoShi.name} walks through the doorway. His posture is upright, his steps confident, but his eyes shiftily dart around the lobby as if he is agitated.[/i]
+[i]{Silas.name} follows, out of breath.[/i]
+[i]{Nathan.name} comes over quickly at the arrival of the two.[/i]
+FoShi: “My friends. Brother {Silas.name} has informed me my presence is welcome. Indeed, that fills my heart with joy.”
+Silas: "I found him in a nearby grocery store. He was really scared when I found him, I think he wants to tell you why."
+FoShi: “My friends, there is a monster out there. From my sightings, it was tall—around 8 feet tall—and pale as the moon. It was shaped like a horse but without hair and with human-like features.”
+[i]{Nathan.name} just laughs at him.[/i]
+nathan: “Monsters? Big dawg, we’re wayyyy past the age where we’d believe that shit. You either found some top-tier LSD or you’re a Stephen King wannabe, and if you are a Stephen King wannabe, you gotta up your game. I mean, come on, a horse-human? That’s a centaur dude!”
+[i]Nobody joins in {Nathan.name}'s laugh.[/i]
+nathan: "Come on guys, you can't seriously believe this guy!"
+nathan: “Like I said, monsters aren’t real. Nobody’s believed that since they were, like, five! Or, wait… don’t tell me…”
+nathan: [i]Nathan’s eyes widen with mock surprise. His hands fly up to cover his mouth as he lets out a gasp.[/i]
+nathan: “You think monsters are real?”
+FoShi: “My friends, I would not deceive you. There is a monster roaming around. It pains me that you do not believe me.”
+nathan: “Yeah, yeah, whatever bro.”
+Silas (Happy): "I'm glad that I found {FoShi.name} so soon. I don't know what could have happened to him if he'd been out there for much longer."
+[i]{Nathan.name} scoffs and walks off. {Silas.name} and {FoShi.name} both go off to somewhere in the building.[/i]
