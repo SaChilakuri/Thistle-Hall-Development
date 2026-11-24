@@ -1,0 +1,9 @@
+[background arg="res://assets/Unsorted/rainy_day_lobbyfirstperson.png" fade="0.0"]
+[i]A cold sweat wakes you up. You have a sudden, sinking feeling, that something terrible had just happened.
+[i]But... you can't figure out what...
+[i]Rain pounds on the roof of the building you're in... it's unrelenting
+[i]As you navigate through the rooms, you soon realize you're in a college residence hall.
+[i]It's strange... you feel like you know this place like the back of your hand.
+[i]In what seems to be a dining area, strangley well-kept... you find a journal...
+[i]Your head begins to rattle...
+[signal arg="puzzle"]

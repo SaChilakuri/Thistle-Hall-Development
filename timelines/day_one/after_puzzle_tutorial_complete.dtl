@@ -1,0 +1,7 @@
+[i]The journals... you remember now!
+[i]Journals... they must hold onto the information you can't seem to remember
+[i]It seems... because of the journal, you can remember your name!
+[i]What was it again...?
+[text_input var="player_name"]
+[i]{player_name}... of course!
+[i]You know for certain... you must hold onto this journal... at all costs.

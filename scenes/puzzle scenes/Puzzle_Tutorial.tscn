@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://cif3l7ue2lhfy"]
+
+[ext_resource type="Texture2D" uid="uid://cqwjoxnhy3n2k" path="res://assets/Journal/open_journal1.png" id="1_vpaqt"]
+[ext_resource type="Texture2D" uid="uid://bl8i3f2ftcj4a" path="res://assets/puzzle/player-puzzle.png" id="2_5iqty"]
+[ext_resource type="Texture2D" uid="uid://ccbsdxnpxpvn5" path="res://assets/puzzle/puzzle-piece.png" id="3_v3dpw"]
+[ext_resource type="Texture2D" uid="uid://ba75rjfpbcgst" path="res://assets/puzzle/puzzle-board.png" id="4_4ocik"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=240355596]
+
+[node name="Journal" type="Sprite2D" parent="." unique_id=528915183]
+position = Vector2(579, 309.5)
+scale = Vector2(1.3599975, 1.3599975)
+texture = ExtResource("1_vpaqt")
+
+[node name="Player" type="Sprite2D" parent="." unique_id=1561171809]
+position = Vector2(344.00003, 180.00002)
+scale = Vector2(0.56875, 0.56875)
+texture = ExtResource("2_5iqty")
+
+[node name="You" type="Label" parent="." unique_id=165772390]
+offset_left = 382.0
+offset_top = 150.0
+offset_right = 469.0
+offset_bottom = 176.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "This is you!"
+
+[node name="Movement" type="Label" parent="." unique_id=1270674298]
+offset_left = 312.0
+offset_top = 212.0
+offset_right = 522.0
+offset_bottom = 287.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "WASD or Arrow keys
+to move!
+"
+
+[node name="OnlyMove" type="Label" parent="." unique_id=690828233]
+offset_left = 384.0
+offset_top = 237.0
+offset_right = 515.0
+offset_bottom = 322.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "(Can only move when you're not already moving!)"
+autowrap_mode = 2
+
+[node name="PuzzlePiece" type="Sprite2D" parent="." unique_id=1352386802]
+position = Vector2(485.00006, 387)
+scale = Vector2(0.5781251, 0.5781251)
+texture = ExtResource("3_v3dpw")
+
+[node name="PuzzlePieces" type="Label" parent="." unique_id=1131679966]
+offset_left = 313.0
+offset_top = 314.0
+offset_right = 514.0
+offset_bottom = 389.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Collect 5 Puzzle Pieces
+Across 5 Boards in the time limit!"
+autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1767254876]
+position = Vector2(703.00006, 263)
+scale = Vector2(0.13124996, 0.13124996)
+texture = ExtResource("4_4ocik")
+
+[node name="Jump" type="Label" parent="." unique_id=1438193185]
+offset_left = 543.0
+offset_top = 148.0
+offset_right = 752.0
+offset_bottom = 249.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Click on a board tile to jump to that tile! Be smart though! Each jump costs you 5 seconds!"
+autowrap_mode = 2
+
+[node name="Continue" type="Label" parent="." unique_id=398437230]
+offset_left = 539.0
+offset_top = 389.0
+offset_right = 749.0
+offset_bottom = 412.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Click anywhere to continue"

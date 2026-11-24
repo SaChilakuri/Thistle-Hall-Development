@@ -5,26 +5,38 @@ const PUZZLE_SCENE = preload("uid://bpychkfoh1utj")
 @onready var timer_label: Label = $timer_label
 @onready var count_label: Label = $count_label
 @onready var complete: Label = $complete
+@onready var tutorial: CanvasLayer = $Tutorial
 signal puzzles_solved
 signal puzzles_failed
 var puzzles_left = 5
 var time = 120
 var new_puzzle
+var tutorial_puzzle = true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Start the timer and create the first puzzle
-	_next_puzzle()
+	if tutorial_puzzle:
+		tutorial.visible = true
+		time = 200
+	else:
+		_next_puzzle()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	timer_label.text = "Time Remaining: " + str(time)
-	count_label.text = "Puzzles Remaining: " + str(puzzles_left)
+	if tutorial_puzzle:
+		if Input.is_action_just_pressed("click"):
+			tutorial.visible = false
+			tutorial_puzzle = false
+			_next_puzzle()
+	else:
+		timer_label.text = "Time Remaining: " + str(time)
+		count_label.text = "Puzzles Remaining: " + str(puzzles_left)
 
-	# If player jumps, remove 5 seconds from the timer
-	if Input.is_action_just_pressed("click"):
-		if time >= 5:
-			time -= 5
+		# If player jumps, remove 5 seconds from the timer
+		if Input.is_action_just_pressed("click"):
+			if time >= 5:
+				time -= 5
 
 func _next_puzzle():
 	# Purpose:

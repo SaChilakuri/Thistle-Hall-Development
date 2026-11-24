@@ -33,6 +33,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "MinervaFirstMeeting": "res://timelines/day_one/MinervaFirstMeeting.dtl",
 "SilasFirstMeeting": "res://timelines/day_one/SilasFirstMeeting.dtl",
+"after_puzzle_tutorial_complete": "res://timelines/day_one/after_puzzle_tutorial_complete.dtl",
 "big_fight_day_1": "res://timelines/day_one/big_fight_day_1.dtl",
 "day_two_beginning_group_convo_foshi_gone": "res://timelines/day_two/day_two_beginning_group_convo_foshi_gone.dtl",
 "day_two_beginning_group_convo_silas_gone": "res://timelines/day_two/day_two_beginning_group_convo_silas_gone.dtl",
@@ -48,6 +49,7 @@ directories/dtl_directory={
 "day_two_silas_back_is_number_one": "res://timelines/day_two/day_two_silas_back_is_number_one.dtl",
 "day_two_silas_back_is_number_two": "res://timelines/day_two/day_two_silas_back_is_number_two.dtl",
 "day_two_silas_post_group": "res://timelines/day_two/day_two_silas_post_group.dtl",
+"exposition_puzzle_tutorial": "res://timelines/day_one/exposition_puzzle_tutorial.dtl",
 "foshi_meeting": "res://timelines/day_one/foshi_meeting.dtl",
 "foshi_talk_end1": "res://timelines/day_one/foshi_talk_end1.dtl",
 "silas_talk_end1": "res://timelines/day_one/silas_talk_end1.dtl"

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dt3qty3p6wc37"]
 
 [ext_resource type="Script" uid="uid://dbuu2ncihl8hm" path="res://scripts/puzzle scripts/puzzle_manager.gd" id="1_4lwn6"]
+[ext_resource type="PackedScene" uid="uid://cif3l7ue2lhfy" path="res://scenes/puzzle scenes/Puzzle_Tutorial.tscn" id="2_l5xug"]
 
 [node name="puzzle_manager" type="Node2D" unique_id=554286022]
 script = ExtResource("1_4lwn6")
@@ -34,5 +35,8 @@ offset_right = 242.0
 offset_bottom = 33.0
 theme_override_font_sizes/font_size = 48
 text = "Puzzle Complete!!! :D"
+
+[node name="Tutorial" parent="." unique_id=240355596 instance=ExtResource("2_l5xug")]
+visible = false
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
