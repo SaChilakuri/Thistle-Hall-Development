@@ -35,6 +35,7 @@ var journal_after_timeline = false
 var puzzle_after_timeline = false
 var current_timeline = 'aaa'
 var timeline_count = 0
+var tutorial_puzzle = true
 
 var important_choices = {
 	"FoShiKickedOut" = null,

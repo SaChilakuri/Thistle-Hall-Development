@@ -4,18 +4,19 @@ const PUZZLE_SCENE = preload("uid://bpychkfoh1utj")
 @onready var timer: Timer = $Timer
 @onready var timer_label: Label = $timer_label
 @onready var count_label: Label = $count_label
-@onready var complete: Label = $complete
 @onready var tutorial: CanvasLayer = $Tutorial
 signal puzzles_solved
 signal puzzles_failed
 var puzzles_left = 5
 var time = 120
 var new_puzzle
-var tutorial_puzzle = true
+var tutorial_puzzle = GameManager.tutorial_puzzle
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Start the timer and create the first puzzle
+	timer_label.visible = false
+	count_label.visible = false
 	if tutorial_puzzle:
 		tutorial.visible = true
 		time = 200
@@ -45,6 +46,8 @@ func _next_puzzle():
 	# None
 	# Returns:
 	# None
+	timer_label.visible = true
+	count_label.visible = true
 	if puzzles_left >= 0:
 		new_puzzle = PUZZLE_SCENE.instantiate()
 		new_puzzle.connect("puzzle_complete", _on_puzzle_complete)
@@ -60,8 +63,9 @@ func _on_puzzle_complete():
 	# None
 	if puzzles_left <= 0:
 		print('finished!')
-		complete.visible = true
 		emit_signal("puzzles_solved")
+		timer_label.visible = false
+		count_label.visible = false
 		timer.stop()
 	else:
 		puzzles_left -= 1
@@ -79,4 +83,6 @@ func _on_timer_timeout() -> void:
 	else:
 		print('L')
 		emit_signal("puzzles_failed")
+		timer_label.visible = false
+		count_label.visible = false
 		timer.stop()

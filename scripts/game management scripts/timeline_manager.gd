@@ -15,11 +15,13 @@ const PUZZLE_MANAGER = preload("uid://dt3qty3p6wc37")
 # The key is a string that represents the current timeline and is always 3 alphabetic characters, and the value is an array of
 # the timelines that will be played in order for that timeline chain.
 var timeline_chains = {
-	'aaa' : ["res://timelines/day_one/exposition_puzzle_tutorial.dtl", "res://timelines/day_one/after_puzzle_tutorial_complete.dtl", "res://timelines/day_one/MinervaFirstMeeting.dtl", "res://timelines/day_one/SilasFirstMeeting.dtl", 
-	"res://timelines/day_one/foshi_meeting.dtl", "res://timelines/day_one/big_fight_day_1.dtl"],
+	'aaa' : ["res://timelines/day_one/exposition_puzzle_tutorial.dtl", "res://timelines/day_one/after_puzzle_tutorial_complete.dtl", "res://timelines/day_one/MinervaFirstMeeting.dtl", 
+		"res://timelines/day_one/SilasFirstMeeting.dtl", "res://timelines/day_one/foshi_meeting.dtl", "res://timelines/day_one/big_fight_day_1.dtl"],
 	# SPLIT ONE - Kicking Fo'Shi out or not
-	'aaB' : ["res://timelines/day_one/foshi_talk_end1.dtl", "res://timelines/day_two/day_two_minerva_post_group_silas_gone.dtl", "res://timelines/day_two/day_two_minerva_rain_midday_silas_gone.dtl"],
-	'aaC' : ["res://timelines/day_one/silas_talk_end1.dtl", "res://timelines/day_two/day_two_minerva_post_group_foshi_gone.dtl", "res://timelines/day_two/day_two_minerva_rain_midday_foshi_gone.dtl"],
+	'aaB' : ["res://timelines/day_one/foshi_talk_end1.dtl", "res://timelines/day_two/day_two_minerva_post_group_silas_gone.dtl", 
+		"res://timelines/day_two/day_two_minerva_rain_midday_silas_gone.dtl"],
+	'aaC' : ["res://timelines/day_one/silas_talk_end1.dtl", "res://timelines/day_two/day_two_minerva_post_group_foshi_gone.dtl", 
+		"res://timelines/day_two/day_two_minerva_rain_midday_foshi_gone.dtl"],
 }
 
 func _ready() -> void:
